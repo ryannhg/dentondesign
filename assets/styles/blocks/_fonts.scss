@@ -1,0 +1,59 @@
+.fonts {
+  &__h1 {
+    font-size: $fonts__h1;
+  }
+  &__h2 {
+    font-size: $fonts__h2;
+  }
+  &__h3 {
+    font-size: $fonts__h3;
+  }
+  &__h4 {
+    font-size: $fonts__h4;
+  }
+  &__h5 {
+    font-size: $fonts__h5;
+  }
+  &__h6 {
+    font-size: $fonts__h6;
+  }
+  &__copy {
+    font-size: $fonts__copy;
+  }
+  &__tabs {
+    font-size: $fonts__tabs;
+  }
+  &__small {
+    font-size: $fonts__small;
+  }
+
+  @include above(tablet) {
+    &__h1 {
+      font-size: $fonts__h1--tablet;
+    }
+    &__h2 {
+      font-size: $fonts__h2--tablet;
+    }
+    &__h3 {
+      font-size: $fonts__h3--tablet;
+    }
+    &__h4 {
+      font-size: $fonts__h4--tablet;
+    }
+    &__h5 {
+      font-size: $fonts__h5--tablet;
+    }
+    &__h6 {
+      font-size: $fonts__h6--tablet;
+    }
+    &__copy {
+      font-size: $fonts__copy--tablet;
+    }
+    &__tabs {
+      font-size: $fonts__tabs--tablet;
+    }
+    &__small {
+      font-size: $fonts__small--tablet;
+    }
+  }
+}

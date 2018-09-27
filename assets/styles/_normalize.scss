@@ -1,0 +1,63 @@
+// The font size set on the root html element.
+$base-font-size: 16px !default;
+
+// The base line height determines the basic unit of vertical rhythm.
+$base-line-height: 24px !default;
+
+@import './../../node_modules/normalize-scss/sass/normalize';
+
+@include normalize();
+
+html {
+  font-size: 100%;
+}
+body, html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+  font-family: $fonts__family;
+  font-weight: $fonts__weight;
+  font-size: 16px;
+  line-height: $fonts__line-height;
+  text-transform: uppercase;
+  background-color: $colors__beige;
+  color: $colors__white;
+}
+
+h1,h2,h3,h4,h5,h6, p {
+  margin: 0;
+  font-size: 1em;
+  font-weight: inherit;
+}
+
+main {
+  display: block;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+
+	&:focus {
+		outline: 1px dotted;
+	}
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+li {
+	margin-bottom: 0;
+}
+
+p {
+  margin-bottom: 0;
+}

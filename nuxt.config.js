@@ -14,7 +14,8 @@ module.exports = {
       { hid: 'description', name: 'description', content: pkg.description }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://use.typekit.net/glk1aqk.css' }
     ]
   },
 
@@ -28,7 +29,7 @@ module.exports = {
   */
   css: [
     // CSS file in the project
-    '@/assets/styles/main.css',
+    // '@/assets/styles/main.css',
     // SCSS file in the project
     '@/assets/styles/main.scss'
   ],
