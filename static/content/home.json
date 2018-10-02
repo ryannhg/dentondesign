@@ -1,0 +1,91 @@
+{
+    "navbar": {
+        "logos": {
+            "small": {
+                "src": "/images/logos/small.svg",
+                "alt": "Denton Design Logo"
+            },
+            "desktop": {
+                "src": "/images/logos/big.svg",
+                "alt": "Denton Design Logo"
+            }
+        }
+    },
+    "menu": {
+        "links": [
+            {
+                "label": "Work",
+                "url": "/work",
+                "image": "/images/menu/work.png"
+            },
+            {
+                "label": "About",
+                "url": "/about",
+                "image": "/images/menu/about.png"
+            },
+            {
+                "label": "Contact",
+                "url": "/contact",
+                "image": "/images/menu/contact.png"
+            }
+        ]
+    },
+    "social": {
+        "label": "Share:",
+        "links": [
+            {
+                "label": "Twitter",
+                "url": "https://www.twitter.com",
+                "icon": "twitter"
+            },
+            {
+                "label": "LinkedIn",
+                "url": "https://www.linkedin.com",
+                "icon": "linkedin"
+            },
+            {
+                "label": "Behance",
+                "url": "https://www.behance.com",
+                "icon": "behance"
+            },
+            {
+                "label": "Dribbble",
+                "url": "https://www.dribbble.com",
+                "icon": "dribbble"
+            },
+            {
+                "label": "Facebook",
+                "url": "https://www.facebook.com",
+                "icon": "facebook"
+            }
+        ]
+    },
+    "page": {
+        "backgroundImage": {
+            "src": "/images/pages/home/chicken.jpg",
+            "alt": "A defiantly handsome chicken."
+        },
+        "titleImage": {
+            "src": "/images/pages/home/title.svg",
+            "alt": "Creative Director"
+        },
+        "caption": "Hatching design solutions for brands big and small",
+        "explore": {
+            "label": "Explore",
+            "links": [
+                {
+                    "label": "Work",
+                    "url": "/work"
+                },
+                {
+                    "label": "About",
+                    "url": "/about"
+                },
+                {
+                    "label": "Contact",
+                    "url": "/contact"
+                }
+            ]
+        }
+    }
+}
