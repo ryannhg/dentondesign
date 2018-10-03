@@ -1,0 +1,16 @@
+.button {
+  line-height: 1.1;
+  background-color: transparent;
+  border-color: transparent;
+  position: relative;
+  border-radius: 0;
+  padding: 0;
+  border-width: 1px;
+  display: inline-block;
+  color: inherit;
+  font-size: $fonts__button;
+  
+  @include above(tablet) {
+    font-size: $fonts__button--tablet;
+  }
+}

@@ -1,0 +1,20 @@
+.page-heading {
+  &__title {
+    border-bottom: $globals__border-size solid $colors__tan;
+  }
+
+  &__svg-container {
+    display: block;
+    position: relative;
+  }
+
+  &__svg {
+    width: 100%;
+  }
+
+  @include above('tablet') {
+    &__title{
+      border-bottom: $globals__border-size--tablet solid $colors__tan;
+    }
+  }
+}
