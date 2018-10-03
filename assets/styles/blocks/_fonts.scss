@@ -1,24 +1,31 @@
 .fonts {
   &__h1 {
     font-size: $fonts__h1;
+    line-height: 1.1
   }
   &__h2 {
     font-size: $fonts__h2;
+    line-height: 1.1
   }
   &__h3 {
     font-size: $fonts__h3;
+    line-height: 1.1
   }
   &__h4 {
     font-size: $fonts__h4;
+    line-height: 1.1
   }
   &__h5 {
     font-size: $fonts__h5;
+    line-height: 1.1
   }
   &__h6 {
     font-size: $fonts__h6;
+    line-height: 1;
   }
   &__copy {
     font-size: $fonts__copy;
+    line-height: 1.4;
   }
   &__tabs {
     font-size: $fonts__tabs;

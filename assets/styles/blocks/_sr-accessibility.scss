@@ -1,0 +1,21 @@
+//visually hide content but accssible to screen readers
+//http://a11yproject.com/posts/how-to-hide-content/
+.sr-only {
+	position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+
+//solve problem where VoiceOver jumps content to underneath the header
+.sr-invisible-offset::before {
+	display: block; 
+	content: " "; 
+	margin-top: -150px; 
+	height: 150px; 
+	visibility: hidden;
+}
