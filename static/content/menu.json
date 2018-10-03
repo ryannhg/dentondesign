@@ -1,0 +1,16 @@
+{
+    "links": {
+        "work": {
+            "label": "Work",
+            "image": "/images/menu/work.png"
+        },
+        "about": {
+            "label": "About",
+            "image": "/images/menu/about.png"
+        },
+        "contact": {
+            "label": "Contact",
+            "image": "/images/menu/contact.png"
+        }
+    }
+}

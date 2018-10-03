@@ -1,0 +1,12 @@
+{
+    "logos": {
+        "small": {
+            "src": "/images/logos/small.svg",
+            "alt": "Denton Design Logo"
+        },
+        "desktop": {
+            "src": "/images/logos/big.svg",
+            "alt": "Denton Design Logo"
+        }
+    }
+}

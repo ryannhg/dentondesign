@@ -1,0 +1,73 @@
+{
+    "backgroundImage": {
+        "src": "/images/pages/about/background.jpg",
+        "alt": "Nate Denton"
+    },
+    "titleImage": {
+        "src": "/images/pages/about/title.svg",
+        "alt": "About"
+    },
+    "approach": {
+        "label": "Approach",
+        "content": "<p>I started as a designer and worked my way up the creative ladder. I pride myself on leading by example. I don’t ask anyone on the team to do anything I haven’t done in the past. that has helped me forge strong bonds over the years</p><br/><p>the design tenets I have carried with me along the way include:</p><br/><h5>Less is lovely</h5><h5>Details are delightful</h5><h5>research is required</h5><h5>collaboration is crucial</h5><h5>in-person, please</h5><br/><p>these ingredients generate an environment where wonderful things can grow.</p>",
+        "contact": {
+            "caption": "I'd love to tell you more!",
+            "link": {
+                "label": "Contact me!",
+                "url": "/contact"
+            }
+        }
+    },
+    "timeline": {
+        "label": "Timeline",
+        "brownEvent": {
+            "years": "1978",
+            "title": "Happy birthday to me!",
+            "content": "Learned to crawl, walked, said my first word, socialized at daycare, first day of school, made a best friend, drew every day, got in trouble, got an “A”, saw “E.T.” (cried), heard Beastie Boys “Licenced to Ill” (danced), fell in love with art, started junior high, got hit by a car, became an amateur rapper, fell in love, got a broken heart, went to a funeral, started high school, drove a car, won some art awards, graduated high school, got the hell out of my parents’ house"
+        },
+        "events": [
+            {
+                "years": "1997 - 2002",
+                "title": "purdue university",
+                "content": "<p>bachelors degree - computer graphics</p><p>associates degree - organizational leadership</p>"
+            },
+            {
+                "years": "2004-2007",
+                "title": "deborah wood associates",
+                "content": "<p>2004-2006 senior graphic designer</p><p>2006-2007 art director</p>"
+            },
+            {
+                "years": "2007-2008",
+                "title": "ideacast",
+                "content": "<p>art director</p>"
+            },
+            {
+                "years": "2008",
+                "title": "ogilvy & mather",
+                "content": "<p>art director</p>"
+            },
+            {
+                "years": "2008-2012",
+                "title": "hubbard one",
+                "content": "<p>2008-2010 art director</p><p>2010-2012 creative director</p>"
+            },
+            {
+                "years": "2012-2018",
+                "title": "one north interactive",
+                "content": "<p>partner, managing director of creative services</p>"
+            },
+            {
+                "years": "2018 - 20??",
+                "title": "put your company here",
+                "year": "<p>let’s make great things together</p>"
+            }
+        ],
+        "contact": {
+            "caption": "Talking is better than scrolling.",
+            "link": {
+                "label": "Contact me!",
+                "url": "/contact"
+            }
+        }
+    }
+}

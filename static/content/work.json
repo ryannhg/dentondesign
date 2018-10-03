@@ -1,0 +1,13 @@
+{
+    "backgroundImage": {
+        "src": "/images/pages/home/background.jpg",
+        "alt": "A defiantly handsome chicken."
+    },
+    "titleImage": {
+        "src": "/images/pages/home/title.svg",
+        "alt": "Creative Director"
+    },
+    "eggs": [
+
+    ]
+}

@@ -1,0 +1,30 @@
+{
+    "label": "Share:",
+    "links": [
+        {
+            "label": "Twitter",
+            "url": "https://www.twitter.com",
+            "icon": "twitter"
+        },
+        {
+            "label": "LinkedIn",
+            "url": "https://www.linkedin.com",
+            "icon": "linkedin"
+        },
+        {
+            "label": "Behance",
+            "url": "https://www.behance.com",
+            "icon": "behance"
+        },
+        {
+            "label": "Dribbble",
+            "url": "https://www.dribbble.com",
+            "icon": "dribbble"
+        },
+        {
+            "label": "Facebook",
+            "url": "https://www.facebook.com",
+            "icon": "facebook"
+        }
+    ]
+}
