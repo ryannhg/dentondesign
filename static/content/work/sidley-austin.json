@@ -1,0 +1,15 @@
+{
+    "images": [
+        "/images/pages/work/skadden/1.jpg"
+    ],
+    "imageCaption": "Creative direction / digital identity / video",
+    "title": "Skadden",
+    "description": "a global law firm that packs a punch",
+    "obstacle": "a strong brand didn’t have a digital presence that matched it’s market cache",
+    "objective": "create a digital identity and experience that is as strong as the firm’s reputation within the industry",
+    "outcome": "a cohesive digital experience that attracted both clients and talent",
+    "siteLink": {
+        "url": "https://www.skadden.com",
+        "label": "Launch site"
+    }
+}

@@ -1,13 +1,18 @@
 {
     "backgroundImage": {
-        "src": "/images/pages/home/background.jpg",
-        "alt": "A defiantly handsome chicken."
+        "src": "/images/pages/work/background.jpg",
+        "alt": "Some eggs."
     },
     "titleImage": {
-        "src": "/images/pages/home/title.svg",
-        "alt": "Creative Director"
+        "src": "/images/pages/work/title.svg",
+        "alt": "Work"
     },
-    "eggs": [
-
+    "links": [
+        { "label": "One North", "url": "/work/one-north" },
+        { "label": "Burns McDonnell", "url": "/work/burns-mcdonnell" },
+        { "label": "Skadden", "url": "/work/skadden" },
+        { "label": "Demerly Architects", "url": "/work/demerly-architects" },
+        { "label": "Sidley Austin", "url": "/work/sidley-austin" },
+        { "label": "Miscellaneous", "url": "/work/miscellaneous" }
     ]
 }
