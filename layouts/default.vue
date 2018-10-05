@@ -1,6 +1,6 @@
 <template>
   <div class="layout">
-    <menu :menu-data="menu"></menu>
+    <navigation :content="menu"></navigation>
     <!-- navbar -->
     <nuxt/>
     <!-- social -->
@@ -8,14 +8,14 @@
 </template>
 
 <script>
-import Menu from '~/components/Menu'
+import Navigation from '~/components/Navigation'
 import menu from '~/static/content/menu.json'
 import navbar from '~/static/content/navbar.json'
 import social from '~/static/content/social.json'
 
 export default {
   components: {
-    Menu
+    Navigation
   },
   data: () => ({
     menu,

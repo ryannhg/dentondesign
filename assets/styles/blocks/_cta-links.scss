@@ -40,12 +40,19 @@
 
     &__list {
       flex-grow: 1;
+      flex-shrink: 1;
     }
+
+    
   }
 
-  @include above('mobile') {
+  @include above('tablet') {
     &__label {
       width: calc(50% - #{$wrapper-maxwidth--narrow/2})
+    }
+
+    .button {
+      min-width: auto;
     }
   }
 }
