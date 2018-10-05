@@ -3,11 +3,8 @@
 
   &__main {
     height: 100%;
-
-    &:before {
-      content: '';
-      display: block;
-      height: 85%;
-    }
+  }
+  &__content {
+    overflow: auto;
   }
 }

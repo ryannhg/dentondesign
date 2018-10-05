@@ -7,6 +7,10 @@
 <script>
 export default {
   props: {
+    percent: {
+      type: Number,
+      required: true
+    },
     image: {
       type: String,
       required: true
@@ -14,7 +18,11 @@ export default {
   },
   computed: {
     imageStyles () {
-      return `background-image: url('${this.image}')`
+      return {
+        'background-image': `url('${this.image}')`,
+        opacity: 1 - (this.percent * 0.6),
+        transform: `translateY(${(1 - this.percent) * 2}rem)`
+      }
     }
   }
 }
