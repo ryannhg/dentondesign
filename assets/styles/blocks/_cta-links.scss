@@ -1,0 +1,51 @@
+.cta-links {
+  margin-top: 3rem;
+  text-align: center;
+
+  &__label {
+    display: inline-block;
+
+    &:after {
+      content: '';
+      height: 30px;
+      border-left: thin solid $colors__cherry;
+      display: block;
+      margin: 3px auto 0;
+      width: 1px;
+    }
+  }
+
+  @include above('mobile') {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    &__label {
+      display: inline-flex;
+      align-items: center;
+      justify-content: flex-end;
+      width: 15%;
+      flex-shrink: 0;
+
+      &:after {
+        content: '';
+        height: 1px;
+        border-left: 0;
+        border-top: thin solid $colors__cherry;
+        display: block;
+        margin: 0 0 0 10px;
+        width: 50px;
+      }
+    }
+
+    &__list {
+      flex-grow: 1;
+    }
+  }
+
+  @include above('mobile') {
+    &__label {
+      width: calc(50% - #{$wrapper-maxwidth--narrow/2})
+    }
+  }
+}

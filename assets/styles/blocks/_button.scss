@@ -1,16 +1,33 @@
 .button {
-  line-height: 1.1;
-  background-color: transparent;
+  background-color: $colors__black-opaque;
   border-color: transparent;
-  position: relative;
   border-radius: 0;
-  padding: 0;
-  border-width: 1px;
+  border: thin solid $colors__cherry;
   display: inline-block;
-  color: inherit;
   font-size: $fonts__button;
+  line-height: 1.1;
+  color: $colors__cherry;
+  padding: 14px 12px;
+  text-align: center;
   
-  @include above(tablet) {
+  &__row {
+    border-left: thin solid  $colors__cherry;
+    display: flex;
+
+    &--three-wide {
+      .button {
+        width: 33.3333%;
+      }
+    }
+  }
+
+  &__row & {
+    border-left: 0;
+  }
+
+  @include above('tablet') {
     font-size: $fonts__button--tablet;
+    padding: 34px 24px;
+    min-width: 360px;
   }
 }

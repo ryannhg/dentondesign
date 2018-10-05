@@ -8,7 +8,8 @@
 
   &__image {
     background-size: cover;
-    background-position: center top;
+    background-position: center bottom;
+    background-repeat: no-repeat;
     height: 100%;
     width: 100%;
   }
