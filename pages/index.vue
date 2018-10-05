@@ -1,8 +1,8 @@
 <template>
   <div class="layout__main">
-    <parallax-background></parallax-background>
+    <parallax-background :image="page.backgroundImage.src"></parallax-background>
     <div class="layout__content">
-      <page-heading></page-heading>
+      <page-heading :title="page.caption" :image="page.titleImage"></page-heading>
       <cta-links></cta-links>
     </div>
   </div>
