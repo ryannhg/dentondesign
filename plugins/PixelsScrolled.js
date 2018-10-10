@@ -1,10 +1,8 @@
 import Vue from 'vue'
 
-const updatePercent = ({ el, vnode, expression }) => _ => {
-  const { height, bottom } = el.getBoundingClientRect()
-  const windowHeight = window.innerHeight
-  const value = (height - bottom) / (height - windowHeight)
-  vnode.context[expression] = Math.min(1, Math.max(0, value))
+const updatePixelsScrolled = ({ vnode, expression }) => _ => {
+  const pixelsScrolled = window.pageYOffset
+  vnode.context[expression] = pixelsScrolled
 }
 
 const options = () => {
@@ -24,9 +22,9 @@ const options = () => {
   return options
 }
 
-Vue.directive('Percentage', {
+Vue.directive('PixelsScrolled', {
   bind (el, { expression }, vnode) {
-    el.percentHandler = updatePercent({ el, vnode, expression })
+    el.percentHandler = updatePixelsScrolled({ vnode, expression })
     window.addEventListener('scroll', el.percentHandler, options)
     window.addEventListener('resize', el.percentHandler)
   },
