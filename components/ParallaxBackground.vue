@@ -1,21 +1,22 @@
 <template>
-  <div role="presentation" class="parallax-background">
+  <div role="presentation" v-pixels-scrolled="pixelsScrolled" class="parallax-background">
     <div class="parallax-background__image" :style="imageStyles"></div>
   </div>
 </template>
 
 <script>
+import PixelsScrolled from '~/plugins/PixelsScrolled'
+
 export default {
   props: {
-    percent: {
-      type: Number,
-      required: true
-    },
     image: {
       type: String,
       required: true
     }
   },
+  data: () => ({
+    pixelsScrolled: 0
+  }),
   computed: {
     imageStyles () {
       return {
@@ -23,6 +24,12 @@ export default {
         opacity: 1 - (this.percent * 0.6),
         transform: `translateY(${(1 - this.percent) * 2}rem)`
       }
+    },
+    percent () {
+      const PIXELS_UNTIL_DONE = 400
+      return this.pixelsScrolled < PIXELS_UNTIL_DONE
+        ? 1 - (PIXELS_UNTIL_DONE - this.pixelsScrolled) / PIXELS_UNTIL_DONE
+        : 1
     }
   }
 }
