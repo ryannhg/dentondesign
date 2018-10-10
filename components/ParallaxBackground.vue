@@ -22,7 +22,7 @@ export default {
       return {
         'background-image': `url('${this.image}')`,
         opacity: 1 - (this.percent * 0.6),
-        transform: `translateY(${(1 - this.percent) * 2}rem)`
+        'background-position-y': `${(1 - this.percent) * 4}rem`
       }
     },
     percent () {

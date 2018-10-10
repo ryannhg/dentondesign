@@ -4,7 +4,7 @@
     <div class="layout__content">
       <div style="height: 86vh"></div>
       <page-heading :title="page.caption" :image="page.titleImage"></page-heading>
-      <cta-links></cta-links>
+      <cta-links v-bind="page.explore"></cta-links>
     </div>
   </div>
 </template>
