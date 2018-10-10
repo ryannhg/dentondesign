@@ -1,4 +1,7 @@
+import postcssPxtorem from 'postcss-pxtorem'
+
 const pkg = require('./package')
+
 
 module.exports = {
   mode: 'universal',
@@ -44,5 +47,14 @@ module.exports = {
   ** Nuxt.js modules
   */
   modules: [
-  ]
+  ],
+
+  /*
+  ** Nuxt.js Build
+  */
+  build: {
+    postcss: [
+      postcssPxtorem()
+    ]
+  }
 }

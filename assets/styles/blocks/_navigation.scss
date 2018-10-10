@@ -1,0 +1,15 @@
+.navigation {
+  $eggsize: 68px;
+  position: fixed;
+  width: $eggsize + $globals__header-padding;
+
+  &__egg {
+    width: $eggsize;
+  }
+
+  @include above('desktop') {
+    &__copy {
+      font-size: $fonts__h4--tablet;
+    }
+  }
+}
