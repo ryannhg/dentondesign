@@ -1,11 +1,21 @@
 .navigation {
   $eggsize: 68px;
   position: fixed;
-  width: $eggsize + $globals__header-padding;
+  width: $eggsize;
+  right: $globals__header-padding - 5px;
+  top: $globals__header-padding;
+  
+  
+  &__svg-container {
+    width: $eggsize;
+    position: relative;
+  }
 
   &__egg {
-    width: $eggsize;
+    width: 100%;
+    position: relative;
   }
+
 
   @include above('desktop') {
     &__copy {
