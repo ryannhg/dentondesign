@@ -1,21 +1,36 @@
 .navigation {
   $eggsize: 68px;
+
   position: fixed;
-  width: $eggsize;
-  right: $globals__header-padding - 5px;
-  top: $globals__header-padding;
-  
-  
-  &__svg-container {
+  width: $eggsize + $globals__header-padding;
+  height: $eggsize + $globals__header-padding;
+  right: 0;
+  top: 0;
+
+  &__menu {
+    position:absolute;
+    z-index: 3;
     width: $eggsize;
-    position: relative;
+    height: $eggsize;
+    right: $globals__header-padding;
+    top: $globals__header-padding - 5px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  &__egg {
+    width: $eggsize;
+    position: absolute;
+    right: $globals__header-padding;
+    top: $globals__header-padding - 5px;
   }
 
-  &__egg {
+  &__egg-svg {
     width: 100%;
     position: relative;
   }
-
 
   @include above('desktop') {
     &__copy {
