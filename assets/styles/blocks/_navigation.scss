@@ -1,17 +1,19 @@
 .navigation {
   $eggsize: 68px;
+  $eggheight: 62px;
 
   position: fixed;
   width: $eggsize + $globals__header-padding;
-  height: $eggsize + $globals__header-padding;
+  height: $eggheight + $globals__header-padding;
   right: 0;
   top: 0;
+  z-index: $zindex__egg;
 
   &__menu {
     position:absolute;
     z-index: 3;
     width: $eggsize;
-    height: $eggsize;
+    height: $eggheight;
     right: $globals__header-padding;
     top: $globals__header-padding - 5px;
 
@@ -22,9 +24,12 @@
   
   &__egg {
     width: $eggsize;
+    height: $eggheight;
     position: absolute;
     right: $globals__header-padding;
     top: $globals__header-padding - 5px;
+    transition: width 0.75s linear,
+    height 0.75s linear; 
   }
 
   &__egg-svg {
