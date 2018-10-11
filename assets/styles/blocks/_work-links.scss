@@ -1,0 +1,33 @@
+.work-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 32px;
+
+  &__link {
+    $color-speed: 250ms;
+    $line-speed: 400ms;
+    @extend .fonts__h3;
+    transition: color $color-speed ease-out;
+    position: relative;
+    overflow: hidden;
+    &::before {
+      content: '';
+      height: .25em;
+      position: absolute;
+      background: white;
+      bottom: .3em;
+      left: 0;
+      right: 100%;
+      z-index: -1;
+      transition: right $line-speed ease-out;
+    }
+    &:focus,
+    &:hover {
+      color: $colors__pink--hot;
+      &::before {
+        right: 0;
+      }
+    }
+  }
+}

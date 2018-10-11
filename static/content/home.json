@@ -1,4 +1,9 @@
 {
+    "meta": {
+        "title": "Denton Design",
+        "description": "Hatching design solutions for brands big and small.",
+        "image": "/images/pages/home/background.jpg"
+    },
     "backgroundImage": {
         "src": "/images/pages/home/background.jpg",
         "alt": "A defiantly handsome chicken."
