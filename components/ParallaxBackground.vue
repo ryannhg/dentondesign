@@ -1,6 +1,7 @@
 <template>
   <div role="presentation" v-pixels-scrolled="pixelsScrolled" class="parallax-background">
     <div class="parallax-background__image" :style="imageStyles"></div>
+    <div class="parallax-background__overlay" :style="overlayStyles"></div>
   </div>
 </template>
 
@@ -12,6 +13,9 @@ export default {
     image: {
       type: String,
       required: true
+    },
+    overlay: {
+      type: String
     }
   },
   data: () => ({
@@ -21,6 +25,13 @@ export default {
     imageStyles () {
       return {
         'background-image': `url('${this.image}')`,
+        opacity: 1 - (this.percent * 0.6),
+        'background-position-y': `${(1 - this.percent) * 4}rem`
+      }
+    },
+    overlayStyles () {
+      return {
+        'background-image': `url('${this.overlay}')`,
         opacity: 1 - (this.percent * 0.6),
         'background-position-y': `${(1 - this.percent) * 4}rem`
       }
