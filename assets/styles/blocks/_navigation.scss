@@ -3,31 +3,25 @@
   $eggheight: 62px;
 
   position: fixed;
-  width: $eggsize + $globals__header-padding;
-  height: $eggheight + $globals__header-padding;
+  z-index: 1;
   right: 0;
   top: 0;
-  z-index: $zindex__egg;
-
-  &__menu {
-    position:absolute;
-    z-index: 3;
+  width: $eggsize + $globals__header-padding;
+  height: $eggheight + $globals__header-padding;
+  
+  &__egg-nest {
+    position: absolute;
     width: $eggsize;
     height: $eggheight;
     right: $globals__header-padding;
-    top: $globals__header-padding - 5px;
-
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    top: $globals__header-padding;
   }
+
   
   &__egg {
+    @include centeralign('both');
     width: $eggsize;
-    height: $eggheight;
     position: absolute;
-    right: $globals__header-padding;
-    top: $globals__header-padding - 5px;
     transition: width 0.75s linear,
     height 0.75s linear; 
   }
@@ -37,9 +31,13 @@
     position: relative;
   }
 
-  @include above('desktop') {
-    &__copy {
-      font-size: $fonts__h4--tablet;
-    }
+  @include above('tablet') {
+    $eggsize: 140px;
+    $eggheight: 126px;
+
+    width: $eggsize + $eggsize;
+    height: $eggheight + $globals__header-padding;
+
+
   }
 }

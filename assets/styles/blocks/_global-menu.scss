@@ -1,0 +1,58 @@
+.navigation {
+  $eggsize: 68px;
+  $eggheight: 62px;
+
+  position: fixed;
+  width: $eggsize;
+  height: $eggheight;
+  right: $globals__header-padding;
+  top: $globals__header-padding;
+  z-index: $zindex__egg;
+
+  &__menu {
+    position:absolute;
+    z-index: 3;
+    width: $eggsize;
+    height: $eggheight;
+    right: $globals__header-padding;
+    top: $globals__header-padding - 5px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  &__egg {
+    width: $eggsize;
+    height: $eggheight;
+    position: absolute;
+    right: $globals__header-padding;
+    top: $globals__header-padding - 5px;
+    transition: width 0.75s linear,
+    height 0.75s linear; 
+  }
+
+  &__egg-svg {
+    width: 100%;
+    position: relative;
+  }
+
+  @include above('tablet') {
+    $eggsize: 140px;
+    $eggheight: 126px;
+
+    &__copy {
+      font-size: $fonts__h4--tablet;
+    }
+
+    &__menu {
+      width: $eggsize;
+      height: $eggheight;
+    }
+
+    &__egg {
+      width: $eggsize;
+      height: $eggheight;
+    }
+  }
+}
