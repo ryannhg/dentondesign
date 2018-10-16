@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   padding-bottom: 32px;
+  z-index: 0;
 
   &__link {
     $color-speed: 250ms;
@@ -11,9 +12,10 @@
     transition: color $color-speed ease-out;
     position: relative;
     overflow: hidden;
+    z-index: 0;
     &::before {
       content: '';
-      height: .25em;
+      height: .2em;
       position: absolute;
       background: white;
       bottom: .3em;
