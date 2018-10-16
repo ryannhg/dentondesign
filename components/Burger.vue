@@ -1,5 +1,5 @@
 <template>
-  <div class="burger">
+  <div class="burger" :class="{'burger--is-expanded': isExpanded}">
     <span class="burger__buns"></span>
     <span class="burger__fillings"></span>
     <span class="burger__buns burger__buns--bottom"></span>
