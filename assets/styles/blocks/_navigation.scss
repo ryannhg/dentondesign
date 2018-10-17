@@ -70,11 +70,11 @@
     $bun-height--tablet: 3px;
     $bun-spacing: 9px;
 
-    // width: $eggsize + $globals__header-padding--tablet;
-    // height: $eggheight + $globals__header-padding--tablet - 20px;
+    width: $eggsize + $globals__header-padding--tablet;
+    height: $eggheight + $globals__header-padding--tablet - 20px;
 
-    width: 75%;
-    height: 100%;
+    // width: 75%;
+    // height: 100%;
 
     &__egg-nest {
       position: absolute;
