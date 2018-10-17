@@ -2,6 +2,7 @@
   $bun-width: 20px;
   $bun-height: 2px;
   $bun-spacing: 4px;
+  $bun-speed: .35s;
 
   display: inline-block;
   backface-visibility: hidden;
@@ -16,6 +17,7 @@
     display: block;
     position: absolute;
     width: 100%;
+    top: 0;
 
     &--bottom {
       top: $bun-height*2 + $bun-spacing*2;
@@ -23,6 +25,8 @@
   }
 
   &__fillings {
+    @include transition(opacity);
+
     background-color: $colors__white;
     height: $bun-height;
     display: block;
@@ -31,17 +35,40 @@
     top: $bun-height + $bun-spacing;
   }
 
+  &--is-expanded &{
+    &__buns {
+      top: $bun-height + $bun-spacing;
+      transform: rotate(45deg);
+      transition: top $bun-speed $transition-easing,
+      transform $bun-speed $transition-easing $bun-speed;
+
+      &--bottom {
+        top: $bun-height + $bun-spacing;
+        transform: rotate(-45deg);
+      }
+    }
+
+    &__fillings {
+      transition: opacity $bun-speed linear $bun-speed;
+      opacity: 0;
+    }
+  }
+
   @include above('mobile') {
     $bun-width--tablet: 40px;
     $bun-height--tablet: 3px;
     $bun-spacing: 9px;
 
     width: $bun-width--tablet;
+    height: $bun-height--tablet*3 + $bun-spacing*2;
 
     &__buns {
+      @include transition(top $bun-speed);
+
       background-color: $colors__white;
       height: $bun-height--tablet;
-
+      
+      
       &--bottom {
         top: $bun-height--tablet*2 + $bun-spacing*2;
       }
@@ -50,6 +77,16 @@
     &__fillings {
       height: $bun-height--tablet;
       top: $bun-height--tablet + $bun-spacing;
+    }
+
+    &--is-expanded &{
+      &__buns {
+        top: $bun-height--tablet + $bun-spacing;
+
+        &--bottom {
+          top: $bun-height--tablet + $bun-spacing;
+        }
+      }
     }
   }
 }

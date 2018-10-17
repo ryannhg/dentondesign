@@ -15,9 +15,9 @@
     height: $eggheight;
     right: $globals__header-padding;
     top: $globals__header-padding;
+    z-index: 2;
   }
 
-  
   &__egg {
     @include centeralign('both');
     width: $eggsize;
@@ -31,13 +31,80 @@
     position: relative;
   }
 
-  @include above('tablet') {
+  &__hamburger {
+    position: absolute;
+    width: $eggsize;
+    height: $eggheight;
+    right: $globals__header-padding;
+    top: $globals__header-padding;
+    z-index: 3;
+
+    .burger {
+      @include centeralign('both');
+    }
+  }
+
+  &__menu-item {
+    position: absolute;
+    bottom: 100%;
+
+    &--dark {
+      background-color: $colors__coal;
+    }
+    &--white {
+      background-color: $colors__white;
+    }
+  }
+
+  &__menu-link {
+    &--red {
+      color: $colors__cherry
+    }
+  }
+
+  @include above('mobile') {
     $eggsize: 140px;
     $eggheight: 126px;
 
-    width: $eggsize + $eggsize;
-    height: $eggheight + $globals__header-padding;
+    $bun-width--tablet: 40px;
+    $bun-height--tablet: 3px;
+    $bun-spacing: 9px;
 
+    // width: $eggsize + $globals__header-padding--tablet;
+    // height: $eggheight + $globals__header-padding--tablet - 20px;
 
+    width: 75%;
+    height: 100%;
+
+    &__egg-nest {
+      position: absolute;
+      width: $eggsize;
+      height: $eggheight;
+      right: $globals__header-padding--tablet;
+      top: $globals__header-padding--tablet - 20px;
+    }
+
+    &__hamburger {
+      position: absolute;
+      width: $eggsize;
+      height: $eggheight;
+      right: $globals__header-padding--tablet;
+      top: $globals__header-padding--tablet - 20px;
+      cursor: pointer;
+
+      &:hover {
+        .burger:not(.burger--is-expanded) {
+          
+          .burger__buns {
+            top: -6px;
+          }
+
+          .burger__buns--bottom {
+            top: $bun-height--tablet*2 + $bun-spacing*2 + 6px;
+          }
+          
+        }
+      }
+    }
   }
 }

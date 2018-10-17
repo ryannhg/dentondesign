@@ -1,8 +1,8 @@
 <template>
-  <nav @click="toggle" class="navigation">
-    <div class="navigation__menu">
+  <nav class="navigation">
+    <button @click.prevent="toggle" class="navigation__hamburger">
       <burger :is-expanded="isOpen"></burger>
-    </div>
+    </button>
     <div class="navigation__egg-nest">
       <div ref="egg" class="navigation__egg" :style="eggWidth">
         <div class="navigation__svg-container">
@@ -10,6 +10,19 @@
         </div>
       </div>
     </div>
+
+    <ul class="navigation__menu">
+      <li ref="work" class="navigation__menu-item">
+        <nuxt-link to="work" class="navigation__menu-link">Work</nuxt-link>
+      </li>
+      <li ref="about" class="navigation__menu-item navigation__menu-item--dark">
+        <nuxt-link to="about" class="navigation__menu-link">About</nuxt-link>
+      </li>
+      <li ref="contact" class="navigation__menu-item navigation__menu-item--white">
+        <nuxt-link to="contact" class="navigation__menu-link navigation__menu-link--red">Contact</nuxt-link>
+      </li>
+    </ul>
+
   </nav>
 </template>
 
@@ -39,7 +52,9 @@ export default {
     Burger
   },
   data: () => ({
-    isOpen: false
+    isOpen: false,
+    tlDesktop: undefined,
+    tlMobile: undefined
   }),
   props: ['content'],
   computed: {
@@ -73,7 +88,18 @@ export default {
       return (this.isMobile())
         ? EGG_RESPONSIVE_WIDTH.mobile + 'px'
         : EGG_RESPONSIVE_WIDTH.tablet + 'px'
+    },
+    buildDesktopTimeline () {
+      let {about} = this.$refs
+      this.tlDesktop = new TimelineMax()
+      // this.tlDesktop = new TimelineMax({paused: true})
+
+      this.tlDesktop
+        .to(about, 1, { bottom: '100%' }, { bottom: '0%' }, 'stage1')
     }
+  },
+  mounted () {
+    this.buildDesktopTimeline()
   }
 }
 </script>
