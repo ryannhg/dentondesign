@@ -1,7 +1,9 @@
 <template>
   <div role="presentation" v-pixels-scrolled="pixelsScrolled" class="parallax-background">
     <div class="parallax-background__image" :style="imageStyles"></div>
-    <div class="parallax-background__overlay" :style="overlayStyles"></div>
+    <div class="parallax-background__overlay"
+      v-for="(overlay, i) in overlays || []" :key="i"
+      :style="overlayStyles(i)"></div>
   </div>
 </template>
 
@@ -14,9 +16,10 @@ export default {
       type: String,
       required: true
     },
-    overlay: {
-      type: String
-    }
+    overlays: {
+      type: Array
+    },
+    activeOverlay: Number
   },
   data: () => ({
     pixelsScrolled: 0
@@ -25,14 +28,7 @@ export default {
     imageStyles () {
       return {
         'background-image': `url('${this.image}')`,
-        opacity: 1 - (this.percent * 0.6),
-        'background-position-y': `${(1 - this.percent) * 4}rem`
-      }
-    },
-    overlayStyles () {
-      return {
-        'background-image': `url('${this.overlay}')`,
-        opacity: 1 - (this.percent * 0.6),
+        opacity: 1,
         'background-position-y': `${(1 - this.percent) * 4}rem`
       }
     },
@@ -42,6 +38,17 @@ export default {
         ? 1 - (PIXELS_UNTIL_DONE - this.pixelsScrolled) / PIXELS_UNTIL_DONE
         : 1
     }
+  },
+  methods: {
+    overlayStyles (i) {
+      return {
+        'background-image': `url('${this.overlays[i]}')`,
+        opacity: this.activeOverlay === i
+          ? 1
+          : 0,
+        'background-position-y': `${(1 - this.percent) * 4}rem`
+      }
+    },
   }
 }
 </script>
