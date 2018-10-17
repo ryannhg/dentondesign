@@ -1,6 +1,6 @@
 <template>
   <div class="layout__main">
-    <parallax-background :image="page.backgroundImage.src" :overlay="overlay"></parallax-background>
+    <parallax-background :image="page.backgroundImage.src" :overlays="overlays" :activeOverlay="hoveredIndex"></parallax-background>
     <div class="layout__content">
       <page-heading :title="page.caption" :image="page.titleImage"></page-heading>
       <div class="work-links">
@@ -30,13 +30,12 @@ export default {
   },
   data: () => ({
     page,
-    hoveredIndex: undefined
+    hoveredIndex: undefined,
   }),
   computed: {
-    overlay () {
-      return this.hoveredIndex !== undefined
-        ? `/images/pages/work/background${this.hoveredIndex}.jpg`
-        : undefined
+    overlays () {
+      return [ ...Array(page.links.length) ]
+        .map((_, i) => `/images/pages/work/background${i}.jpg`)
     }
   },
   methods: {
@@ -47,12 +46,6 @@ export default {
       this.hoveredIndex = (this.hoveredIndex === i)
         ? undefined
         : i
-    },
-    workEggImageStyles (i) {
-      return {
-        'opacity': this.hoveredIndex === i ? '1' : '0',
-        'background-image': `url('/images/background${i}.jpg')`
-      }
     }
   }
 }

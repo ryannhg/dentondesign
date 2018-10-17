@@ -14,6 +14,7 @@
     background-repeat: no-repeat;
     height: 100%;
     width: 100%;
+    transition: opacity .3s ease-in-out;
   }
   &__overlay {
     position: absolute;
@@ -23,5 +24,6 @@
     background-repeat: no-repeat;
     height: 100%;
     width: 100%;
+    transition: opacity .3s ease-in-out;
   }
 }
