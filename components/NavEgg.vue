@@ -1,14 +1,11 @@
 <template>
-  <nav class="navigation">
-    <div class="navigation__menu">
-      <burger :is-expanded="isOpen"></burger>
-    </div>
-    <div ref="egg" class="navigation__egg">
-      <div class="navigation__svg-container">
-        <img class="navigation__egg-svg" src="~/assets/images/eggmenu.svg" />
+  <div class="navegg">
+    <div ref="egg" class="navegg__nest">
+      <div class="navegg__svg-container">
+        <img class="navegg__svg" src="~/assets/images/eggmenu.svg" />
       </div>
     </div>
-  </nav>
+  </div>
 </template>
 
 <script>

@@ -1,0 +1,28 @@
+/* Variables */
+$icomoon-font-path: "~/icons/" !default;
+
+$ico-icon-name: "icomoon";
+
+$icomoon-hash: 'gaktil';
+
+//Mixin to load icon font
+@mixin icon-face-family($font-family, $file-path, $font-weight:normal, $font-style: normal) {
+  @font-face {
+  	font-family: $font-family;
+  	src:  url('#{$file-path}#{$font-family}.ttf') format('truetype'),
+					url('#{$file-path}#{$font-family}.woff') format('woff'),
+					url('#{$file-path}#{$font-family}.svg?gaktil##{$font-family}') format('svg');
+		font-weight: $font-weight;
+		font-style: $font-style;
+  }
+}
+
+//sass mappings
+$icons: (
+  share: "\e905",
+  facebook: "\e900",
+  dribbble: "\e901",
+  behance: "\e902",
+  linkedin: "\e903",
+  twitter: "\e904"
+);

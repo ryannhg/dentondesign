@@ -49,7 +49,7 @@
     }
 
     &__fillings {
-      transition: opacity $bun-speed linear $bun-speed;
+      transition: opacity $bun-speed linear $bun-speed/2;
       opacity: 0;
     }
   }
@@ -90,36 +90,3 @@
     }
   }
 }
-
-    // &__buns {
-    //   width: $bun-width--tablet;
-    //   height: px-to-em( $bun-height*3 + $bun-spacing*2);
-    // }
-
-    // &__topping {
-    //   overflow: hidden;
-
-    //   &:before {
-    //     @include transition(right 0.6s ease-out);
-
-    //     content: '';
-    //     display: block;
-    //     width: 400%;
-    //     height: 100%;
-    //     right: 0;
-    //     position: absolute;
-    //     background-color: transparent;
-    //     // border: $bun-width--tablet solid $color__brand-gold;
-    //     border-top-width: 0;
-    //     border-bottom-width: 0;
-    //   }
-  
-    //   &--middle {
-    //     top: px-to-em( $bun-height + $bun-spacing);
-    //   }
-  
-    //   &--bottom {
-    //     top: px-to-em( $bun-height*2 + $bun-spacing*2);
-    //   }
-    // }
-

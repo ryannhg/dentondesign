@@ -11,23 +11,26 @@
       </div>
     </div>
 
-    <ul class="navigation__menu">
-      <li ref="work" class="navigation__menu-item">
-        <nuxt-link to="work" class="navigation__menu-link">Work</nuxt-link>
+    <ul ref="menu" class="navigation__menu">
+      <li ref="work" class="navigation__menu-item navigation__menu-item--primary">
+        <nuxt-link to="work" class="navigation__menu-link navigation__menu-link--large navigation__menu-link--white-onred ">Work</nuxt-link>
       </li>
-      <li ref="about" class="navigation__menu-item navigation__menu-item--dark">
-        <nuxt-link to="about" class="navigation__menu-link">About</nuxt-link>
+      <li ref="about" class="navigation__menu-item">
+        <nuxt-link to="about" class="navigation__menu-link navigation__menu-link--beige-coal">About</nuxt-link>
       </li>
-      <li ref="contact" class="navigation__menu-item navigation__menu-item--white">
-        <nuxt-link to="contact" class="navigation__menu-link navigation__menu-link--red">Contact</nuxt-link>
+      <li ref="contact" class="navigation__menu-item">
+        <nuxt-link to="contact" class="navigation__menu-link navigation__menu-link--red-white">Contact</nuxt-link>
       </li>
     </ul>
-
+    
+    <social-links :social-options="social.links" :label="social.label" :direction="'horizontal'" ></social-links>
   </nav>
 </template>
 
 <script>
 import Burger from '~/components/Burger'
+import SocialLinks from '~/components/SocialLinks'
+import page from '~/static/content/work.json'
 import { TweenLite } from 'gsap'
 
 const RADIUS__OFFSET = 0.85
@@ -49,14 +52,15 @@ const attempt = (fn, fallback = undefined) => {
 
 export default {
   components: {
-    Burger
+    Burger,
+    SocialLinks
   },
   data: () => ({
     isOpen: false,
     tlDesktop: undefined,
     tlMobile: undefined
   }),
-  props: ['content'],
+  props: ['menu', 'social'],
   computed: {
     eggRatio () {
       return (EGG_WIDTH / EGG_HEIGHT) * 100

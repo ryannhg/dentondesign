@@ -1,6 +1,6 @@
 <template>
   <div class="layout">
-    <navigation :content="menu"></navigation>
+    <navigation :menu="menu" :social="social"></navigation>
     <!-- navbar -->
     <nuxt/>
     <!-- social -->

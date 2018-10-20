@@ -1,6 +1,11 @@
 .navigation {
   $eggsize: 68px;
   $eggheight: 62px;
+  $fonts__nav: 50px;
+  $fonts__nav--large: 80px;
+  $fonts__nav--tablet: 100px;
+  $fonts__nav--large-tablet: 130px;
+  $social-links-height: 90px;
 
   position: fixed;
   z-index: 1;
@@ -43,10 +48,23 @@
       @include centeralign('both');
     }
   }
+  
+  //menu open
+  width: 100%;
+  height: 100%;
+
+  &__menu {
+    width: 100%;
+    height: calc(100% - #{$social-links-height});
+  }
 
   &__menu-item {
-    position: absolute;
-    bottom: 100%;
+    // position: absolute;
+    height: 30%;
+
+    &--primary {
+      height: 40%;
+    }
 
     &--dark {
       background-color: $colors__coal;
@@ -57,8 +75,39 @@
   }
 
   &__menu-link {
-    &--red {
-      color: $colors__cherry
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    font-size: $fonts__nav;
+
+    &--large {
+      font-size: $fonts__nav--large;
+    }
+
+    &--white-onred {
+      background-color: $colors__cherry;
+      color: $colors__white;
+    }
+
+    &--beige-coal {
+      color: $colors__beige;
+      background-color: $colors__coal;
+    }
+
+    &--red-white {
+      color: $colors__cherry;
+      background-color: $colors__white;
+    }
+  }
+
+  .social-links {
+    background-color: $colors__beige;
+    height: $social-links-height;
+
+    &__icon {
+      font-size: 20px;
     }
   }
 
@@ -102,7 +151,6 @@
           .burger__buns--bottom {
             top: $bun-height--tablet*2 + $bun-spacing*2 + 6px;
           }
-          
         }
       }
     }
