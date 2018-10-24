@@ -3,7 +3,7 @@
     <button @click.prevent="toggle" class="navigation__hamburger">
       <burger :is-expanded="isOpen"></burger>
     </button>
-    <navegg v-on:transition-finished="handleEggTransition" :is-expanded="isExpandedEgg"></navegg>
+    <nav-egg v-on:transition-finished="handleEggTransition" :is-expanded="isExpandedEgg"></nav-egg>
 
     <ul ref="menu" class="navigation__menu">
       <li ref="work" class="navigation__menu-item navigation__menu-item--primary">
@@ -30,7 +30,7 @@
 <script>
 import Burger from '~/components/Burger'
 import SocialLinks from '~/components/SocialLinks'
-import Navegg from '~/components/Navegg'
+import NavEgg from '~/components/NavEgg'
 import page from '~/static/content/work.json'
 import { TimelineLite, TweenLite } from 'gsap'
 
@@ -57,7 +57,7 @@ export default {
   components: {
     Burger,
     SocialLinks,
-    Navegg
+    NavEgg
   },
   data: () => ({
     isOpen: false,
