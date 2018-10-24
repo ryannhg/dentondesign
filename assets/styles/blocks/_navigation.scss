@@ -13,7 +13,7 @@
   top: 0;
   width: $eggsize + $globals__header-padding;
   height: $eggheight + $globals__header-padding;
-  overflow: hidden;
+  
 
   transition: width 100ms linear 0.75s,
     height 100ms linear 0.75s;
@@ -24,6 +24,7 @@
     width: 100%;
     height: 100%;
     transition: none;
+    overflow: hidden;  
   }
   
 
@@ -154,6 +155,7 @@
     //Not open
     width: $eggsize--tablet + $globals__header-padding--tablet;
     height: $eggheight--tablet + $globals__header-padding--tablet - 20px;
+    overflow: hidden;
 
     //menu open
     &--egg-expanded {
