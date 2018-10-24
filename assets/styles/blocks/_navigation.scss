@@ -1,6 +1,6 @@
-.navigation {
-  $eggsize: 68px;
-  $eggheight: 62px;
+
+
+.navigation {  
   $fonts__nav: 50px;
   $fonts__nav--large: 80px;
   $fonts__nav--tablet: 100px;
@@ -13,28 +13,19 @@
   top: 0;
   width: $eggsize + $globals__header-padding;
   height: $eggheight + $globals__header-padding;
-  
-  &__egg-nest {
-    position: absolute;
-    width: $eggsize;
-    height: $eggheight;
-    right: $globals__header-padding;
-    top: $globals__header-padding;
-    z-index: 2;
-  }
+  overflow: hidden;
 
-  &__egg {
-    @include centeralign('both');
-    width: $eggsize;
-    position: absolute;
-    transition: width 0.75s linear,
-    height 0.75s linear; 
-  }
+  transition: width 100ms linear 0.75s,
+    height 100ms linear 0.75s;
 
-  &__egg-svg {
+    //menu open
+
+  &--egg-expanded {
     width: 100%;
-    position: relative;
+    height: 100%;
+    transition: none;
   }
+  
 
   &__hamburger {
     position: absolute;
@@ -42,21 +33,19 @@
     height: $eggheight;
     right: $globals__header-padding;
     top: $globals__header-padding;
-    z-index: 3;
+    z-index: 5;
 
     .burger {
       @include centeralign('both');
     }
   }
   
-  //menu open
-  width: 100%;
-  height: 100%;
 
   &__menu {
     width: 100%;
     height: calc(100% - #{$social-links-height});
     position: relative;
+    z-index: 2;
   }
 
   &__menu-item {
@@ -124,6 +113,9 @@
   .social-links {
     background-color: $colors__beige;
     height: $social-links-height;
+    opacity: 0;
+    position: relative;
+    z-index: 3;
 
     &__icon {
       font-size: 20px;
@@ -131,31 +123,28 @@
   }
 
   @include above('mobile') {
-    $eggsize: 140px;
-    $eggheight: 126px;
+    
 
     $bun-width--tablet: 40px;
     $bun-height--tablet: 3px;
     $bun-spacing: 9px;
 
-    width: $eggsize + $globals__header-padding--tablet;
-    height: $eggheight + $globals__header-padding--tablet - 20px;
+    //Not open
+    width: $eggsize--tablet + $globals__header-padding--tablet;
+    height: $eggheight--tablet + $globals__header-padding--tablet - 20px;
 
-    // width: 75%;
-    // height: 100%;
 
-    &__egg-nest {
-      position: absolute;
-      width: $eggsize;
-      height: $eggheight;
-      right: $globals__header-padding--tablet;
-      top: $globals__header-padding--tablet - 20px;
+
+    //menu open
+    &--egg-expanded {
+      width: calc(50% + #{$wrapper-maxwidth--narrow/2});
+      height: 100%;
     }
 
     &__hamburger {
       position: absolute;
-      width: $eggsize;
-      height: $eggheight;
+      width: $eggsize--tablet;
+      height: $eggheight--tablet;
       right: $globals__header-padding--tablet;
       top: $globals__header-padding--tablet - 20px;
       cursor: pointer;
@@ -173,10 +162,6 @@
         }
       }
     }
-
-    //menu open
-    width: calc(50% + #{$wrapper-maxwidth--narrow/2});
-    height: 100%;
 
     .social-links {
       display: none;

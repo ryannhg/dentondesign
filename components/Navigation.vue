@@ -1,15 +1,9 @@
 <template>
-  <nav class="navigation">
+  <nav class="navigation" :class="{'navigation--egg-expanded': isExpandedEgg}">
     <button @click.prevent="toggle" class="navigation__hamburger">
       <burger :is-expanded="isOpen"></burger>
     </button>
-    <div class="navigation__egg-nest">
-      <div ref="egg" class="navigation__egg" :style="eggWidth">
-        <div class="navigation__svg-container">
-          <img class="navigation__egg-svg" src="~/assets/images/eggmenu.svg" />
-        </div>
-      </div>
-    </div>
+    <navegg v-on:transition-finished="handleEggTransition" :is-expanded="isExpandedEgg"></navegg>
 
     <ul ref="menu" class="navigation__menu">
       <li ref="work" class="navigation__menu-item navigation__menu-item--primary">
@@ -29,13 +23,14 @@
       </li>
     </ul>
     
-    <social-links :social-options="social.links" :label="social.label" :direction="'horizontal'" ></social-links>
+    <social-links ref="sociallinks" :social-options="social.links" :label="social.label" :direction="'horizontal'" ></social-links>
   </nav>
 </template>
 
 <script>
 import Burger from '~/components/Burger'
 import SocialLinks from '~/components/SocialLinks'
+import Navegg from '~/components/Navegg'
 import page from '~/static/content/work.json'
 import { TimelineLite, TweenLite } from 'gsap'
 
@@ -61,10 +56,12 @@ const MENU__HEIGHT__ANIMATED = 120
 export default {
   components: {
     Burger,
-    SocialLinks
+    SocialLinks,
+    Navegg
   },
   data: () => ({
     isOpen: false,
+    isExpandedEgg: false,
     masterTimeline: null
   }),
   props: ['menu', 'social'],
@@ -76,6 +73,13 @@ export default {
       return (!this.isOpen)
         ? {width: this.getDefaultSize()}
         : {width: this.getViewportEggSize()}
+    }
+  },
+  watch: {
+    isOpen (newVal, oldVal) {
+      (newVal === true )
+      ? this.isExpandedEgg = newVal
+      : this.reverseTimeline()
     }
   },
   methods: {
@@ -168,14 +172,26 @@ export default {
       if (this.masterTimeline !== null ) this.masterTimeline.clear()
       this.masterTimeline = new TimelineLite()
 
+      this.masterTimeline.eventCallback('onReverseComplete', () => {  
+        this.isExpandedEgg = false
+      })
+
       if (window.innerWidth > 767) {
         this.masterTimeline.add(this.buildNavTimeline(about, menuHeight, menuLeftOffset), 'step1')
         this.masterTimeline.add(this.buildNavTimeline(contact, menuHeight, menuLeftOffset, true), 'step1+=0.25')
         this.masterTimeline.add(this.buildNavTimeline(work, menuHeight, menuLeftOffset), 'step1+=0.75')
       } else {
+        
+        this.masterTimeline.add(TweenLite.to(this.$refs.sociallinks.$el, 0.5, {opacity: 1} ))
         this.masterTimeline.add(this.buildNavTimeline(contact, menuHeight, menuLeftOffset), 'step1')
         this.masterTimeline.add(this.buildNavTimeline(about, menuHeight, menuLeftOffset), 'step1+=0.5')
         this.masterTimeline.add(this.buildNavTimeline(work, menuHeight, menuLeftOffset), 'step1+=1')
+
+      }
+    },
+    handleEggTransition () {
+      if (this.isOpen) {
+        this.playTimeline()
       }
     },
     reverseTimeline () {
@@ -186,11 +202,11 @@ export default {
   },
   mounted () {
     
-    this.playTimeline()
+    // this.playTimeline()
 
-      setTimeout(() => {
-        this.reverseTimeline()
-      }, 5000);
+    //   setTimeout(() => {
+    //     this.reverseTimeline()
+    //   }, 5000);
     
   }
 }
