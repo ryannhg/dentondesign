@@ -76,6 +76,8 @@
     align-items: center;
     justify-content: center;
     font-size: $fonts__nav;
+    position: relative;
+    z-index: 1;
 
     &--large {
       font-size: $fonts__nav--large;
@@ -84,21 +86,40 @@
     &--white-onred {
       background-color: $colors__cherry;
       color: $colors__white;
+
+      .navigation__menu-label {
+        &:before {
+          background-color: $colors__tan
+        }
+      }
     }
 
     &--beige-coal {
       color: $colors__beige;
       background-color: $colors__coal;
+
+      .navigation__menu-label {
+        &:before {
+          background-color: $colors__cherry
+        }
+      }
     }
 
     &--red-white {
       color: $colors__cherry;
       background-color: $colors__white;
+
+      .navigation__menu-label {
+        &:before {
+          background-color: $colors__coal
+        }
+      }
     }
   }
 
   &__menu-item--show-text & {
     &__menu-label {
+      
       @include transition(opacity);
 
       opacity: 1;
@@ -108,6 +129,9 @@
   &__menu-label {
     transition-duration: 0.15s;
     opacity: 0;
+    position: relative;
+    display: inline-block;
+    line-height: 0.8;
   }
 
   .social-links {
@@ -123,8 +147,6 @@
   }
 
   @include above('mobile') {
-    
-
     $bun-width--tablet: 40px;
     $bun-height--tablet: 3px;
     $bun-spacing: 9px;
@@ -132,8 +154,6 @@
     //Not open
     width: $eggsize--tablet + $globals__header-padding--tablet;
     height: $eggheight--tablet + $globals__header-padding--tablet - 20px;
-
-
 
     //menu open
     &--egg-expanded {
@@ -185,6 +205,31 @@
         width: 100%;
       }
     }
-    
+
+    $line-offset: -8px;
+
+    &__menu-link:hover &{
+      &__menu-label {
+        &:before {
+          right: $line-offset
+        }
+      }
+    }
+
+
+    &__menu-label {
+      &:before {
+        @include transition(right);
+
+        content: '';
+        position: absolute;
+        z-index: -1;
+        width: auto;
+        height: 12px;
+        left: $line-offset;
+        right: calc(100% + #{$line-offset * -1});
+        bottom: -2px;
+      }
+    }
   }
 }
