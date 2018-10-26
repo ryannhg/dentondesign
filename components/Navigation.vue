@@ -6,19 +6,22 @@
     <nav-egg v-on:transition-finished="handleEggTransition" :is-expanded="isExpandedEgg"></nav-egg>
 
     <ul ref="menu" class="navigation__menu">
-      <li ref="work" class="navigation__menu-item navigation__menu-item--primary">
-        <nuxt-link to="work" class="navigation__menu-link navigation__menu-link--large navigation__menu-link--white-onred ">
-          <span class="navigation__menu-label">Work</span>
+      <li  class="navigation__menu-item navigation__menu-item--primary" :class=[visibilityClass]>
+        <nuxt-link ref="work" to="work" class="navigation__menu-link navigation__menu-link--large navigation__menu-link--white-onred">
+          <span class="navigation__menu-label" v-text="menuLabel('work')"></span>
+          <span class="navigation__menu-background" :style="menuBackground('work')"></span>
         </nuxt-link>
       </li>
-      <li ref="about" class="navigation__menu-item">
-        <nuxt-link to="about" class="navigation__menu-link navigation__menu-link--beige-coal">
-          <span class="navigation__menu-label">About</span>
+      <li class="navigation__menu-item" :class=[visibilityClass]>
+        <nuxt-link  ref="about" to="about" class="navigation__menu-link navigation__menu-link--beige-coal" >
+          <span class="navigation__menu-label" v-text="menuLabel('about')"></span>
+          <span class="navigation__menu-background" :style="menuBackground('about')"></span>
         </nuxt-link>
       </li>
-      <li ref="contact" class="navigation__menu-item">
-        <nuxt-link to="contact" class="navigation__menu-link navigation__menu-link--red-white">
-          <span class="navigation__menu-label">Contact</span>
+      <li class="navigation__menu-item" :class=[visibilityClass]>
+        <nuxt-link ref="contact" to="contact" class="navigation__menu-link navigation__menu-link--red-white">
+          <span class="navigation__menu-label" v-text="menuLabel('contact')"></span>
+          <span class="navigation__menu-background" :style="menuBackground('contact')"></span>
         </nuxt-link>
       </li>
     </ul>
@@ -31,6 +34,7 @@
 import Burger from '~/components/Burger'
 import SocialLinks from '~/components/SocialLinks'
 import NavEgg from '~/components/NavEgg'
+import windowresize from '~/mixins/windowresize'
 import page from '~/static/content/work.json'
 import { TimelineLite, TweenLite } from 'gsap'
 
@@ -62,17 +66,25 @@ export default {
   data: () => ({
     isOpen: false,
     isExpandedEgg: false,
-    masterTimeline: null
+    showTextVisibility: false,
+    masterTimeline: null,
+    viewportChange: 'mobile'
   }),
   props: ['menu', 'social'],
+  mixins: [windowresize],
   computed: {
     eggRatio () {
       return (EGG_WIDTH / EGG_HEIGHT) * 100
     },
     eggWidth () {
-      return (!this.isOpen)
+      return (!this.isOpen || this.viewportChange === 'mobile' || this.viewportChange === 'desktop')
         ? {width: this.getDefaultSize()}
         : {width: this.getViewportEggSize()}
+    },
+    visibilityClass () {
+      return {
+        'navigation__menu-item--show-text' : this.showTextVisibility
+      }
     }
   },
   watch: {
@@ -83,8 +95,27 @@ export default {
     }
   },
   methods: {
+    windowResizeCallbackEvent () {
+      this.closeMenu()
+      this.updateViewportChange()
+    },
     toggle () {
       this.isOpen = !this.isOpen
+    },
+    closeMenu() {
+      this.isOpen = false
+    },
+    updateViewportChange () {
+      
+      this.viewportChange = window.innerWidth < 768 ? 'mobile' : 'desktop' 
+    },
+    menuBackground (name) {
+      return {
+        backgroundImage: `url('${this.menu.links[name].image}')`
+      }
+    },
+    menuLabel (name) {
+      return this.menu.links[name].label
     },
     isMobile () {
       return attempt(_ => window.innerWidth < 768, false) 
@@ -113,35 +144,10 @@ export default {
       this.tlDesktop
         .to(about, 1, { bottom: '100%' }, { bottom: '0%' }, 'stage1')
     },
-    tweenTextVisibility (element) {
-      (element.isTextVisible)
-        ? TweenLite.set(element, {className:"-=navigation__menu-item--show-text"})
-        : TweenLite.set(element, {className:'+=navigation__menu-item--show-text '})
-      element.isTextVisible = !element.isTextVisible
+    tweenTextVisibility () {
+      this.showTextVisibility = !this.showTextVisibility
     },
     buildMobileTimeline () {
-      let {about, contact, work, menu} = this.$refs
-
-      this.tlDesktop = new TimelineLite()
-      // this.tlDesktop = new TimelineMax({paused: true})
-      
-      let menuHeight = menu.getBoundingClientRect().height
-      let workOffset = work.getBoundingClientRect().bottom
-      let workHeight = work.getBoundingClientRect().height
-      
-      work.isTextVisible = false
-
-      this.tlDesktop
-        .set(work, { position: 'absolute', bottom: menuHeight, height: MENU__HEIGHT__ANIMATED, opacity: .3 })
-        .to(work, 0.75, { bottom: menuHeight - workOffset}, 'stage1' )
-        .to(work, 0.5, { height: workHeight, opacity: 1},  '-=0.25')
-        .call(this.tweenTextVisibility, [ work ])
-        .to(work, 0.01, { opacity: 1 })
-        .eventCallback('onReverseComplete', () => {  
-          TweenLite.set(work, {clearProps: 'all'})
-        })
-    },
-    buildNavTimeline (navEl, menuHeight, menuLeftOffset, hardOffsetLeft = false ) {
       let tl = new TimelineLite()
       let boundingRect = navEl.getBoundingClientRect()
       let navOffset = boundingRect.bottom
@@ -153,11 +159,36 @@ export default {
       navEl.isTextVisible = false
 
       tl
-        .set(navEl, { position: 'absolute', left: leftOffset, bottom: menuHeight, height: MENU__HEIGHT__ANIMATED, opacity: .3 })
+        .set(navEl, { position: 'absolute', left: leftOffset, bottom: menuHeight, height: MENU__HEIGHT__ANIMATED })
         .to(navEl, 0.75, { bottom: menuHeight - navOffset}, 'stage1' )
         .to(navEl, 0.5, { height: navHeight, opacity: 1}  )
         .call(this.tweenTextVisibility, [ navEl ], '-=0.2')
         .to(navEl, 0.01, { opacity: 1 })
+        .eventCallback('onReverseComplete', () => {  
+          TweenLite.set(navEl, {clearProps: 'all'})
+        })
+
+      return tl
+    },
+    buildNavTimeline (navEl, growDirection = 'toTop' ) {
+      let tl = new TimelineLite()
+      
+      navEl.isTextVisible = false
+      let topOffset  = (growDirection === 'toBottom')
+        ? 0
+        : '100%'
+      let bottomOffset  = (growDirection === 'toBottom')
+        ? '100%'
+        : 0
+
+      let changeFactor = (growDirection === 'toBottom')
+        ? 'bottom'
+        : 'top'
+
+      tl
+        .set(navEl, { top: topOffset, bottom: bottomOffset, opacity: .3})
+        .to(navEl, 0.75, { [changeFactor]: '0%' }, 'height' )
+        .to(navEl, 0.75, { opacity: 1 }, 'height=-0.25' )
         .eventCallback('onReverseComplete', () => {  
           TweenLite.set(navEl, {clearProps: 'all'})
         })
@@ -172,20 +203,23 @@ export default {
       if (this.masterTimeline !== null ) this.masterTimeline.clear()
       this.masterTimeline = new TimelineLite()
 
-      this.masterTimeline.eventCallback('onReverseComplete', () => {  
+      this.masterTimeline.eventCallback('onReverseComplete', () => {
         this.isExpandedEgg = false
       })
 
       if (window.innerWidth > 767) {
-        this.masterTimeline.add(this.buildNavTimeline(about, menuHeight, menuLeftOffset), 'step1')
-        this.masterTimeline.add(this.buildNavTimeline(contact, menuHeight, menuLeftOffset, true), 'step1+=0.25')
-        this.masterTimeline.add(this.buildNavTimeline(work, menuHeight, menuLeftOffset), 'step1+=0.75')
+        this.masterTimeline.add(this.buildNavTimeline(contact.$el, 'toTop'), 'step1')
+        this.masterTimeline.add(this.buildNavTimeline(about.$el, 'toBottom'), 'step1')
+        this.masterTimeline.to(work.$el, 0.75, {opacity: 1}, '-=0.75')
+        this.masterTimeline.call(this.tweenTextVisibility, [], '-=0.2')
+        this.masterTimeline.to(work.$el, 0.1, {opacity: 1})
       } else {
         
+        this.masterTimeline.add(this.buildNavTimeline(contact.$el, 'toTop'), 'step1')
+        this.masterTimeline.add(this.buildNavTimeline(about.$el, 'toBottom'), 'step1')
+        this.masterTimeline.to(work.$el, 0.75, {opacity: 1}, '-=0.75')
+        this.masterTimeline.call(this.tweenTextVisibility, [], '-=0.2')
         this.masterTimeline.add(TweenLite.to(this.$refs.sociallinks.$el, 0.5, {opacity: 1} ))
-        this.masterTimeline.add(this.buildNavTimeline(contact, menuHeight, menuLeftOffset), 'step1')
-        this.masterTimeline.add(this.buildNavTimeline(about, menuHeight, menuLeftOffset), 'step1+=0.5')
-        this.masterTimeline.add(this.buildNavTimeline(work, menuHeight, menuLeftOffset), 'step1+=1')
 
       }
     },
@@ -199,15 +233,6 @@ export default {
         .timeScale(1.75)
         .reverse()
     }
-  },
-  mounted () {
-    
-    // this.playTimeline()
-
-    //   setTimeout(() => {
-    //     this.reverseTimeline()
-    //   }, 5000);
-    
   }
 }
 </script>
