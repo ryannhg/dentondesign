@@ -1,5 +1,6 @@
 <template>
   <div class="layout">
+    <global-header />
     <navigation :menu="menu" :social="social"></navigation>
     <!-- navbar -->
     <nuxt/>
@@ -8,6 +9,7 @@
 </template>
 
 <script>
+import GlobalHeader from '~/components/GlobalHeader'
 import Navigation from '~/components/Navigation'
 import menu from '~/static/content/menu.json'
 import navbar from '~/static/content/navbar.json'
@@ -15,6 +17,7 @@ import social from '~/static/content/social.json'
 
 export default {
   components: {
+    GlobalHeader,
     Navigation
   },
   data: () => ({

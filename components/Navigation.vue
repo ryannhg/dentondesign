@@ -207,25 +207,21 @@ export default {
         this.isExpandedEgg = false
       })
 
-      if (window.innerWidth > 767) {
-        this.masterTimeline.add(this.buildNavTimeline(contact.$el, 'toTop'), 'step1')
-        this.masterTimeline.add(this.buildNavTimeline(about.$el, 'toBottom'), 'step1')
-        this.masterTimeline.to(work.$el, 0.75, {opacity: 1}, '-=0.75')
-        this.masterTimeline.call(this.tweenTextVisibility, [], '-=0.2')
-        this.masterTimeline.to(work.$el, 0.1, {opacity: 1})
-      } else {
-        
-        this.masterTimeline.add(this.buildNavTimeline(contact.$el, 'toTop'), 'step1')
-        this.masterTimeline.add(this.buildNavTimeline(about.$el, 'toBottom'), 'step1')
-        this.masterTimeline.to(work.$el, 0.75, {opacity: 1}, '-=0.75')
-        this.masterTimeline.call(this.tweenTextVisibility, [], '-=0.2')
-        this.masterTimeline.add(TweenLite.to(this.$refs.sociallinks.$el, 0.5, {opacity: 1} ))
+      this.masterTimeline.add(this.buildNavTimeline(contact.$el, 'toTop'), 'step1')
+      this.masterTimeline.add(this.buildNavTimeline(about.$el, 'toBottom'), 'step1')
+      this.masterTimeline.to(work.$el, 0.75, {opacity: 1}, '-=0.75')
+      this.masterTimeline.call(this.tweenTextVisibility, [], '-=0.2')
+      this.masterTimeline.to(work.$el, 0.1, {opacity: 1})
 
+      if (window.innerWidth < 767) {
+        this.masterTimeline.add(TweenLite.to(this.$refs.sociallinks.$el, 0.5, {opacity: 1} ))
       }
+      
+      return this.masterTimeline
     },
     handleEggTransition () {
       if (this.isOpen) {
-        this.playTimeline()
+        this.playTimeline().timeScale(1.75)
       }
     },
     reverseTimeline () {

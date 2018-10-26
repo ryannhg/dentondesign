@@ -10,10 +10,10 @@ export default {
       , false)
   },
   methods: {
-    windowResizeCallbackEvent() {
+    windowResizeCallbackEvent () {
       // console.log('size me')
     },
-    resizeThrottle() {
+    resizeThrottle () {
       if (!this.timeoutID) {
         this.timeoutID = setTimeout(() => {
           this.timeoutID = undefined

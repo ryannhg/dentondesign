@@ -1,0 +1,21 @@
+.logo {
+  &__link {
+    display: block;
+  }
+
+  &__main {
+    width: 95px;
+    display: block;
+  }
+
+  &__svg {
+    position: relative;
+    width: 100%;
+  }
+
+  @include above('mobile') {
+    &__main {
+      width: 155px;
+    }
+  }
+}

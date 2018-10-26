@@ -1,0 +1,8 @@
+.global-header {
+  padding-left: $globals__header-padding;
+  padding-top: $globals__header-padding;
+
+  @include above('mobile') {
+    
+  }
+}
