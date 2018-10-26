@@ -147,29 +147,6 @@ export default {
     tweenTextVisibility () {
       this.showTextVisibility = !this.showTextVisibility
     },
-    buildMobileTimeline () {
-      let tl = new TimelineLite()
-      let boundingRect = navEl.getBoundingClientRect()
-      let navOffset = boundingRect.bottom
-      let navHeight = boundingRect.height
-      let leftOffset = (hardOffsetLeft)
-        ? boundingRect.width
-        : Math.floor(boundingRect.left - menuLeftOffset)
-      
-      navEl.isTextVisible = false
-
-      tl
-        .set(navEl, { position: 'absolute', left: leftOffset, bottom: menuHeight, height: MENU__HEIGHT__ANIMATED })
-        .to(navEl, 0.75, { bottom: menuHeight - navOffset}, 'stage1' )
-        .to(navEl, 0.5, { height: navHeight, opacity: 1}  )
-        .call(this.tweenTextVisibility, [ navEl ], '-=0.2')
-        .to(navEl, 0.01, { opacity: 1 })
-        .eventCallback('onReverseComplete', () => {  
-          TweenLite.set(navEl, {clearProps: 'all'})
-        })
-
-      return tl
-    },
     buildNavTimeline (navEl, growDirection = 'toTop' ) {
       let tl = new TimelineLite()
       
@@ -197,8 +174,6 @@ export default {
     },
     playTimeline() {
       let {about, contact, work, menu} = this.$refs
-      let menuHeight = menu.getBoundingClientRect().height
-      let menuLeftOffset = menu.getBoundingClientRect().left
 
       if (this.masterTimeline !== null ) this.masterTimeline.clear()
       this.masterTimeline = new TimelineLite()
@@ -216,7 +191,7 @@ export default {
       if (window.innerWidth < 767) {
         this.masterTimeline.add(TweenLite.to(this.$refs.sociallinks.$el, 0.5, {opacity: 1} ))
       }
-      
+
       return this.masterTimeline
     },
     handleEggTransition () {

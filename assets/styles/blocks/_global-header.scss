@@ -3,6 +3,7 @@
   padding-top: $globals__header-padding;
 
   @include above('mobile') {
-    
+    padding-left: $globals__header-padding--tablet;
+    padding-top: $globals__header-padding--tablet;
   }
 }
