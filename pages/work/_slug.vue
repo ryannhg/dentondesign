@@ -9,6 +9,8 @@
       :title="'Objective'" :copy="page.objective" :image-type="'shell'"></line-snippet>
     <line-snippet v-if="hasSnippetFor('Outcome')" 
       :title="'Outcome'" :copy="page.outcome" :image-type="'sandwich'"></line-snippet>
+
+    <link-callout :link-content="page.siteLink"></link-callout>
   </div>
 </main>
 </template>
@@ -17,13 +19,15 @@
 <script>
 import pageHeading from '~/components/PageHeading'
 import LineSnippet from '~/components/LineSnippet'
+import LinkCallout from '~/components/LinkCallout'
 import page from '~/static/content/work/burns-mcdonnell.json'
 
 
 export default {
   components: {
     pageHeading,
-    LineSnippet
+    LineSnippet,
+    LinkCallout
   },
   data: () =>({page}),
   methods: {
