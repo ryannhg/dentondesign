@@ -6,20 +6,20 @@
     <nav-egg v-on:transition-finished="handleEggTransition" :is-expanded="isExpandedEgg"></nav-egg>
 
     <ul ref="menu" class="navigation__menu">
-      <li  class="navigation__menu-item navigation__menu-item--primary" :class=[visibilityClass]>
+      <li @click="closeMenu" class="navigation__menu-item navigation__menu-item--primary" :class=[visibilityClass]>
         <nuxt-link ref="work" to="work" class="navigation__menu-link navigation__menu-link--large navigation__menu-link--white-onred">
           <span class="navigation__menu-label" v-text="menuLabel('work')"></span>
           <span class="navigation__menu-background" :style="menuBackground('work')"></span>
         </nuxt-link>
       </li>
-      <li class="navigation__menu-item" :class=[visibilityClass]>
-        <nuxt-link  ref="about" to="about" class="navigation__menu-link navigation__menu-link--beige-coal" >
+      <li @click="closeMenu" class="navigation__menu-item" :class=[visibilityClass]>
+        <nuxt-link ref="about" to="about" class="navigation__menu-link navigation__menu-link--beige-coal" >
           <span class="navigation__menu-label" v-text="menuLabel('about')"></span>
           <span class="navigation__menu-background" :style="menuBackground('about')"></span>
         </nuxt-link>
       </li>
-      <li class="navigation__menu-item" :class=[visibilityClass]>
-        <nuxt-link ref="contact" to="contact" class="navigation__menu-link navigation__menu-link--red-white">
+      <li @click="closeMenu" class="navigation__menu-item" :class=[visibilityClass]>
+        <nuxt-link  ref="contact" to="contact" class="navigation__menu-link navigation__menu-link--red-white">
           <span class="navigation__menu-label" v-text="menuLabel('contact')"></span>
           <span class="navigation__menu-background" :style="menuBackground('contact')"></span>
         </nuxt-link>

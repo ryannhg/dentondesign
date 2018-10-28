@@ -2,8 +2,12 @@
     "images": [
         "/images/pages/work/burns-mcdonnell/1.jpg"
     ],
+    
     "imageCaption": "Creative direction / digital identity / video",
-    "title": "Burns McDonnell",
+    "titleImage": {
+        "src": "/images/pages/work/burns-mcdonnell/title.svg",
+        "alt": "Burns McDonnell"
+    },
     "description": "a world-renowned architecture, construction & engineering firm",
     "obstacle": "create a digital experience that is as impressive as the firm’s impact on global design and infrastructure",
     "objective": "extending the brand promise of “create amazing” into a memorable identity and digital experience",

@@ -6,14 +6,14 @@
         <img :src="image.src" :alt="image.alt" class="page-heading__svg" />
       </span>
     </h1>
-    <p class="page-heading__copy" v-text="title"></p>
+    <p class="page-heading__copy" v-text="caption"></p>
   </div>
 </template>
 
 <script>
 export default {
   props: {
-    title: String,
+    caption: String,
     image: Object
   }
 }
