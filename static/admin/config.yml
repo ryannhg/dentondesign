@@ -5,8 +5,8 @@ backend:
 # publish_mode: editorial_workflow
 display_url: https://dentondesign.netlify.com
 
-media_folder: "static/media"
-public_folder: "/media"
+media_folder: "static/images"
+public_folder: "/images"
 
 collections:
   - label: 'Pages'
