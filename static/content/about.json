@@ -1,4 +1,9 @@
 {
+    "meta": {
+      "title": "About | Denton Design",
+      "description": "I started as a designer and worked my way up the creative ladder. I pride myself on leading by example. I don’t ask anyone on the team to do anything I haven’t done in the past.",
+      "image": "/images/pages/about/background.jpg"
+    },
     "backgroundImage": {
         "src": "/images/pages/about/background.jpg",
         "alt": "Nate Denton"
