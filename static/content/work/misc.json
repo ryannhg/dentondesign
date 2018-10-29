@@ -1,0 +1,18 @@
+{
+  "meta": {
+    "title": "Misc | Work | Denton Design",
+    "description": "Miscelleanous Work",
+    "image": "/images/work-misc-featured.jpg"
+  },
+
+  "images": [
+    "/images/work-misc-featured.jpg"
+  ],
+  "imageCaption": "Creative direction / digital identity / video",
+  "titleImage": {
+    "src": "/images-work-isc-title.svg",
+    "alt": "Burns McDonnell"
+  },
+  "description": "an aspirational refresh for a high-end furniture company that brings iconic modern design to the masses",
+  "richtext": "<p>Commodo nisi nisi aliqua nulla quis et sint est. Reprehenderit non minim qui deserunt. Minim minim nisi ea adipisicing adipisicing ea dolor. Dolore incididunt elit anim ut Lorem amet incididunt ad. Aliquip in irure cupidatat ea.</p><p>Reprehenderit qui est veniam in sit enim enim.</p><p><img src='/images/menu-about.jpg' >/></p>"
+}

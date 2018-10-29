@@ -3,10 +3,11 @@
 
   &__main {
     height: 100%;
-    overflow-x: hidden;
+    
   }
   &__content {
     padding-top: 85vh;
+    
 
     &--above-fold {
       padding-top: $globals__page-padding-top;
