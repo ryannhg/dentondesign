@@ -31,7 +31,7 @@
 
   @include above('desktop') {
     &__copy {
-      font-size: $fonts__h4--tablet;
+      font-size: 4rem;
     }
   }
 }
