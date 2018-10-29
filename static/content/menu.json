@@ -2,15 +2,15 @@
     "links": {
         "work": {
             "label": "Work",
-            "image": "/images/menu/work.png"
+            "image": "/images/menu/work.jpg"
         },
         "about": {
             "label": "About",
-            "image": "/images/menu/about.png"
+            "image": "/images/menu/about.jpg"
         },
         "contact": {
             "label": "Contact",
-            "image": "/images/menu/contact.png"
+            "image": "/images/menu/contact.jpg"
         }
     }
 }

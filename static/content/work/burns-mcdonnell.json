@@ -1,13 +1,17 @@
 {
     "images": [
-        "/images/pages/work/skadden/1.jpg"
+        "/images/pages/work/burns-mcdonnell/1.jpg"
     ],
+    
     "imageCaption": "Creative direction / digital identity / video",
-    "title": "Skadden",
-    "description": "a global law firm that packs a punch",
-    "obstacle": "a strong brand didn’t have a digital presence that matched it’s market cache",
-    "objective": "create a digital identity and experience that is as strong as the firm’s reputation within the industry",
-    "outcome": "a cohesive digital experience that attracted both clients and talent",
+    "titleImage": {
+        "src": "/images/pages/work/burns-mcdonnell/title.svg",
+        "alt": "Burns McDonnell"
+    },
+    "description": "a world-renowned architecture, construction & engineering firm",
+    "obstacle": "create a digital experience that is as impressive as the firm’s impact on global design and infrastructure",
+    "objective": "extending the brand promise of “create amazing” into a memorable identity and digital experience",
+    "outcome": "creation of a website & identity that set the firm well ahead of its direct competitors",
     "siteLink": {
         "url": "https://www.skadden.com",
         "label": "Launch site"

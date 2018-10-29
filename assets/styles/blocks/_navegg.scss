@@ -1,0 +1,37 @@
+$eggsize: 68px;
+$eggheight: 62px;
+
+$eggsize--tablet: 141px;
+$eggheight--tablet: 126px;
+
+.navegg {
+  position: absolute;
+  width: $eggsize;
+  height: $eggheight;
+  right: $globals__header-padding;
+  top: $globals__header-padding;
+  z-index: 2;
+  
+  &__nest {
+    @include centeralign('both');
+
+    width: $eggsize;
+    position: absolute;
+    transition: width 0.75s linear,
+    height 0.75s linear;  
+  }
+
+  &__svg {
+    width: 100%;
+    position: relative;
+  }
+
+  @include above('mobile') {
+    position: absolute;
+    width: $eggsize--tablet;
+    height: $eggheight--tablet;
+    right: $globals__header-padding--tablet;
+    top: $globals__header-padding--tablet - 20px;
+
+  }
+}

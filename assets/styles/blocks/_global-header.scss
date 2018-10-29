@@ -1,0 +1,11 @@
+.global-header {
+  padding-left: $globals__header-padding;
+  padding-top: $globals__header-padding;
+  position:fixed;
+  z-index: 2;
+
+  @include above('mobile') {
+    padding-left: $globals__header-padding--tablet;
+    padding-top: $globals__header-padding--tablet;
+  }
+}

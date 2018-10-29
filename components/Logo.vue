@@ -1,0 +1,22 @@
+<template>
+  <div class="logo" >
+    <nuxt-link to="/" class="logo__link">
+      <span class="logo__main">
+        <img class="logo__svg" src="~/assets/images/logo.svg" />
+      </span>
+    </nuxt-link>
+  </div>
+</template>
+
+
+<script>
+
+export default {
+  props: { 
+    isMini: {
+      type: Boolean,
+      default: false
+    }
+  }
+}
+</script>

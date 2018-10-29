@@ -33,6 +33,9 @@
   &__small {
     font-size: $fonts__small;
   }
+  &__snippets {
+    font-size: $fonts__snippets;
+  }
 
   @include above(tablet) {
     &__h1 {
@@ -61,6 +64,9 @@
     }
     &__small {
       font-size: $fonts__small--tablet;
+    }
+    &__snippets {
+      font-size: $fonts__snippets;
     }
   }
 }

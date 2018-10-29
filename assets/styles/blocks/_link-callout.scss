@@ -1,0 +1,23 @@
+.link-callout {
+  padding-bottom: 80px;
+  text-align: center;
+
+  &__heading {
+    text-align: left;
+    display: inline-block;
+    border-top: $globals__border-size solid $colors__tan;
+    padding-top: 20px;
+    color: $colors__cherry;
+  }
+
+  @include above('mobile') {
+    padding-bottom: 130px;
+
+    &__heading {
+      text-align: left;
+      display: inline-block;
+      border-top: $globals__border-size--tablet solid $colors__tan;
+      padding-top: 38px;
+    }
+  }
+}

@@ -3,9 +3,23 @@
 
   &__main {
     height: 100%;
+    overflow-x: hidden;
   }
   &__content {
     padding-top: 85vh;
-    overflow: auto;
+
+    &--above-fold {
+      padding-top: $globals__page-padding-top;
+    }
+  }
+
+  @include above('mobile') {
+    &__content {
+      padding-top: 85vh;
+
+      &--above-fold {
+        padding-top: $globals__page-padding-top--tablet;
+      }
+    }
   }
 }
