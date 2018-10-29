@@ -29,7 +29,10 @@ export default {
     LineSnippet,
     LinkCallout
   },
-  data: () =>({page}),
+  asyncData ({ route }) {
+    const page = require(`~/static/content/work/${route.params.slug}.json`)
+    return { page }
+  },
   methods: {
     hasSnippetFor (section) {
       return this.$data.page[section.toLowerCase()] 
