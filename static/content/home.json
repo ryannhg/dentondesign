@@ -2,14 +2,14 @@
     "meta": {
         "title": "Denton Design",
         "description": "Hatching design solutions for brands big and small.",
-        "image": "/images/pages/home/background.jpg"
+        "image": "/images/home-bg.jpg"
     },
     "backgroundImage": {
-        "src": "/images/pages/home/background.jpg",
+        "src": "/images/home-bg.jpg",
         "alt": "A defiantly handsome chicken."
     },
     "titleImage": {
-        "src": "/images/pages/home/title.svg",
+        "src": "/images/home-title.svg",
         "alt": "Nathan Denton, Creative Director"
     },
     "caption": "Hatching design solutions for brands big and small",
