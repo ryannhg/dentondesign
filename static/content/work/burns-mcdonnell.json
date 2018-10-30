@@ -2,11 +2,11 @@
     "title": "Burns McDonnell",
     "type": "Obstacle, Objective, Outcome",
     "images": [
-        "/images/pages/work/burns-mcdonnell/1.jpg"
+        "/images/pages-work-burns-featured.png"
     ],
     "imageCaption": "Creative direction / digital identity / video",
     "titleImage": {
-        "src": "/images/pages/work/burns-mcdonnell/title.svg",
+        "src": "/images/pages-work-burns-title.svg",
         "alt": "Burns McDonnell"
     },
     "description": "a world-renowned architecture, construction & engineering firm",
