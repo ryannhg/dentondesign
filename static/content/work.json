@@ -1,23 +1,41 @@
 {
-    "meta": {
-        "title": "Work | Denton Design",
-        "description": "Hatching design solutions for brands big and small.",
-        "image": "/images/pages/work/background.jpg"
+  "meta": {
+    "title": "Work | Denton Design",
+    "description": "Hatching design solutions for brands big and small.",
+    "image": "/images/pages/work/background.jpg"
+  },
+  "backgroundImage": {
+    "src": "/images/pages/work/background.jpg",
+    "alt": "Some eggs."
+  },
+  "titleImage": {
+    "src": "/images/pages/work/title.svg",
+    "alt": "Work"
+  },
+  "links": [
+    {
+      "label": "One North",
+      "url": "/work/one-north"
     },
-    "backgroundImage": {
-        "src": "/images/pages/work/background.jpg",
-        "alt": "Some eggs."
+    {
+      "label": "Skadden",
+      "url": "/work/skadden"
     },
-    "titleImage": {
-        "src": "/images/pages/work/title.svg",
-        "alt": "Work"
+    {
+      "label": "Burns McDonnell",
+      "url": "/work/burns-mcdonnell"
     },
-    "links": [
-        { "label": "One North", "url": "/work/one-north" },
-        { "label": "Burns McDonnell", "url": "/work/burns-mcdonnell" },
-        { "label": "Skadden", "url": "/work/skadden" },
-        { "label": "Demerly Architects", "url": "/work/demerly-architects" },
-        { "label": "Sidley Austin", "url": "/work/sidley-austin" },
-        { "label": "Miscellaneous", "url": "/work/miscellaneous" }
-    ]
+    {
+      "label": "Demerly Architects",
+      "url": "/work/demerly-architects"
+    },
+    {
+      "label": "Sidley Austin",
+      "url": "/work/sidley-austin"
+    },
+    {
+      "label": "Miscellaneous",
+      "url": "/work/miscellaneous"
+    }
+  ]
 }
