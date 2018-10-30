@@ -101,9 +101,13 @@
 
       .navigation__menu-label {
         &:before {
-          background-color: $colors__cherry
+          background-color: $colors__cherry;
         }
       }
+    }
+
+    &--beige-cool {
+      background-color: #484b4c;
     }
 
     &--red-white {

@@ -1,0 +1,22 @@
+.line {
+  &__top {
+    height: 200px;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 100%;
+      left: 50%;
+      width: 3px;
+      background: white;
+      transition: bottom 500ms ease-in;
+    }
+
+    &--ready {
+      &::before {
+        bottom: 0;
+      }
+    }
+  }
+}
