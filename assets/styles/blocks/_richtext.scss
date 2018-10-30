@@ -1,0 +1,157 @@
+.richtext {
+  $spacing__normalize: 1rem;
+  font-size: $fonts__copy;
+  text-align: center;
+  line-height: 1.5;
+  color: $colors__coal;
+
+  &--color-white {
+    color: $colors__white;
+  }
+  
+  & > * {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  a {
+    color: $colors__cherry;
+  }
+
+  p {
+    margin-bottom: $spacing__normalize;
+  }
+
+  ul {
+    
+    // padding-left: 1.1em;
+    margin-bottom: $spacing__normalize;
+
+    ul {
+      // list-style-type: circle;
+      margin-top: $spacing__normalize/2;
+    }
+  }
+
+  li {
+    margin-bottom: $spacing__normalize;
+  }
+
+  ol {
+    // padding-left: 1.1em;
+    margin-bottom: $spacing__normalize;
+
+    ol {
+      margin-top: $spacing__normalize/2;
+    }
+  }
+
+  // blockquote,
+  // .blockquote {
+  //   @include font-weight('light');
+  //   font-size: em($font-size__blockquote);
+  //   line-height: 1.2;
+  //   margin: px-to-em($spacing__normalize) 0;
+  //   padding-top: em($spacing-base, $font-size__blockquote);
+  //   border-top: 3px solid $color__brand-aqua;
+
+  //   p {
+  //     margin-bottom: 0.5em;
+  //   }
+
+  //   cite,
+  //   .cite {
+  //     font-size: em($font-size__small, $font-size__blockquote);
+  //     text-transform: uppercase;
+  //   }
+  // }
+
+  // cite,
+  // .cite {
+  //   @include font-weight('bold');
+
+  //   font-style: normal;
+  //   font-size: em($font-size__small);
+  //   color: $color__text-gray;
+  // }
+
+  //headings
+  
+  h2,
+  .h2-size {
+    font-size: $fonts__h2;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+  }
+
+  h3,
+  .h3-size {
+    font-size:$fonts__h3;
+    line-height: 1.1;
+    margin-bottom:$spacing__normalize;
+  }
+
+  h4,
+  .h4-size {
+    font-size: $fonts__h4;
+    line-height: 1.1;
+    margin-bottom: $spacing__normalize;
+  }
+
+  h5,
+  .h5-size {
+    font-size: $fonts__h5;
+    line-height: 1.1;
+    margin-bottom: $spacing__normalize;
+  }
+  
+  h6,
+  .h6-size {
+    font-size: $fonts__h6;
+    line-height: 1.1;
+    margin-bottom:$spacing__normalize;
+  }  
+
+  img,
+  iframe {
+    max-width: 100%;
+  }
+
+  @include above('mobile') {
+    font-size: $fonts__copy--tablet;
+
+    &--small {
+      font-size: 35px;
+    }
+
+    h2,
+    .h2-size {
+      font-size: $fonts__h2--tablet;
+    }
+
+    h3,
+    .h3-size {
+      font-size:$fonts__h3--tablet;
+    }
+
+    h4,
+    .h4-size {
+      font-size: $fonts__h4--tablet;
+    }
+
+    h5,
+    .h5-size {
+      font-size: $fonts__h5--tablet;
+    }
+    
+    h6,
+    .h6-size {
+      font-size: $fonts__h6--tablet;
+    } 
+  }
+}
