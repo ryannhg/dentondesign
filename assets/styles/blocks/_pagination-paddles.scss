@@ -50,6 +50,8 @@
   @include above('mobile') {
 
      &__button {
+      @include transition(background-color, color);
+      
       $icon-padding: $wrapper-padding * 1.25;
       
       min-height: 200px;
@@ -69,6 +71,11 @@
         .icon {
           right: $icon-padding;
         }
+      }
+
+      &:hover {
+        color: $colors__cherry;
+        background-color: $colors__white;
       }
     }
   }

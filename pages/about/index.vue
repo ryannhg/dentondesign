@@ -1,6 +1,6 @@
 <template>
   <div class="layout__main">
-    <parallax-background :image="page.backgroundImage.src"></parallax-background>
+    <parallax-background :opacity-percent="0.6" :image="page.backgroundImage.src"></parallax-background>
     <div class="layout__content">
       <page-heading :image="page.titleImage"></page-heading>
       <tabs :approach="page.approach" :timeline="page.timeline"></tabs>

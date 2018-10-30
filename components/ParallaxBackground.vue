@@ -19,7 +19,8 @@ export default {
     overlays: {
       type: Array
     },
-    activeOverlay: Number
+    activeOverlay: Number,
+    opacityPercent: {type: Number, default: 1}
   },
   data: () => ({
     pixelsScrolled: 0
@@ -28,7 +29,7 @@ export default {
     imageStyles () {
       return {
         'background-image': `url('${this.image}')`,
-        opacity: 1,
+        opacity: (this.opacityPercent === 1) ? 1 : 1 - (this.percent * this.opacityPercent),
         'background-position-y': `${(1 - this.percent) * 4}rem`
       }
     },

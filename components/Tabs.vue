@@ -1,15 +1,15 @@
 <template>
   <div class="tabs">
-    <div class="tabs__navigation wrapper wrapper--narrow">
+    <!-- <div class="tabs__navigation wrapper wrapper--narrow">
       <button class="tabs__navigation">{{approach.label}}</button>
       <button class="tabs__navigation">{{timeline.label}}</button>
-    </div>
+    </div> -->
 
-    <div class="tabs__panel">
+    <!-- <div class="tabs__panel">
       <div class="wrapper wrapper--narrow">
         <div class="richtext richtext--color-white" v-html="approach.content"></div>
       </div>
-    </div>
+    </div> -->
 
     <div class="tabs__panel">
       

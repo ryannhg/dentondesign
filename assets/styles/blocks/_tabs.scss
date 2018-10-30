@@ -1,5 +1,6 @@
 .tabs {
   padding-bottom: 80px;
+  padding-top: 50px;
   
   @include above('mobile') {
     padding-bottom: 130px;

@@ -24,6 +24,14 @@
   &__row & {
     border-left: 0;
   }
+  @include above('mobile') {
+    @include transition(background-color,color);
+
+    &:hover {
+      color: $colors__cherry;
+      background-color: $colors__white;
+    }
+  }
 
   @include above('tablet') {
     font-size: $fonts__button--tablet;

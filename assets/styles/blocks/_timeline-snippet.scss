@@ -10,7 +10,12 @@
     max-width: none;
   }
 
-  
+  &--intro &{
+    &__caption {
+      margin-top: 1.25rem;
+    }
+  }
+
   &__year {
     color: $colors__cherry;
     line-height: 1;

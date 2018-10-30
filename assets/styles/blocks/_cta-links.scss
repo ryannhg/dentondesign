@@ -47,6 +47,8 @@
   }
 
   @include above('tablet') {
+    margin-top: 120px;
+    
     &__label {
       width: calc(50% - #{$wrapper-maxwidth--narrow/2})
     }

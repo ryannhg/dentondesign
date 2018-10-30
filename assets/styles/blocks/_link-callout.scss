@@ -23,9 +23,14 @@
     padding-bottom: 130px;
 
     &__heading {
+      @include transition(color);
       padding-top: 38px;
       min-width: 400px;
       border-top-width: $globals__border-size--tablet;
-    }
+
+      &:hover {
+        color: $colors__coal;
+      }
+    }  
   }
 }

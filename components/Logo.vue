@@ -4,6 +4,9 @@
       <span class="logo__main">
         <img class="logo__svg" src="~/assets/images/logo.svg" />
       </span>
+      <span class="logo__mobile">
+        <img class="logo__svg" src="~/assets/images/logo-dd.svg" />
+      </span>
     </nuxt-link>
   </div>
 </template>
