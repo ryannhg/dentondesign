@@ -1,18 +1,24 @@
 <template>
 <main class="layout__main">
   <div class="layout__content layout__content--above-fold">
-    <featured-screenshot :image="'~/images/pages/work/burns-mcdonnell/feature.png'" :caption="page.imageCaption" ></featured-screenshot>
+    <div class="layout__hide-edges">
+      <featured-screenshot :image="'/images/pages/work/burns-mcdonnell/featured.png'" :caption="page.imageCaption" ></featured-screenshot>
 
-    <page-heading :caption="page.description" :image="page.titleImage"></page-heading>
+      <page-heading :caption="page.description" :image="page.titleImage"></page-heading>
+      
+      <line-snippet v-if="hasSnippetFor('Obstacle')" 
+        :title="'Obstacle'" :copy="page.obstacle" :image-type="'egg'"></line-snippet>
+      <line-snippet v-if="hasSnippetFor('Objective')" 
+        :title="'Objective'" :copy="page.objective" :image-type="'shell'"></line-snippet>
+      <line-snippet v-if="hasSnippetFor('Outcome')" 
+        :title="'Outcome'" :copy="page.outcome" :image-type="'sandwich'"></line-snippet>
+
+      <link-callout :link-content="page.siteLink"></link-callout>
+
+      <pagination-paddles :left-link='{label: "BURNS MCDONNELL", url: "/works/burns-mcdonnell"}' :right-link='{label: "kirkland & Ellis", url: "/works/sidley-austin"}'></pagination-paddles>
+      
+    </div>
     
-    <line-snippet v-if="hasSnippetFor('Obstacle')" 
-      :title="'Obstacle'" :copy="page.obstacle" :image-type="'egg'"></line-snippet>
-    <line-snippet v-if="hasSnippetFor('Objective')" 
-      :title="'Objective'" :copy="page.objective" :image-type="'shell'"></line-snippet>
-    <line-snippet v-if="hasSnippetFor('Outcome')" 
-      :title="'Outcome'" :copy="page.outcome" :image-type="'sandwich'"></line-snippet>
-
-    <link-callout :link-content="page.siteLink"></link-callout>
   </div>
 </main>
 </template>
@@ -23,6 +29,7 @@ import pageHeading from '~/components/PageHeading'
 import FeaturedScreenshot from '~/components/FeaturedScreenshot'
 import LineSnippet from '~/components/LineSnippet'
 import LinkCallout from '~/components/LinkCallout'
+import PaginationPaddles from '~/components/PaginationPaddles'
 import page from '~/static/content/work/burns-mcdonnell.json'
 
 
@@ -31,7 +38,8 @@ export default {
     pageHeading,
     LineSnippet,
     LinkCallout,
-    FeaturedScreenshot
+    FeaturedScreenshot,
+    PaginationPaddles
   },
   asyncData ({ route }) {
     const page = require(`~/static/content/work/${route.params.slug}.json`)
