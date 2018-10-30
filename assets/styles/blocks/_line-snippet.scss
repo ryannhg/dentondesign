@@ -28,7 +28,7 @@
   }
 
   .line__top {
-    height: 500px;
+    height: 250px;
     z-index: -2;
   }
 
@@ -40,6 +40,9 @@
       font-size: 100px
     }
 
+    .line__top {
+      height: 500px;
+    }
     &__header {
       padding-bottom: 42px;
     }
