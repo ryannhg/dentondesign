@@ -1,12 +1,12 @@
 {
+    "title": "Skadden",
     "images": [
         "/images/pages/work/burns-mcdonnell/1.jpg"
     ],
-    
     "imageCaption": "Creative direction / digital identity / video",
     "titleImage": {
         "src": "/images/pages/work/burns-mcdonnell/title.svg",
-        "alt": "Burns McDonnell"
+        "alt": "Skadden"
     },
     "description": "a world-renowned architecture, construction & engineering firm",
     "obstacle": "create a digital experience that is as impressive as the firm’s impact on global design and infrastructure",
