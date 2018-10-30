@@ -1,0 +1,14 @@
+{
+  "type": "Misc",
+  "title": "Chickens",
+  "images": [
+    "/images/home-bg.jpg"
+  ],
+  "imageCaption": "Bagock",
+  "titleImage": {
+    "src": "/images/pages-work-title.svg",
+    "alt": "sample"
+  },
+  "description": "I make chickens fried",
+  "richtext": "Nathan is awesome and I can add text whenever I want.\n\nTaste the chicken bitches. \n\nSmell\n\nTaste\n\nSmile\n\n![about](/images/pages-about-title.svg)"
+}
