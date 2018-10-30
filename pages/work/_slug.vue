@@ -11,7 +11,8 @@
           v-image-line-slapper="images"
           v-html="marked(page.richtext)"></div>
       </div>
-      <div v-else>
+      <div v-else
+          v-image-line-slapper="images">
         <line-snippet v-if="hasSnippetFor('Obstacle')" class="line-snippet--tiny-bottom"
           :title="'Obstacle'" :copy="page.obstacle" :image-type="'egg'"></line-snippet>
         <line-snippet v-if="hasSnippetFor('Objective')" 
