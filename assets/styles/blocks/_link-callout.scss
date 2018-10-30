@@ -4,20 +4,27 @@
 
   &__heading {
     text-align: left;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
     border-top: $globals__border-size solid $colors__tan;
     padding-top: 20px;
     color: $colors__cherry;
+    min-width: 200px;
+  }
+
+  .icon {
+    margin-left: 1rem;
+    display: inline-block;
   }
 
   @include above('mobile') {
     padding-bottom: 130px;
 
     &__heading {
-      text-align: left;
-      display: inline-block;
-      border-top: $globals__border-size--tablet solid $colors__tan;
       padding-top: 38px;
+      min-width: 400px;
+      border-top-width: $globals__border-size--tablet;
     }
   }
 }

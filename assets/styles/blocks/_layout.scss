@@ -1,17 +1,16 @@
 .layout {
   height: 100%;
 
-  &__main {
-    height: 100%;
-    
-  }
   &__content {
     padding-top: 85vh;
-    
 
     &--above-fold {
       padding-top: $globals__page-padding-top;
     }
+  }
+
+  &__hide-edges {
+    overflow-x: hidden;
   }
 
   @include above('mobile') {

@@ -1,0 +1,101 @@
+.pagination-paddles {
+  display: flex;
+  position: relative;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    height: 100%;
+    border-left: 1px solid $colors__white;
+  }
+
+  &__button {
+    $icon-width: 30px;
+    width: 50%;
+    display: inline-flex;
+    align-items: center;
+     
+    background-color: $colors__cherry;
+    color: $colors__white;
+    position: relative;
+    min-height: 130px;
+    text-align: left;
+
+    &:first-child {
+      padding-left: $wrapper-padding;
+      padding-right: $wrapper-padding/2;
+      justify-content: flex-end;
+
+      .icon {
+        left: 10px;
+      }
+    }
+
+    &:last-child {
+      padding-right: $wrapper-padding;
+      padding-left: $wrapper-padding/2;
+
+      .icon {
+        right: 10px;
+      }
+    }
+  }
+
+  .icon {
+    @include centeralign('vertical');
+  }
+
+  @include above('mobile') {
+
+     &__button {
+      $icon-padding: $wrapper-padding * 1.25;
+      
+      min-height: 200px;
+
+      &:first-child {
+        padding-left: $icon-padding;
+        padding-right: $icon-padding;
+        .icon {
+          left: $icon-padding;
+        }
+      }
+
+      &:last-child {
+        padding-right: $icon-padding;
+        padding-left: $icon-padding;
+
+        .icon {
+          right: $icon-padding;
+        }
+      }
+    }
+  }
+
+  @include above('tablet') {
+
+    &__button {
+      $icon-padding: 50px;
+      
+      min-height: 250px;
+
+      &:first-child {
+        padding-left: $icon-padding;
+        padding-right: $icon-padding;
+        .icon {
+          left: $icon-padding;
+        }
+      }
+
+      &:last-child {
+        padding-right: $icon-padding;
+        padding-left: $icon-padding;
+
+        .icon {
+          right: $icon-padding;
+        }
+      }
+    }
+  }
+}

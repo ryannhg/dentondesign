@@ -1,8 +1,8 @@
 <template>
-<div class="featured-screenshot wrapper wrapper--narrow">
+<div class="featured-screenshot wrapper ">
   <figure class="featured-screenshot__figure" >
     <img class="featured-screenshot__image" :src="image" />
-    <p class="featured-screenshot__copy">{{caption}}</p>
+    <p class="featured-screenshot__caption">{{caption}}</p>
   </figure>
 </div>
 </template>

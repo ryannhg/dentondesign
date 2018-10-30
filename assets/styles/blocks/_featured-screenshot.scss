@@ -1,0 +1,40 @@
+.featured-screenshot {
+  $imageWidth: 789;
+  $imageHeight: 1125;
+  $image-ratio:  $imageWidth / $imageHeight * 100%;
+
+  margin-bottom: 3rem;
+
+  &__figure {
+    position: relative;
+    padding-top: $image-ratio;
+  }
+
+  &__image {
+    @include centeralign('horizontal');
+    max-width: 120%;
+    top: 0;
+    z-index: -1;
+  }
+
+  &__caption {
+    text-align: center;
+    color: $colors__coal;
+    font-size: $fonts__snippets;
+  }
+
+  @include above('tablet') {
+    margin-bottom: 8rem;
+
+    &__caption {
+      font-size: $fonts__snippets--tablet;
+    }
+    &__figure {
+      padding-top: $image-ratio - 5%;
+    }
+
+    &__image {
+      max-width: 150%;
+    }
+  }
+}
