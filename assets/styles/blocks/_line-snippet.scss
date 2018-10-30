@@ -2,8 +2,7 @@
   $line-height: 50px;
   $line-height--tablet: 100px;
   $image-clearance: 400px;
-  $image-clearance--tablet: 600px;
-  margin-top: 24px + $line-height;
+  $image-clearance--tablet: 600px; 
   text-align: center;
   padding-top: $line-height; 
   min-height: $image-clearance;
@@ -42,6 +41,9 @@
 
     .line__top {
       height: 500px;
+      &::before {
+        width: 5px;
+      }
     }
     &__header {
       padding-bottom: 42px;
