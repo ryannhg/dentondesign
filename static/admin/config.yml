@@ -239,11 +239,13 @@ collections:
     label_singular: Work Detail Page
     create: true
     folder: 'static/content/work'
+    filter: {field: "type", value: "Obstacle, Objective, Outcome"}
     extension: json
     name: 'work-detail-pages'
     editor:
       preview: false
     fields:
+      - {label: "Page Type", name: "type", widget: "select", options: ["Obstacle, Objective, Outcome", "Misc"], default: "Obstacle, Objective, Outcome"}
       - {label: "Title", name: "title", widget: "string"}
       - label: Images
         name: images
@@ -268,5 +270,40 @@ collections:
         - {label: Label, name: label, widget: string}
         - {label: URL, name: url, widget: string}
 
-
-    
+  - label: Work Detail Pages - Misc
+    label_singular: Work Detail Page - Misc
+    create: true
+    folder: 'static/content/work'
+    filter: {field: "type", value: "Misc"}
+    extension: json
+    name: 'work-detail-pages-misc'
+    editor:
+      preview: false
+    fields:
+      - {label: "Page Type", name: "type", widget: "select", options: ["Obstacle, Objective, Outcome", "Misc"], default: "Misc"}
+      - {label: "Title", name: "title", widget: "string"}
+      - label: Images
+        name: images
+        widget: list
+        allow_add: true
+        field: {label: Image, name: image, widget: image}
+      - {label: "Image Caption", name: "imageCaption", widget: "string"}
+      - label: Title Image
+        name: titleImage
+        widget: object
+        fields:
+        - {label: Image, name: src, widget: image}
+        - {label: Alt Text, name: alt, widget: string}
+      - {label: "Description", name: "description", widget: "string"}
+      - label: Content
+        name: richtext
+        widget: markdown
+        buttons:
+        - bold
+        - italic
+        - link
+        - heading-two
+        - heading-three
+        - heading-four
+        - bulleted-list
+        - numbered-list
