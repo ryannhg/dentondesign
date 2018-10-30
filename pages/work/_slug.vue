@@ -2,7 +2,7 @@
 <main class="layout__main">
   <div class="layout__content layout__content--above-fold">
     <div class="layout__hide-edges">
-      <featured-screenshot :image="'/images/pages/work/burns-mcdonnell/featured.png'" :caption="page.imageCaption" ></featured-screenshot>
+      <featured-screenshot :image="page.images[0]" :caption="page.imageCaption" ></featured-screenshot>
 
       <page-heading :caption="page.description" :image="page.titleImage"></page-heading>
       
@@ -15,7 +15,7 @@
 
       <link-callout :link-content="page.siteLink"></link-callout>
 
-      <pagination-paddles :left-link='{label: "BURNS MCDONNELL", url: "/works/burns-mcdonnell"}' :right-link='{label: "kirkland & Ellis", url: "/works/sidley-austin"}'></pagination-paddles>
+      <pagination-paddles :left-link="leftLink" :right-link="rightLink"></pagination-paddles>
       
     </div>
     
@@ -30,7 +30,7 @@ import FeaturedScreenshot from '~/components/FeaturedScreenshot'
 import LineSnippet from '~/components/LineSnippet'
 import LinkCallout from '~/components/LinkCallout'
 import PaginationPaddles from '~/components/PaginationPaddles'
-import page from '~/static/content/work/burns-mcdonnell.json'
+import work from '~/static/content/work.json'
 
 
 export default {
@@ -43,7 +43,25 @@ export default {
   },
   asyncData ({ route }) {
     const page = require(`~/static/content/work/${route.params.slug}.json`)
-    return { page }
+    return {
+      page,
+      slug: route.params.slug,
+      work
+    }
+  },
+  computed: {
+    indexOfLink () {
+      return this.work.links
+        .map((link, i) => ({ link, i }))
+        .filter(({ link }) => link.url === '/work/' + this.slug)
+        .map(({ i }) => i)[0] || 0
+    },
+    leftLink () {
+      return this.work.links[(this.indexOfLink - 1 + this.work.links.length) % this.work.links.length]
+    },
+    rightLink () {
+      return this.work.links[(this.indexOfLink + 1 + this.work.links.length) % this.work.links.length]
+    }
   },
   methods: {
     hasSnippetFor (section) {
