@@ -1,7 +1,7 @@
 import postcssPxtorem from 'postcss-pxtorem'
 
 const pkg = require('./package')
-
+const work = require('./static/content/work')
 
 module.exports = {
   mode: 'universal',
@@ -56,5 +56,8 @@ module.exports = {
     postcss: [
       postcssPxtorem()
     ]
+  },
+  generate: {
+    routes: work.links.map(link => link.url)
   }
 }
