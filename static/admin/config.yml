@@ -78,7 +78,7 @@ collections:
             widget: object
             fields:
               - {label: Title, name: title, widget: string}
-              - {label: Description, name: description, widget: string}
+              - {label: Description, name: description, widget: text}
               - {label: Image, name: image, widget: image}
           - label: Background Image
             name: backgroundImage
@@ -106,6 +106,37 @@ collections:
                 fields:
                 - {label: Label, name: label, widget: string}
                 - {label: URL, name: url, widget: string}
+      
+      - label: Work
+        name: work
+        file: 'static/content/work.json'
+        extension: json
+        fields:
+          - label: Meta
+            name: meta
+            widget: object
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Description, name: description, widget: text}
+              - {label: Image, name: image, widget: image}
+          - label: Background Image
+            name: backgroundImage
+            widget: object
+            fields:
+            - {label: Image, name: src, widget: image}
+            - {label: Alt Text, name: alt, widget: string}
+          - label: Title Image
+            name: titleImage
+            widget: object
+            fields:
+            - {label: Image, name: src, widget: image}
+            - {label: Alt Text, name: alt, widget: string}
+          - label: Links
+            name: links
+            widget: list
+            fields:
+            - {label: Label, name: label, widget: string}
+            - {label: URL, name: url, widget: string}
       - label: About
         name: 'about'
         file: 'static/content/about.json'
@@ -116,7 +147,7 @@ collections:
             widget: object
             fields:
               - {label: Title, name: title, widget: string}
-              - {label: Description, name: description, widget: string}
+              - {label: Description, name: description, widget: text}
               - {label: Image, name: image, widget: image}
           - label: Background Image
             name: backgroundImage
@@ -135,7 +166,18 @@ collections:
             widget: object
             fields:
             - {label: Label, name: label, widget: string}
-            - {label: Content, name: content, widget: string}
+            - label: Content
+              name: content
+              widget: markdown
+              buttons:
+              - bold
+              - italic
+              - link
+              - heading-two
+              - heading-three
+              - heading-four
+              - bulleted-list
+              - numbered-list
             - label: Contact
               name: contact
               widget: object
