@@ -13,7 +13,7 @@
         </nuxt-link>
       </li>
       <li @click="closeMenu" class="navigation__menu-item" :class=[visibilityClass]>
-        <nuxt-link ref="about" to="/about" class="navigation__menu-link navigation__menu-link--beige-coal" >
+        <nuxt-link ref="about" to="/about" class="navigation__menu-link navigation__menu-link--beige-coal navigation__menu-link--beige-cool" >
           <span class="navigation__menu-label" v-text="menuLabel('about')"></span>
           <span class="navigation__menu-background" :style="menuBackground('about')"></span>
         </nuxt-link>

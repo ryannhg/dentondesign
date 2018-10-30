@@ -8,6 +8,10 @@
   &--color-white {
     color: $colors__white;
   }
+
+  &--gapped {
+    margin-top: 4rem;
+  }
   
   & > * {
     &:last-child {
