@@ -1,6 +1,6 @@
 {
-  "title": "Miscellaneous",
   "type": "Misc",
+  "title": "Miscellaneous",
   "images": [
     "/images/work-misc-featured.jpg"
   ],
@@ -9,6 +9,6 @@
     "src": "/images-work-misc-title.svg",
     "alt": "Misc"
   },
-  "description": "an aspirational refresh for a high-end furniture company that brings iconic modern design to the masses",
-  "richtext": "<p>Commodo nisi nisi aliqua nulla quis et sint est. Reprehenderit non minim qui deserunt. Minim minim nisi ea adipisicing adipisicing ea dolor. Dolore incididunt elit anim ut Lorem amet incididunt ad. Aliquip in irure cupidatat ea.</p><p>Reprehenderit qui est veniam in sit enim enim.</p><p><img src=\"/images/menu-about.jpg\" ></p>"
+  "description": "An aspirational refresh for a high-end furniture company that brings iconic modern design to the masses.",
+  "richtext": "Commodo nisi nisi aliqua nulla quis et sint est. Reprehenderit non minim qui deserunt. Minim minim nisi ea adipisicing adipisicing ea dolor. Dolore incididunt elit anim ut Lorem amet incididunt ad. Aliquip in irure cupidatat ea.\n\nReprehenderit qui est veniam in sit enim enim.\n\n![A manly boi, with muscles and such.](/images/menu-about.jpg)"
 }
