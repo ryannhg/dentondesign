@@ -1,0 +1,39 @@
+.timeline-snippet {
+  text-align: center;
+  color: $colors__white;
+
+  &+& {
+    margin-top: 50px
+  }
+
+  &--intro {
+    max-width: none;
+  }
+
+  
+  &__year {
+    color: $colors__cherry;
+    line-height: 1;
+  }
+  &__caption {
+    color: $colors__coal;
+    margin-top: 0.25em;
+
+    &--brownie {
+      color: $colors__tan;
+    }
+  }
+
+  @include above('mobile') {
+    &+& {
+      margin-top: 100px
+    }
+  }
+
+  @include above('tablet') {
+    &--intro {
+      padding-left: 5rem;
+      padding-right: 5rem;
+    }
+  }
+}

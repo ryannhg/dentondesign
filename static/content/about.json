@@ -5,11 +5,11 @@
     "image": "/images/pages/about/background.jpg"
   },
   "backgroundImage": {
-    "src": "/images/pages/about/background.jpg",
+    "src": "/images/pages-about-background.jpg",
     "alt": "Nate Denton"
   },
   "titleImage": {
-    "src": "/images/pages/about/title.svg",
+    "src": "/images/pages-about-title.svg",
     "alt": "About"
   },
   "approach": {
