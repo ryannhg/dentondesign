@@ -7,7 +7,7 @@
 
     <div class="tabs__panel">
       <div class="wrapper wrapper--narrow">
-        <div class="richtext richtext--color-white" v-html="approach.content"></div>
+        <div class="richtext richtext--color-white" v-html="marked(approach.content)"></div>
       </div>
     </div>
 
@@ -33,7 +33,7 @@
 
 <script>
 import TimelineSnippet from '~/components/TimelineSnippet'
-
+import marked from 'marked'
 
 export default {
   components: {
@@ -42,6 +42,9 @@ export default {
   props: {
     approach: Object,
     timeline: Object,
+  },
+  methods: {
+    marked
   }
 }
 </script>
