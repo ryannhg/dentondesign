@@ -11,7 +11,7 @@
       </div>
     </div>
 
-    <div class="tabs__panel">
+    <div class="tabs__panel" style="padding-top: 20vh">
       
       <timeline-snippet
         :is-brown="true"

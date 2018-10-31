@@ -2,7 +2,7 @@
   $spacing__normalize: 1rem;
   font-size: $fonts__copy;
   text-align: center;
-  line-height: 1.5;
+  line-height: 1.4;
   color: $colors__coal;
 
   &--color-white {
@@ -25,6 +25,7 @@
 
   a {
     color: $colors__cherry;
+    text-decoration: underline;
   }
 
   p {
@@ -88,8 +89,8 @@
   
   h2,
   .h2-size {
-    font-size: $fonts__h2;
-    line-height: 1.1;
+    font-size: $fonts__h3;
+    line-height: 1;
     margin-bottom: 1rem;
     color: $colors__coal;
   }
@@ -128,15 +129,29 @@
   }
 
   @include above('mobile') {
+    $spacing__normalize: 1.5rem;
     font-size: $fonts__copy--tablet;
+    line-height: 1.1;
 
     &--small {
       font-size: 35px;
     }
 
+    a {
+      &:hover {
+        color: $colors__coal;
+      }
+    }
+
+
+    p {
+      margin-bottom: $spacing__normalize;
+    }
+
     h2,
     .h2-size {
-      font-size: $fonts__h2--tablet;
+      font-size: $fonts__h4--tablet;
+      margin-bottom: 1.5rem;
     }
 
     h3,
