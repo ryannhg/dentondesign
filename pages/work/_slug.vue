@@ -19,7 +19,7 @@
           :title="'Objective'" :copy="page.objective" :image-type="'shell'"></line-snippet>
         <line-snippet v-if="hasSnippetFor('Outcome')" 
           :title="'Outcome'" :copy="page.outcome" :image-type="'sandwich'"></line-snippet>
-        <link-callout :link-content="page.siteLink"></link-callout>
+        <link-callout v-if="page.siteLink" :link-content="page.siteLink"></link-callout>
       </div>
 
       <pagination-paddles :left-link="leftLink" :right-link="rightLink"></pagination-paddles>
