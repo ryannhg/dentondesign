@@ -5,11 +5,11 @@
       <button class="tabs__navigation">{{timeline.label}}</button>
     </div> -->
 
-    <!-- <div class="tabs__panel">
+    <div class="tabs__panel">
       <div class="wrapper wrapper--narrow">
         <div class="richtext richtext--color-white" v-html="approach.content"></div>
       </div>
-    </div> -->
+    </div>
 
     <div class="tabs__panel">
       
