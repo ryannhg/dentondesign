@@ -4,7 +4,7 @@
     "url": "https://www.onenorth.com"
   },
   "titleImage": {
-    "src": "/images/onenorth_home.png",
+    "src": "/images/work_onenorth.svg",
     "alt": "One North"
   },
   "imageCaption": "Creative direction / brand identity / website",
@@ -12,7 +12,7 @@
   "outcome": "a new brand and website that positions One North as a high-end service provider for sophisticated professional service organizations",
   "title": "One North",
   "images": [
-    "/images/pages-work-burns-featured.png"
+    "/images/onenorth_home.png"
   ],
   "objective": "creating a new brand identity and website experience that aligned with the agency's promise of developing engaging and professional digital experiences",
   "type": "Obstacle, Objective, Outcome",
