@@ -1,20 +1,21 @@
 {
-    "title": "One North",
-    "type": "Obstacle, Objective, Outcome",
-    "images": [
-        "/images/pages-work-burns-featured.png"
-    ],
-    "imageCaption": "Creative direction / digital identity / video",
-    "titleImage": {
-        "src": "/images/pages-work-onenorth-title.svg",
-        "alt": "Burns McDonnell"
-    },
-    "description": "a world-renowned architecture, construction & engineering firm",
-    "obstacle": "create a digital experience that is as impressive as the firm’s impact on global design and infrastructure",
-    "objective": "extending the brand promise of “create amazing” into a memorable identity and digital experience",
-    "outcome": "creation of a website & identity that set the firm well ahead of its direct competitors",
-    "siteLink": {
-        "url": "https://www.onenorth.com",
-        "label": "Launch site"
-    }
+  "siteLink": {
+    "label": "Launch site",
+    "url": "https://www.onenorth.com"
+  },
+  "titleImage": {
+    "src": "/images/work_onenorth.svg",
+    "alt": "One North"
+  },
+  "imageCaption": "Creative direction / brand identity / website",
+  "obstacle": "the old brand and website experience had become fractured and outdated",
+  "outcome": "a new brand and website that positions One North as a high-end service provider for sophisticated professional service organizations",
+  "title": "One North",
+  "images": [
+    "/images/work_onenorth_home.png",
+    ""
+  ],
+  "objective": "creating a new brand identity and website experience that aligned with the agency's promise of developing engaging and professional digital experiences",
+  "type": "Obstacle, Objective, Outcome",
+  "description": "an agency focused on creating and nurturing powerful digital experiences that drive growth"
 }
