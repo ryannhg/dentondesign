@@ -1,20 +1,20 @@
 {
-    "title": "Burns McDonnell",
-    "type": "Obstacle, Objective, Outcome",
-    "images": [
-        "/images/pages-work-burns-featured.png"
-    ],
-    "imageCaption": "Creative direction / digital identity / video",
-    "titleImage": {
-        "src": "/images/pages-work-burns-title.svg",
-        "alt": "Burns McDonnell"
-    },
-    "description": "a world-renowned architecture, construction & engineering firm",
-    "obstacle": "create a digital experience that is as impressive as the firm’s impact on global design and infrastructure",
-    "objective": "extending the brand promise of “create amazing” into a memorable identity and digital experience",
-    "outcome": "creation of a website & identity that set the firm well ahead of its direct competitors",
-    "siteLink": {
-        "url": "https://www.burnsmcd.com/",
-        "label": "Launch site"
-    }
+  "siteLink": {
+    "label": "Launch site",
+    "url": "https://www.burnsmcd.com/"
+  },
+  "titleImage": {
+    "src": "/images/pages-work-burns-title.svg",
+    "alt": "Burns McDonnell"
+  },
+  "imageCaption": "Creative direction / digital identity / website ",
+  "obstacle": "The firm was growing fast, and the digital experience supporting it was not working hard enough",
+  "outcome": "a memorable homepage and website that strongly differentiates the firm from its competition by showing the impact it has on the world",
+  "title": "Burns McDonnell",
+  "images": [
+    "/images/pages-work-burns-featured.png"
+  ],
+  "objective": "develop an impactful digital identity and website experience that generates leads and supports the brand promise of \"create amazing\"",
+  "type": "Obstacle, Objective, Outcome",
+  "description": "a world-renowned architecture, construction & engineering firm"
 }
