@@ -174,14 +174,10 @@ collections:
               name: content
               widget: markdown
               buttons:
+              - heading-two
               - bold
               - italic
               - link
-              - heading-two
-              - heading-three
-              - heading-four
-              - bulleted-list
-              - numbered-list
             - label: Contact
               name: contact
               widget: object
@@ -216,14 +212,10 @@ collections:
                   name: content
                   widget: markdown
                   buttons:
+                  - heading-two
                   - bold
                   - italic
                   - link
-                  - heading-two
-                  - heading-three
-                  - heading-four
-                  - bulleted-list
-                  - numbered-list
               - label: Contact
                 name: contact
                 widget: object
@@ -250,7 +242,12 @@ collections:
               - {label: Image, name: image, widget: image}
           - {label: Email, name: email, widget: string}
           - {label: Phone, name: phone, widget: string}
-          - {label: Address, name: address, widget: markdown}
+          - label: Address
+            name: address
+            widget: markdown
+            buttons:
+            - bold
+            - italic
           - label: Background Image
             name: backgroundImage
             widget: object
@@ -328,11 +325,7 @@ collections:
         name: richtext
         widget: markdown
         buttons:
+        - heading-two
         - bold
         - italic
         - link
-        - heading-two
-        - heading-three
-        - heading-four
-        - bulleted-list
-        - numbered-list
