@@ -2,7 +2,7 @@
 <main class="layout__main" v-pixels-scrolled="pixelsScrolled">
   <div class="layout__content layout__content--above-fold">
     <div class="layout__hide-edges">
-      <featured-screenshot :image="page.images[0]" :caption="page.imageCaption" ></featured-screenshot>
+      <featured-screenshot :images="page.images" :caption="page.imageCaption" ></featured-screenshot>
 
       <page-heading :caption="page.description" :image="page.titleImage"></page-heading>
       
