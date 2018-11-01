@@ -16,7 +16,10 @@ $ yarn run build
 $ yarn start
 
 # generate static project
-$ yarn run generate
+$ yarn run generatexp
 ```
 
 For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+
+
+hardcode 80px  on homepage description
