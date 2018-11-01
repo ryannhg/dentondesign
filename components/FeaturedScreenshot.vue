@@ -5,8 +5,8 @@
       :style="imageOffset(i)"
       class="featured-screenshot__image" :src="image" />
     <p class="featured-screenshot__caption">{{caption}}</p>
-    <button class="featured-screenshot__control featured-screenshot__control--prev" @click="prev()">Prev</button>
-    <button class="featured-screenshot__control featured-screenshot__control--next" @click="next()">Next</button>
+    <button v-if="showControls" class="featured-screenshot__control featured-screenshot__control--prev" @click="prev()">Prev</button>
+    <button v-if="showControls" class="featured-screenshot__control featured-screenshot__control--next" @click="next()">Next</button>
   </figure>
 </div>
 </template>
@@ -20,6 +20,11 @@ export default {
   data: () => ({
     index: 0
   }),
+  computed: {
+    showControls () {
+      return this.images.length > 1
+    }
+  },
   methods: {
     imageOffset (i) {
       return {
