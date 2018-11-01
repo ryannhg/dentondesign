@@ -16,7 +16,8 @@
   &__copy {
     font-size: $fonts__h3;
     margin-top: 10px;
-    line-height: 1.1
+    line-height: 1.1;
+    text-align: center;
   }
 
   @include above('tablet') {
