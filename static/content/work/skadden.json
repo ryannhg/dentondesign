@@ -1,20 +1,25 @@
 {
-    "title": "Skadden",
-    "type": "Obstacle, Objective, Outcome",
-    "images": [
-        "/images/pages-work-skadden-featured.png"
-    ],
-    "imageCaption": "Creative direction / digital identity / video",
-    "titleImage": {
-        "src": "/images/pages-work-skadden-title.svg",
-        "alt": "Skadden"
-    },
-    "description": "a world-renowned architecture, construction & engineering firm",
-    "obstacle": "create a digital experience that is as impressive as the firm’s impact on global design and infrastructure",
-    "objective": "extending the brand promise of “create amazing” into a memorable identity and digital experience",
-    "outcome": "creation of a website & identity that set the firm well ahead of its direct competitors",
-    "siteLink": {
-        "url": "https://www.skadden.com",
-        "label": "Launch site"
-    }
+  "siteLink": {
+    "label": "Launch site",
+    "url": "https://www.skadden.com"
+  },
+  "titleImage": {
+    "src": "/images/pages-work-skadden-title.svg",
+    "alt": "Skadden"
+  },
+  "imageCaption": "Creative direction / digital identity / video",
+  "obstacle": "The old site didn't match the firm's reputation as an elite firm with premier capabilities",
+  "outcome": "a cohesive, high-end digital experience that attracts both clients and talent",
+  "title": "Skadden",
+  "images": [
+    "/images/work_skadden_home2.png",
+    "/images/work_skadden_bio.png",
+    "/images/work_skadden_servicedetail.png",
+    "/images/work_skadden_careers1.png",
+    "/images/work_skadden_careers2.png",
+    "/images/work_skadden_careers3.png"
+  ],
+  "objective": "create a digital identity and website that are strong enough to carry the Skadden name",
+  "type": "Obstacle, Objective, Outcome",
+  "description": "a global law firm with a brand that carries a lot of cachet"
 }
