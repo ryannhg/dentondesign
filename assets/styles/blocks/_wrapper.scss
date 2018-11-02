@@ -1,8 +1,6 @@
 $wrapper-padding: 34px;
-
 $wrapper-maxwidth--body: 1029px;
 $wrapper-maxwidth--narrow: 717px;
-
 
 .wrapper {
   max-width: $wrapper-maxwidth--body + ($wrapper-padding * 2);
