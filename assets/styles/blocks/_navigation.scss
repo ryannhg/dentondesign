@@ -153,13 +153,13 @@
   }
 
   &__menu-background {
-    @include transition(opacity );
+    @include transition(opacity 100ms);
 
     position: absolute;
     top: 0;
-    bottom: 0;
     left: 0;
     right: 0;
+    min-height: 50vh;
     background-size: auto 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -183,6 +183,13 @@
     &--egg-expanded {
       width: calc(50% + #{$wrapper-maxwidth--narrow/2});
       height: 100%;
+    }
+
+    &--egg-expanded & {
+      &__menu-background {
+        @include transition(opacity .5s);
+        
+      }
     }
 
     &__hamburger {
@@ -232,7 +239,7 @@
 
     $line-offset: -8px;
 
-    &__menu-link:hover &{
+    &__menu-link:hover & {
       &__menu-label {
         &:before {
           right: $line-offset
@@ -240,7 +247,6 @@
       }
 
       &__menu-background {
-        @include transition(opacity .5s);
         opacity: 1;
       }
     }
