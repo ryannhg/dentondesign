@@ -4,7 +4,7 @@
       <button class="tabs__navbutton" :class="{'tabs__navbutton--is-active': isActiveTab(0)}" @click.prevent="updateTab(0)"><span class="tabs__navbutton-label">{{approach.label}}</span></button>
       <button class="tabs__navbutton" :class="{'tabs__navbutton--is-active': isActiveTab(1)}" @click.prevent="updateTab(1)"><span class="tabs__navbutton-label">{{timeline.label}}</span></button>
     </div>
-
+    
     <div class="tabs__panels">
       <transition name="tabs" mode="out-in" tag="div">
          <div  v-if="isActiveTab(0)" class="tabs__panel" key="panel1" >
@@ -12,9 +12,7 @@
             <div class="richtext richtext--color-white" v-html="marked(approach.content)"></div>
           </div>
         </div>
-
         <div v-else class="tabs__panel"  key="panel2" >
-      
           <timeline-snippet
             :is-brown="true"
             :years="timeline.brownEvent.years"
@@ -29,13 +27,8 @@
             :key="'snippet'+index"
               ></timeline-snippet>
         </div>
-
       </transition>
     </div>
-   
-
-    
-
   </div>
 </template>
 

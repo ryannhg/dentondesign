@@ -1,6 +1,6 @@
 .tabs {
-  padding-bottom: 80px;
-  padding-top: 50px;
+  padding-bottom: 60px;
+  padding-top: 25px;
 
   // Vue Transitions
   &-enter-active, 
@@ -17,6 +17,9 @@
     flex-wrap: nowrap;
     justify-content: center;
     align-items: stretch;
+    position: relative;
+    z-index: 1;
+    padding-bottom: 40px;
   }
 
   &__navbutton {
@@ -65,7 +68,12 @@
 
   
   @include above('mobile') {
-    padding-bottom: 130px;
+    padding-bottom: 100px;
+    padding-top: 40px;
+
+    &__navigation {
+      padding-bottom: 80px;
+    }
 
     &__navbutton {
       min-width: 250px;
