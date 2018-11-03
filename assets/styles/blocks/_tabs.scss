@@ -1,6 +1,16 @@
 .tabs {
   padding-bottom: 80px;
   padding-top: 50px;
+
+
+  &-enter-active, 
+  &-leave-active {
+    @include transition(opacity 0.5s);
+  }
+
+  &-enter, &-leave-active {
+    opacity: 0
+  }
   
   @include above('mobile') {
     padding-bottom: 130px;

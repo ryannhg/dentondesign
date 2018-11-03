@@ -1,32 +1,40 @@
 <template>
   <div class="tabs">
-    <!-- <div class="tabs__navigation wrapper wrapper--narrow">
-      <button class="tabs__navigation">{{approach.label}}</button>
-      <button class="tabs__navigation">{{timeline.label}}</button>
-    </div> -->
-
-    <div class="tabs__panel">
-      <div class="wrapper wrapper--narrow">
-        <div class="richtext richtext--color-white" v-html="marked(approach.content)"></div>
-      </div>
+    <div class="tabs__navigation wrapper wrapper--narrow">
+      <button class="tabs__navigation" :class="{'tabs__navigation--is-active': isActiveTab(0)}" @click.prevent="updateTab(0)">{{approach.label}}</button>
+      <button class="tabs__navigation" :class="{'tabs__navigation--is-active': isActiveTab(1)}" @click.prevent="updateTab(1)">{{timeline.label}}</button>
     </div>
 
-    <div class="tabs__panel" style="padding-top: 20vh">
+    <div class="tabs__panels">
+      <transition name="tabs" mode="out-in" tag="div">
+         <div  v-if="isActiveTab(0)" class="tabs__panel" key="panel1" >
+          <div class="wrapper wrapper--narrow">
+            <div class="richtext richtext--color-white" v-html="marked(approach.content)"></div>
+          </div>
+        </div>
+
+        <div v-else class="tabs__panel"  key="panel2" >
       
-      <timeline-snippet
-        :is-brown="true"
-        :years="timeline.brownEvent.years"
-        :title="timeline.brownEvent.title"
-        :caption="timeline.brownEvent.content">
-      </timeline-snippet>
-      <timeline-snippet 
-          v-for="(snippet, index) in timeline.events"
-        :years="snippet.years"
-        :title="snippet.title"
-        :caption="snippet.content"
-        :key="'snippet'+index"
-          ></timeline-snippet>
+          <timeline-snippet
+            :is-brown="true"
+            :years="timeline.brownEvent.years"
+            :title="timeline.brownEvent.title"
+            :caption="timeline.brownEvent.content">
+          </timeline-snippet>
+          <timeline-snippet 
+              v-for="(snippet, index) in timeline.events"
+            :years="snippet.years"
+            :title="snippet.title"
+            :caption="snippet.content"
+            :key="'snippet'+index"
+              ></timeline-snippet>
+        </div>
+
+      </transition>
     </div>
+   
+
+    
 
   </div>
 </template>
@@ -43,8 +51,17 @@ export default {
     approach: Object,
     timeline: Object,
   },
+  data: () => ({
+    activePanel: 0
+  }),
   methods: {
-    marked
+    marked,
+    updateTab (tabID) {
+      this.activePanel = tabID
+    },
+    isActiveTab (tabID) {
+      return tabID === this.activePanel
+    }
   }
 }
 </script>
