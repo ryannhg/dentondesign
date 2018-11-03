@@ -3,7 +3,8 @@
   color: $colors__white;
 
   &+& {
-    margin-top: 50px
+    margin-top: 10px;
+    padding-top: 40px;
   }
 
   &--intro {
@@ -26,12 +27,75 @@
 
     &--brownie {
       color: $colors__dirt;
+      position: relative;
+      z-index: 0;
+      margin-bottom: -2rem;
+      &::before {
+        content: '';
+        display: block;
+        width: 2px;
+        background-color: white;
+        position: absolute;
+        z-index: -1;
+        left: 50%;
+        top: -1rem;
+        bottom: calc(100% + 1rem);
+        transform: translateX(-50%);
+        transition: bottom 800ms ease-in-out;
+      }
+      &-ready {
+        &::before {
+          bottom: -1rem;
+        }
+      }
     }
+  }
+  &--line-top {
+    position: relative;
+    overflow: hidden;
+    &::before {
+      content: '';
+      display: block;
+      width: 2px;
+      background-color: white;
+      height: 35px;
+      position: absolute;
+      left: 50%;
+      bottom: 100%;
+      transform: translateX(-50%);
+      transition: bottom 400ms ease-in-out;
+    }
+  }
+  &--line-top-ready {
+    &::before {
+      bottom: calc(100% - 35px);
+    }
+    
   }
 
   @include above('mobile') {
     &+& {
-      margin-top: 100px
+      margin-top: 20px;
+      padding-top: 130px;
+    }
+    &--line-top {
+      &::before {
+        height: 130px;
+        width: 4px;
+      }
+    }
+    &--line-top-ready {
+      &::before {
+        bottom: calc(100% - 130px);
+      }
+    }
+    &__caption {
+      &--brownie {
+        margin-bottom: -7rem;
+        &::before {
+          width: 4px;
+        }
+      }
     }
   }
 
