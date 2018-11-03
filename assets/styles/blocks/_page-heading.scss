@@ -17,7 +17,10 @@
     font-size: $fonts__h3;
     margin-top: 10px;
     line-height: 1.1;
-    text-align: center;
+    &:not(&--large) {
+      
+      text-align: center;
+    }
   }
 
   @include above('tablet') {
@@ -33,6 +36,10 @@
   @include above('desktop') {
     &__copy {
       font-size: 4rem;
+
+      &--large {
+        font-size: 80px;
+      }
     }
   }
 }

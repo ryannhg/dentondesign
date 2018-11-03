@@ -1,4 +1,9 @@
 .logo {
+  $transition-speed: 0.5s;
+
+  overflow: hidden;
+  position: relative;
+
   &__link {
     display: block;
   }
@@ -19,13 +24,35 @@
   }
 
   @include above('mobile') {
+
+
     &__main {
+      @include transition(transform $transition-speed);
+
       width: 155px;
       display: block;
+      transition-delay: $transition-speed;
     }
 
     &__mobile {
-      display: none;
+      @include transition(transform $transition-speed);
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+    }
+
+    &--show-the-d & {
+      &__main {
+        transform: translateX(-100%);
+        transition-delay: 0s;
+      }
+
+      &__mobile {
+        transition-delay: $transition-speed;
+        transform: translateX(0);
+      }
     }
   }
 }
