@@ -37,7 +37,7 @@
     font-size: $fonts__snippets;
   }
 
-  @include above(tablet) {
+  @include above(mobile) {
     &__h1 {
       font-size: $fonts__h1--tablet;
     }

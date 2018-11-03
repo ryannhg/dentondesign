@@ -172,9 +172,11 @@
     $bun-height--tablet: 3px;
     $bun-spacing: 9px;
 
+    $tablet-offset: 10px;
+
     //Not open
     width: $eggsize--tablet + $globals__header-padding--tablet;
-    height: $eggheight--tablet + $globals__header-padding--tablet - 20px;
+    height: $eggheight--tablet + $globals__header-padding--tablet - $tablet-offset;
     overflow: hidden;
 
     //menu open
@@ -188,7 +190,7 @@
       width: $eggsize--tablet;
       height: $eggheight--tablet;
       right: $globals__header-padding--tablet;
-      top: $globals__header-padding--tablet - 20px;
+      top: $globals__header-padding--tablet - $tablet-offset;
       cursor: pointer;
 
       &:hover {
