@@ -17,10 +17,12 @@
             :is-brown="true"
             :years="timeline.brownEvent.years"
             :title="timeline.brownEvent.title"
-            :caption="timeline.brownEvent.content">
+            :caption="timeline.brownEvent.content"
+            :top="true">
           </timeline-snippet>
           <timeline-snippet 
-              v-for="(snippet, index) in timeline.events"
+            v-for="(snippet, index) in timeline.events"
+            :top="index === 0"
             :years="snippet.years"
             :title="snippet.title"
             :caption="snippet.content"
