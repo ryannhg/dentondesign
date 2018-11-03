@@ -1,8 +1,8 @@
 <template>
   <div class="tabs">
     <div class="tabs__navigation wrapper wrapper--narrow">
-      <button class="tabs__navigation" :class="{'tabs__navigation--is-active': isActiveTab(0)}" @click.prevent="updateTab(0)">{{approach.label}}</button>
-      <button class="tabs__navigation" :class="{'tabs__navigation--is-active': isActiveTab(1)}" @click.prevent="updateTab(1)">{{timeline.label}}</button>
+      <button class="tabs__navbutton" :class="{'tabs__navbutton--is-active': isActiveTab(0)}" @click.prevent="updateTab(0)"><span class="tabs__navbutton-label">{{approach.label}}</span></button>
+      <button class="tabs__navbutton" :class="{'tabs__navbutton--is-active': isActiveTab(1)}" @click.prevent="updateTab(1)"><span class="tabs__navbutton-label">{{timeline.label}}</span></button>
     </div>
 
     <div class="tabs__panels">

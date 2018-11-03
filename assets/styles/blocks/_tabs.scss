@@ -2,7 +2,7 @@
   padding-bottom: 80px;
   padding-top: 50px;
 
-
+  // Vue Transitions
   &-enter-active, 
   &-leave-active {
     @include transition(opacity 0.5s);
@@ -11,8 +11,78 @@
   &-enter, &-leave-active {
     opacity: 0
   }
+
+  &__navigation {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  &__navbutton {
+    @include transition(color, background-color);
+
+    overflow: visible;
+    color: $colors__white;
+    background-color: $colors__cherry;
+    padding: 1.5em 0.25em;
+    min-width: 150px;
+    position: relative;
+
+    &:after {
+      $width: 15px;
+      $height: 12px;
+
+      @include centeralign('horizontal');
+      @include transition(transform);
+      content: '';
+      width: 0;
+      height: 0;
+      border-left: $height solid transparent;
+      border-right: $height solid transparent;
+      border-top: $width solid $colors__white;
+      top: 100%;
+      z-index: -1;
+      transform: translate(-50%, $width * -1);
+    }
+
+    &-label {
+      font-size: $fonts__button;
+    }
+
+    &--is-active {
+      background-color: $colors__white;
+      color: $colors__cherry;
+
+      &:after {
+        transition: transform $transition-duration $transition-easing 0.25s,
+          border-color $transition-duration $transition-easing;
+        transform: translate(-50%, 0px);
+      }
+    }
+  }
+
+
   
   @include above('mobile') {
     padding-bottom: 130px;
+
+    &__navbutton {
+      min-width: 250px;
+      min-height: 130px;
+
+      &-label {
+        font-size: $fonts__button--tablet;
+      }
+
+      &:hover {
+        background-color: $colors__coal;
+        color: $colors__white;
+
+        &:after {
+          border-top-color: $colors__coal;
+        }
+      }
+    }
   }
 }

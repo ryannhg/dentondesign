@@ -81,6 +81,8 @@ button {
   border-width: 1px;
   display: inline-block;
   color: inherit;
+  font-family: $fonts__family;
+  font-weight: $fonts__weight;
   &:focus {
     outline: none;
   }
