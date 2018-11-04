@@ -28,12 +28,21 @@
   }
   &__links {
     padding: 1.5rem 1rem;
-    padding-bottom: 3.5rem;
-    background-color: $colors__pink--hot;
+    padding-bottom: 3.75rem;
+    background-color: rgba($colors__cherry, 0.85);
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
+    &::after {
+      content: '';
+      height: 1px;
+      position: absolute;
+      background-color: white;
+      bottom: 3.75rem;
+      left: 1rem;
+      right: 1rem;
+    }
     &-wrapper {
       overflow: auto;
       border-radius: 2.5rem;
@@ -47,9 +56,7 @@
 
   &__link {
     font-size: 1.25rem;
-    &:not(:last-child) {
-      margin-bottom: 0.5rem;
-    }
+    margin-bottom: 0.5rem;
   }
 
   @include above(mobile) {
