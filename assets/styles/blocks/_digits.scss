@@ -1,3 +1,66 @@
 .digits {
   text-align: center;
+  padding-top: 10%;
+
+  &__prefix {
+    display: none;
+  }
+
+  &__entry {
+    font-style: normal;
+
+    & + & {
+      margin-top: 1.25rem;
+    }
+  }
+
+  &__contact { 
+    color: $colors__coal;
+     white-space: pre;
+     line-height: 1;
+  }
+
+  a#{&}__contact {
+    color: $colors__cherry;
+
+    &--dark-link {
+      color: $colors__coal;
+    }
+  }
+
+
+  @include above('mobile') {
+    padding-left: $globals__header-padding--tablet;
+    text-align: left;
+
+    &__entry {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: flex-start;
+
+      & + & {
+        margin-top: 1rem;
+      }
+    } 
+
+    &__prefix {
+      display: inline-flex;
+      white-space: nowrap;
+      align-items: center;
+      width: 15%;
+      line-height: 1.1;
+      max-width: 150px;
+      color: $colors__cherry;
+
+      &:after {
+        content: '';
+        border-top: 1px solid $colors__coal;
+        display: inline-block;
+        width: 20%;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        flex-grow: 1;
+      }
+    }
+  }
 }
