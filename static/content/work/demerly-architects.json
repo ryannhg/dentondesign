@@ -1,20 +1,25 @@
 {
-    "title": "Demerly Architects",
-    "type": "Obstacle, Objective, Outcome",
-    "images": [
-        "/images/pages-work-burns-featured.png"
-    ],
-    "imageCaption": "Creative direction / digital identity / video",
-    "titleImage": {
-        "src": "/images/pages/work/burns-mcdonnell/title.svg",
-        "alt": "Demerly Architects"
-    },
-    "description": "a world-renowned architecture, construction & engineering firm",
-    "obstacle": "create a digital experience that is as impressive as the firm’s impact on global design and infrastructure",
-    "objective": "extending the brand promise of “create amazing” into a memorable identity and digital experience",
-    "outcome": "creation of a website & identity that set the firm well ahead of its direct competitors",
-    "siteLink": {
-        "url": "https://www.demerlyarchitects.com",
-        "label": "Launch site"
-    }
+  "siteLink": {
+    "label": "",
+    "url": ""
+  },
+  "titleImage": {
+    "src": "/images/work_demerlyarchitects.svg",
+    "alt": "Demerly Architects"
+  },
+  "imageCaption": "creative direction / identity / website",
+  "obstacle": "the current identity and digital experience has become dated and inaccurate",
+  "outcome": "a redefined and refined design system that is scalable and complementary to the firm's work and profile ",
+  "title": "Demerly Architects",
+  "images": [
+    "/images/work_demerly_home1.jpg",
+    "/images/work_demerly_home2.jpg",
+    "/images/work_demerly_prodet1.jpg",
+    "/images/work_demerly_prodet3.jpg",
+    "/images/work_demerly_bio.jpg",
+    "/images/work_demerly_buscards.jpg"
+  ],
+  "objective": "create a clean identity and experience that aligns with the design philosophy of the firm",
+  "type": "Obstacle, Objective, Outcome",
+  "description": "an architecture firm that offers a diverse array of capabilities and styles"
 }
