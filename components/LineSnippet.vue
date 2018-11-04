@@ -2,7 +2,7 @@
 <div class="line-snippet wrapper wrapper--narrow">
   <div class="line-snippet__header" :class="{'line-snippet__header--with-image': hasImage}" >
     <h2 class="line-snippet__title fonts__h3">{{title}}</h2>
-    <img v-if="hasImage" :src="eggImage()" class="line-snippet__image" />
+    <img v-if="hasImage" :src="eggImage()" alt="An image on an egg" class="line-snippet__image" />
   </div>
   <p class="line-snippet__copy fonts__snippets">{{copy}}</p>
 </div>

@@ -3,7 +3,7 @@
   <figure class="featured-screenshot__figure" >
     <img v-for="(image, i) in images" :key="i"
       :style="imageOffset(i)"
-      class="featured-screenshot__image" :src="image" />
+      class="featured-screenshot__image" :src="image" alt="Screenshot of the website" />
     <p class="featured-screenshot__caption">{{caption}}</p>
     <button v-if="showControls" class="featured-screenshot__control featured-screenshot__control--prev" @click="prev()">Prev</button>
     <button v-if="showControls" class="featured-screenshot__control featured-screenshot__control--next" @click="next()">Next</button>
