@@ -1,0 +1,33 @@
+$cursor-size: 7px;
+$orb-size: 36px;
+
+//turn off cursor for the entire site
+* {
+  cursor: none !important;
+}
+
+.fancy-cursor,
+.fancy-cursor__orb {
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) translate(0, 0);
+  pointer-events: none;
+  z-index: 15;
+}
+
+.fancy-cursor {
+  width: $cursor-size;
+  height: $cursor-size;
+  background-color: $colors__cherry;
+
+}
+
+.fancy-cursor__orb {
+  width: $orb-size - 4px;
+  height: $orb-size;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 14;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+}

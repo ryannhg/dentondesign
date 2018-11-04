@@ -7,7 +7,7 @@
       <page-heading :caption="page.description" :image="page.titleImage"></page-heading>
       
       <div v-if="page.type === 'Misc'">
-        <div class="wrapper wrapper--narrow richtext richtext--gapped"
+        <div class="wrapper wrapper--narrow richtext richtext--color-white richtext--gapped"
           v-image-line-slapper="images"
           v-html="marked(page.richtext)"></div>
       </div>

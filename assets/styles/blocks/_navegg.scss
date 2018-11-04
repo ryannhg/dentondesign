@@ -27,11 +27,13 @@ $eggheight--tablet: 126px;
   }
 
   @include above('mobile') {
+    $tablet-offset: 10px;
+
     position: absolute;
     width: $eggsize--tablet;
     height: $eggheight--tablet;
     right: $globals__header-padding--tablet;
-    top: $globals__header-padding--tablet - 20px;
+    top: $globals__header-padding--tablet - $tablet-offset;
 
   }
 }
