@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1200 661.6" style="enable-background:new 0 0 1200 661.6;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#D50D54;stroke-width:3;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#58595B;stroke-width:3;stroke-miterlimit:10;}
+	.st2{fill:none;}
+	.st3{fill:#D50D54;}
+	.st4{font-family:'BebasNeue-Regular';}
+	.st5{font-size:119.5052px;}
+	.st6{fill:#58595B;}
+	.st7{fill:#4D4F4D;}
+	.st8{fill:#FFFFFF;}
+	.st9{fill:#C21F4F;}
+</style>
+<path class="st0" d="M767.4,334.4c-2,198.7-252.1,324.8-450.8,322.8S0,525.4,2,326.7S124.5,0.6,323.2,2.6S769.4,135.7,767.4,334.4z"
+	/>
+<path class="st1" d="M432.4,325.4c2-198.7,252.1-324.8,450.8-322.8s316.6,131.8,314.6,330.5c-2,198.7-122.5,326.1-321.2,324.1
+	S430.4,524.1,432.4,325.4z"/>
+<rect x="2" y="280.1" class="st2" width="430.4" height="99.7"/>
+<text transform="matrix(1 0 0 1 86.0361 363.7113)" class="st3 st4 st5">SIMPLE</text>
+<rect x="767.4" y="280.1" class="st2" width="430.4" height="99.7"/>
+<text transform="matrix(1 0 0 1 835.5107 363.7113)" class="st6 st4 st5">precise</text>
+<g>
+	<g>
+		<path class="st7" d="M561.8,250.8h47.9c22.9,0,34.2,12.7,34.2,36v100.9c0,23.3-11.2,36-34.2,36h-47.9V250.8z M609.3,403
+			c7.3,0,11.7-3.7,11.7-14.2v-103c0-10.4-4.4-14.2-11.7-14.2h-24.6V403H609.3z"/>
+	</g>
+	<g>
+		<path class="st8" d="M617.9,274.8c-2-2.2-4.9-3.2-8.6-3.2h-24.6v129.3l-22.9,2.4V250.8h47.9c10.9,0,9.4-3.1,15.1,2.4L617.9,274.8z
+			"/>
+	</g>
+	<g>
+		<path class="st9" d="M547.1,236H595c22.9,0,34.2,12.7,34.2,36V373c0,23.3-11.2,36-34.2,36h-47.9V236z M594.6,388.2
+			c7.3,0,11.7-3.7,11.7-14.2V271c0-10.4-4.4-14.2-11.7-14.2H570v131.3H594.6z"/>
+	</g>
+</g>
+</svg>
