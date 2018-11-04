@@ -1,5 +1,5 @@
 <template>
-  <div class="page-heading wrapper wrapper--narrow">
+  <div class="page-heading wrapper wrapper--narrow" :class="[modifierClass]">
     <h1  class="page-heading__title"> 
       <span class="sr-only" v-text="image.alt"></span>
       <span role="presentation" class="page-heading__svg-container">
@@ -18,6 +18,17 @@ export default {
     largeCaption: {
       type: Boolean,
       default: false
+    },
+    anchorTitle: {
+      type: String,
+      default: ''
+    }
+  },
+  computed: {
+    modifierClass () {
+      return (this.anchorTitle === 'bottom')
+        ? 'page-heading--anchor-bottom'
+        : ''
     }
   }
 }

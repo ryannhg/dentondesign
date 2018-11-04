@@ -5,7 +5,7 @@
 
 
 <script>
-const orbDelay = 100
+const orbDelay = 50
 
 export default {
   data: () => ({

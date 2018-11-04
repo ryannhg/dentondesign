@@ -1,4 +1,10 @@
 .page-heading {
+
+  &--anchor-bottom {
+    @include centeralign('horizontal');
+    top: 100%;
+    transform: translate(-50%, -50%);
+  }
   &__title {
     border-bottom: $globals__border-size solid $colors__tan;
     padding-bottom: 10px;

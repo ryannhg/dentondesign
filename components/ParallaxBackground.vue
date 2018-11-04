@@ -1,6 +1,6 @@
 <template>
   <div role="presentation" v-pixels-scrolled="pixelsScrolled" class="parallax-background">
-    <div class="parallax-background__image" :style="imageStyles"></div>
+    <div class="parallax-background__image" :class="[imageModifiers]" :style="imageStyles"></div>
     <div class="parallax-background__overlay"
       v-for="(overlay, i) in overlays || []" :key="i"
       :style="overlayStyles(i)"></div>
@@ -16,6 +16,10 @@ export default {
       type: String,
       required: true
     },
+    anchorImage: {
+      type: String,
+      default: ''
+    },
     overlays: {
       type: Array
     },
@@ -27,18 +31,22 @@ export default {
   }),
   computed: {
     imageStyles () {
-      return {
+      return (this.anchorImage === 'bottom' )
+        ? { 'background-image': `url('${this.image}')`} : ({
         'background-image': `url('${this.image}')`,
         opacity: (this.opacityPercent === 1) ? 1 : 1 - (this.percent * this.opacityPercent),
         'background-position-y': `${(1 - this.percent) * 4}rem`
-      }
+      })
     },
     percent () {
       const PIXELS_UNTIL_DONE = 400
       return this.pixelsScrolled < PIXELS_UNTIL_DONE
         ? 1 - (PIXELS_UNTIL_DONE - this.pixelsScrolled) / PIXELS_UNTIL_DONE
         : 1
-    }
+    },
+    imageModifiers () {
+      return (this.anchorImage === 'bottom' ) ? 'parallax-background__image--anchor-bottom' : ''
+    },
   },
   methods: {
     overlayStyles (i) {

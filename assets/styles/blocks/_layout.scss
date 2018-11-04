@@ -7,10 +7,22 @@
     &--above-fold {
       padding-top: $globals__page-padding-top;
     }
+
+    &--bottom-title {
+      position: relative;
+      height: 100%;
+    }
   }
 
   &__hide-edges {
     overflow-x: hidden;
+  }
+
+  &__main {
+    &--no-scroll {
+      overflow: hidden;
+      height: 100%;
+    }
   }
 
   @include above('mobile') {

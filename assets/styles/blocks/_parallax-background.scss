@@ -14,6 +14,10 @@
     height: 100%;
     width: 100%;
     transition: opacity .3s ease-in-out;
+
+    &--anchor-bottom {
+      background-position: center 100%;
+    }
   }
   &__overlay {
     position: absolute;
