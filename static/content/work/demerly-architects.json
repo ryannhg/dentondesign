@@ -16,7 +16,8 @@
     "/images/work_demerly_home2.jpg",
     "/images/work_demerly_prodet1.jpg",
     "/images/work_demerly_prodet3.jpg",
-    "/images/work_demerly_bio.jpg"
+    "/images/work_demerly_bio.jpg",
+    null
   ],
   "objective": "create a clean identity and experience that aligns with the design philosophy of the firm",
   "type": "Obstacle, Objective, Outcome",
