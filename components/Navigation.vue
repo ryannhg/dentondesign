@@ -1,6 +1,6 @@
 <template>
   <nav class="navigation" :class="{'navigation--egg-expanded': isExpandedEgg}">
-    <button @click.prevent="toggle" class="navigation__hamburger">
+    <button @click.prevent="toggle" class="navigation__hamburger" aria-label="Toggle navigation">
       <burger :is-expanded="isOpen"></burger>
     </button>
     <nav-egg v-on:transition-finished="handleEggTransition" :is-expanded="isExpandedEgg"></nav-egg>

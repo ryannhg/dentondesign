@@ -25,6 +25,12 @@ export default {
     window.addEventListener('scroll', this.checkIfVisible)
     window.addEventListener('scroll', this.checkIfBrownVisible)
   },
+  destroyed () {
+    try {
+      window.removeEventListener('scroll', this.checkIfVisible)
+      window.removeEventListener('scroll', this.checkIfBrownVisible)
+    } catch (e) {}
+  },
   methods: {
     checkIfVisible () {
       const PERCENT_UNTIL_LINE_TRIGGER = 0.75

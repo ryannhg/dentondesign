@@ -5,7 +5,8 @@
 
 
 <script>
-const orbDelay = 50
+import detectIt from 'detect-it'
+const orbDelay = 100
 
 export default {
   data: () => ({
@@ -13,16 +14,22 @@ export default {
     orbEl: undefined
   }),
   mounted () {
-    document.addEventListener('mousemove', this.requestTicker, false)
-    this.orbEl = document.createElement('div')
-    this.orbEl.setAttribute('class', 'fancy-cursor__orb')
-    this.$refs.cursor.insertAdjacentElement('afterEnd', this.orbEl)
+    if (typeof window !== 'undefined' && detectIt.deviceType === 'mouseOnly') {
+      document.addEventListener('mousemove', this.requestTicker)
+      this.orbEl = document.createElement('div')
+      this.orbEl.setAttribute('class', 'fancy-cursor__orb')
+      this.$refs.cursor.insertAdjacentElement('afterEnd', this.orbEl)
+    } else {
+      this.$refs.cursor.style.visibility = 'hidden'
+    }
   },
   beforeDestroy () {
-    document.removeEventListener('mousemove', this.requestTicker, false)
+    try {
+      document.removeEventListener('mousemove', this.requestTicker)
+    } catch (e) {}
   },
   methods: {
-    requestTicker () {
+    requestTicker (event) {
       if (!this.rAFTicker) {
         window.requestAnimationFrame(this.mousePosition.bind(this, event))
         this.rAFTicker = true
@@ -32,7 +39,7 @@ export default {
       this.rAFTicker = false
       this.$refs.cursor.style.transform = `translate(-50%, -50%) translate(${clientX}px, ${clientY}px)`
       setTimeout(() => {
-        this.orbEl.style.transform = `translate(-50%, -50%) translate(${clientX}px, ${clientY}px)`
+        this.orbEl.style.transform = `translate(-50%, -50%) translate(${clientX}px, ${clientY}px) scaleY(-1)`
       }, orbDelay)
     }
   }

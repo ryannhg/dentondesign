@@ -2,7 +2,7 @@
   <div class="navegg">
     <div ref="egg" class="navegg__nest" :style="eggWidth">
       <div class="navegg__svg-container">
-        <img class="navegg__svg" src="~/assets/images/eggmenu.svg" />
+        <img class="navegg__svg" src="~/assets/images/eggmenu.svg" alt="Navigation egg" />
       </div>
     </div>
   </div>

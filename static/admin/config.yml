@@ -89,7 +89,7 @@ collections:
             fields:
             - {label: Image, name: src, widget: image}
             - {label: Alt Text, name: alt, widget: string}
-          - label: Title Image
+          - label: Bold Page Title Text
             name: titleImage
             widget: object
             fields:
@@ -128,7 +128,7 @@ collections:
             fields:
             - {label: Image, name: src, widget: image}
             - {label: Alt Text, name: alt, widget: string}
-          - label: Title Image
+          - label: Bold Page Title Text
             name: titleImage
             widget: object
             fields:
@@ -159,7 +159,7 @@ collections:
             fields:
             - {label: Image, name: src, widget: image}
             - {label: Alt Text, name: alt, widget: string}
-          - label: Title Image
+          - label: Bold Page Title Text
             name: titleImage
             widget: object
             fields:
@@ -254,7 +254,7 @@ collections:
             fields:
             - {label: Image, name: src, widget: image}
             - {label: Alt Text, name: alt, widget: string}
-          - label: Title Image
+          - label: Bold Page Title Text
             name: titleImage
             widget: object
             fields:
@@ -279,7 +279,7 @@ collections:
         allow_add: true
         field: {label: Image, name: image, widget: image}
       - {label: "Image Caption", name: "imageCaption", widget: "string"}
-      - label: Title Image
+      - label: Bold Page Title Text
         name: titleImage
         widget: object
         fields:
@@ -314,7 +314,7 @@ collections:
         allow_add: true
         field: {label: Image, name: image, widget: image}
       - {label: "Image Caption", name: "imageCaption", widget: "string"}
-      - label: Title Image
+      - label: Bold Page Title Text
         name: titleImage
         widget: object
         fields:
