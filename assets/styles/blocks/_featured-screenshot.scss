@@ -23,23 +23,48 @@
     color: $colors__coal;
     font-size: $fonts__snippets;
   }
+  $arrow-size: 45px;
 
   &__control {
-    font-family: $fonts__family;
-    font-size: $fonts__h3;
     position: absolute;
-    top: 50%;
+    top: 30%;
     transform: translateY(-50%);
     text-transform: uppercase;
     cursor: pointer;
-    &:hover {
-      opacity: 0.6;
+    background-color: rgba(0,0,0,0.3);
+    width: $arrow-size;
+    height: $arrow-size;
+
+    .icon {
+      display: inline-block;
+      font-size: 1rem;
     }
+
     &--prev {
-      left: 0;
+      left: $wrapper-padding * -1;
     }
     &--next {
-      right: 0;
+      right: $wrapper-padding * -1;
+    }
+  }
+
+  @include above('mobile') {
+
+    &__control {
+      @include transition(background-color);
+
+      top: 40%;
+
+      &:hover {
+        background-color: rgba($colors__coal,0.85);
+      }
+
+      &--prev {
+        left: $wrapper-padding * -0.5;
+      }
+      &--next {
+        right: $wrapper-padding * -0.5;
+      }
     }
   }
 
@@ -48,6 +73,7 @@
 
     &__caption {
       font-size: $fonts__snippets--tablet;
+
     }
     &__figure {
       padding-top: $image-ratio - 5%;
@@ -55,6 +81,23 @@
 
     &__image {
       max-width: 150%;
+    }
+
+    $arrow-size: 85px;
+
+    &__control {
+      width: $arrow-size;
+      height: $arrow-size;
+      
+      .icon {
+        font-size: 1.5rem;
+      }
+      &--prev {
+        left: $wrapper-padding * -1.75;
+      }
+      &--next {
+        right: $wrapper-padding * -1.75;
+      }
     }
   }
 }

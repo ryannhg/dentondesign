@@ -4,7 +4,6 @@
     <div class="layout__content">
       <page-heading :large-caption="true" :caption="page.caption" :image="page.titleImage"></page-heading>
       <cta-links v-bind="page.explore"></cta-links>
-      <!-- <div v-html="marked('### I love lamp')"></div> -->
     </div>
   </div>
 </template>

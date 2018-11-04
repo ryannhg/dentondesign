@@ -8,11 +8,11 @@
     "phone": "317.650.0857",
     "address": "1630 W. Le Moyne\nChicago, IL 60622",
     "backgroundImage": {
-        "src": "/images/pages/contact/background.jpg",
+        "src": "/images/pages-contact-background.jpg",
         "alt": "Nate Denton's lovely, modern home."
     },
     "titleImage": {
-        "src": "/images/pages/contact/title.svg",
+        "src": "/images/pages-contact-title.svg",
         "alt": "Contact"
     }
 }

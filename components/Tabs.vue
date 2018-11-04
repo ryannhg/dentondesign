@@ -10,6 +10,7 @@
          <div  v-if="isActiveTab(0)" class="tabs__panel" key="panel1" >
           <div class="wrapper wrapper--narrow">
             <div class="richtext richtext--color-white" v-html="marked(approach.content)"></div>
+            <closing-callout :callout-content="timeline.contact"></closing-callout>
           </div>
         </div>
         <div v-else class="tabs__panel"  key="panel2" >
@@ -28,6 +29,9 @@
             :caption="snippet.content"
             :key="'snippet'+index"
               ></timeline-snippet>
+            
+          <closing-callout :callout-content="timeline.contact" :with-border="true"></closing-callout>
+            
         </div>
       </transition>
     </div>
@@ -36,11 +40,13 @@
 
 <script>
 import TimelineSnippet from '~/components/TimelineSnippet'
+import ClosingCallout from '~/components/ClosingCallout'
 import marked from 'marked'
 
 export default {
   components: {
-    TimelineSnippet
+    TimelineSnippet,
+    ClosingCallout
   },
   props: {
     approach: Object,

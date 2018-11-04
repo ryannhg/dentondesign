@@ -1,0 +1,38 @@
+.closing-callout {
+  margin-top: 40px;
+  text-align: center;
+
+  &__container {
+    display: inline-block;
+    &--with-border {
+      border-top: $globals__border-size solid $colors__tan;
+      padding-top: 20px;
+    }
+  }
+
+  &__link {
+    color: $colors__cherry;
+  }
+
+  @include above('mobile') {
+
+    &__container {
+    
+      &--with-border {
+        margin-top: 40px;
+        padding-top: 38px;
+        min-width: 400px;
+        border-top-width: $globals__border-size--tablet;
+      }
+    }
+
+    &__link {
+      @include transition(color);
+      
+
+      &:hover {
+        color: $colors__coal;
+      }
+    }  
+  }
+}
