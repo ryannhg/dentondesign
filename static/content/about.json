@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "About | Denton Design",
-    "description": "<font color=\"#4D4E4C\">\n\nI started as a designer and worked my way up the creative ladder. I pride myself on leading by example. I don’t ask anyone on the team to do anything I haven’t done in the past.\n\n</font>",
+    "description": "I started as a designer and worked my way up the creative ladder. I pride myself on leading by example. I don’t ask anyone on the team to do anything I haven’t done in the past.",
     "image": ""
   },
   "backgroundImage": {
@@ -14,7 +14,7 @@
   },
   "approach": {
     "label": "Approach",
-    "content": "![Denton Design Diagram](/images/design_diagram.svg)\n\n<br>\n\nI started as a designer and worked my way up the creative ladder. I pride myself on leading by example. I don’t ask anyone on the team to do anything I haven’t done in the past. that has helped me forge strong bonds over the years \n\nthe design tenets I have carried with me along the way include:\n\n## Less is lovely\n\n## Details are delightful\n\n## research is required\n\n## collaboration is crucial\n\n## in-person, please\n\nthese ingredients generate an environment where wonderful things can grow.",
+    "content": "![Denton Design Diagram](/images/design_diagram.svg)\n\n<br>\n\n<font color=\"#4D4E4C\">\n\nI started as a designer and worked my way up the creative ladder. I pride myself on leading by example. I don’t ask anyone on the team to do anything I haven’t done in the past. that has helped me forge strong bonds over the years \n\nthe design tenets I have carried with me along the way include:\n\n</font>\n\n<font color=\"#C21E4E\">\n\n## Less is lovely\n\n## Details are delightful\n\n## research is required\n\n## collaboration is crucial\n\n## in-person, please\n\n</font>\n\n<font color=\"#4D4E4C\">\n\nthese ingredients generate an environment where wonderful things can grow.\n\n</font>",
     "contact": {
       "caption": "I'd love to tell you more!",
       "link": {
