@@ -4,6 +4,8 @@
     <navigation :menu="menu" :social="social"></navigation>
     <!-- navbar -->
     <nuxt />
+    <!-- line boys -->
+    <scroll-teaser />
     <!-- social -->
     <share-egg />
     <fancy-cursor></fancy-cursor>
@@ -13,6 +15,7 @@
 <script>
 import GlobalHeader from '~/components/GlobalHeader'
 import Navigation from '~/components/Navigation'
+import ScrollTeaser from '~/components/ScrollTeaser'
 import ShareEgg from '~/components/ShareEgg'
 import FancyCursor from '~/components/FancyCursor'
 import menu from '~/static/content/menu.json'
@@ -23,6 +26,7 @@ export default {
   components: {
     GlobalHeader,
     Navigation,
+    ScrollTeaser,
     ShareEgg,
     FancyCursor
   },
