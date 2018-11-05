@@ -15,14 +15,6 @@ import Digits from '~/components/Digits'
 import page from '~/static/content/contact.json'
 import Page from '~/plugins/Page'
 
-const attempt = (propertyName, fallback= undefined) => {
-  try {
-    return this.page[propertyName]
-  } catch (_) {
-    return fallback
-  }
-}
-
 export default {
   mixins: [ Page ],
   components: {

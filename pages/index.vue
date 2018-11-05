@@ -24,9 +24,12 @@ export default {
     PageHeading,
     CtaLinks
   },
-  data: () => ({ page }),
-  // methods: {
-  //   marked
-  // }
+  data: () => ({ 
+    page,
+    timeline: null
+  }),
+  mounted () {
+
+  }
 }
 </script>
