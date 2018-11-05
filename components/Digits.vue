@@ -7,7 +7,7 @@
       <span class="digits__prefix">P</span> <a class="digits__contact digits__contact--dark-link" :href="'tel:' + contactInfo.phone">{{contactInfo.phone}}</a>
     </p>
     <address class="digits__entry fonts__small">
-      <span class="digits__prefix">A</span> <a class="digits__contact" target="_blank" :href="addressLink" v-html="marked(contactInfo.address)"></a>
+      <span class="digits__prefix">A</span> <a class="digits__contact digits__contact--dark-link" target="_blank" :href="addressLink" v-html="marked(contactInfo.address)"></a>
     </address>
   </div>
 </template>
