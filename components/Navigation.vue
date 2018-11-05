@@ -1,9 +1,9 @@
 <template>
-  <nav class="navigation" :class="{'navigation--egg-expanded': isExpandedEgg}">
-    <button @click.prevent="toggle" class="navigation__hamburger" aria-label="Toggle navigation">
+  <nav id="navigation" class="navigation" :class="{'navigation--egg-expanded': isExpandedEgg}">
+    <button id="navburger" @click.prevent="toggle" class="navigation__hamburger" aria-label="Toggle navigation">
       <burger :is-expanded="isOpen"></burger>
     </button>
-    <nav-egg v-on:transition-finished="handleEggTransition" :is-expanded="isExpandedEgg"></nav-egg>
+    <nav-egg id="navegg" v-on:transition-finished="handleEggTransition" :is-expanded="isExpandedEgg"></nav-egg>
 
     <ul ref="menu" class="navigation__menu">
       <li @click="closeMenu" class="navigation__menu-item navigation__menu-item--primary" :class=[visibilityClass]>
@@ -183,10 +183,10 @@ export default {
       })
 
       this.masterTimeline.add(this.buildNavTimeline(contact.$el, 'toTop'), 'step1')
-      this.masterTimeline.add(this.buildNavTimeline(about.$el, 'toBottom'), 'step1')
-      this.masterTimeline.to(work.$el, 0.75, {opacity: 1}, '-=0.75')
-      this.masterTimeline.call(this.tweenTextVisibility, [], '-=0.2')
-      this.masterTimeline.to(work.$el, 0.1, {opacity: 1})
+        .add(this.buildNavTimeline(about.$el, 'toBottom'), 'step1')
+        .to(work.$el, 0.75, {opacity: 1}, '-=0.75')
+        .call(this.tweenTextVisibility, [], '-=0.2')
+        .to(work.$el, 0.1, {opacity: 1})
 
       if (window.innerWidth < 767) {
         this.masterTimeline.add(TweenLite.to(this.$refs.sociallinks.$el, 0.5, {opacity: 1} ))

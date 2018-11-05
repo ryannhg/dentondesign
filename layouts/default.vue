@@ -7,7 +7,7 @@
     <!-- line boys -->
     <scroll-teaser />
     <!-- social -->
-    <share-egg />
+    <share-egg id="share-egg" />
     <fancy-cursor></fancy-cursor>
   </div>
 </template>

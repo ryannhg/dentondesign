@@ -1,10 +1,10 @@
 <template>
   <div class="scroll-teaser" v-if="shouldShowTeaser" v-pixels-scrolled="pixelsScrolled">
-    <div class="scroll-teaser__line"></div>
-    <div class="scroll-teaser__egg">
+    <div id="scroll-teaser-line" class="scroll-teaser__line"></div>
+    <div id="scroll-teaser-egg" class="scroll-teaser__egg">
       <span class="scroll-teaser__icon">▼</span>
     </div>
-    <div class="scroll-teaser__message">
+    <div id="scroll-teaser-message"  class="scroll-teaser__message">
       <span class="scroll-teaser__words" :style="styles('words')" ref="words">Scroll</span>
       <div class="scroll-teaser__hand" :style="styles('hand')" ref="hand">
         <img src="~/assets/images/hand-okay.svg" alt="a hand suggesting you absolutely nailed it, great job scrolling">
