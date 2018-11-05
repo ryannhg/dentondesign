@@ -2,6 +2,7 @@
 <div class="featured-screenshot wrapper ">
   <figure class="featured-screenshot__figure" >
     <img v-for="(image, i) in images" :key="i"
+      v-lazy=""
       :style="imageOffset(i)"
       class="featured-screenshot__image" :src="image" alt="Screenshot of the website" />
     <p class="featured-screenshot__caption">{{caption}}</p>
@@ -12,6 +13,7 @@
 </template>
 
 <script>
+import Lazy from '~/plugins/Lazy'
 export default {
   props: {
     caption: String,
