@@ -21,7 +21,7 @@ const ANIM_DURATIONS = {
   stage1: 0.75,
   stage2: 0.75,
   stage3: 0.5,
-  stage4: 0.75
+  stage4: 0.6
 }
 
 const ELEM_ID = {
@@ -57,7 +57,7 @@ export default {
       let { logo } = ELEM_ID
 
       timeline
-        .fromTo(logo, 1, {opacity: 0}, {opacity: 1}, 'stage1')
+        .fromTo(logo, 1, {opacity: 0}, {opacity: 1, ease: Power1.easeIn}, 'stage1')
         .add(this.buildNavigationTimeline(), 'stage1')
         .add(this.buildChickenTimeline(), 'stage2')
         .add(this.buildTaglineTimeline(), 'stage3')
@@ -91,7 +91,7 @@ export default {
       let viewportOffset = window.innerHeight - (headingDOM.getBoundingClientRect().top - window.pageYOffset)
       
       tl.set(headingDOM, {y: viewportOffset})
-        .to(headingDOM, ANIM_DURATIONS.stage3, {y: 0, ease: Power1.easeIn})
+        .to(headingDOM, ANIM_DURATIONS.stage3, {y: 0, ease: Power1.easeOut})
       
       return tl
     },
