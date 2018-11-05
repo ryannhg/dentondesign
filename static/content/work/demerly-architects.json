@@ -1,0 +1,14 @@
+{
+  "type": "Misc",
+  "title": "Demerly Architects",
+  "images": [
+    "/images/work_demerly_home1.jpg"
+  ],
+  "imageCaption": "Creative Direction / brand identity / website",
+  "titleImage": {
+    "src": "/images/work_demerlyarchitects.svg",
+    "alt": "Demerly Architects"
+  },
+  "description": "an award winning architecture firm that offers a diverse array of capabilities and styles",
+  "richtext": "sgsg"
+}
