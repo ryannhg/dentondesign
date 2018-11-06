@@ -1,5 +1,5 @@
 <template>
-  <div class="scroll-teaser" v-if="shouldShowTeaser" v-pixels-scrolled="pixelsScrolled">
+  <div class="scroll-teaser" :style="teaserStyles" v-if="shouldShowTeaser" v-pixels-scrolled="pixelsScrolled">
     <div id="scroll-teaser-line" class="scroll-teaser__line"></div>
     <div id="scroll-teaser-egg" class="scroll-teaser__egg">
       <span class="scroll-teaser__icon">▼</span>
@@ -33,6 +33,11 @@ export default {
         left: this.pixelsScrolled === 0
           ? '6.4rem'
           : '2.5rem'
+      }
+    },
+    teaserStyles () {
+      return {
+        opacity: this.pixelsScrolled < 800 ? 1 : 0
       }
     }
   },
