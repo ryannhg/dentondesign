@@ -1,6 +1,7 @@
 .pagination-paddles {
   display: flex;
   position: relative;
+  z-index: 3;
 
   &:after {
     content: '';

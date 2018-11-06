@@ -1,14 +1,14 @@
 .scroll-teaser {
-  display: none;
-  position: fixed;
-  top: 10rem;
-  transition: left 0.5s ease-in-out;
-  left: 6.4rem;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
   color: $colors__coal;
   flex-direction: column;
   align-items: center;
   &__line {
-    height: 50vh;
+    height: 3rem;
     width: 1px;
     background-color: $colors__coal;
   }
@@ -50,6 +50,11 @@
     margin: 0 auto;
   }
   @include above(mobile) {
-    display: flex;
+    position: fixed;
+    top: 10rem;
+    left: 7.8rem;
+    &__line {
+      height: 50vh;
+    }
   }
 }

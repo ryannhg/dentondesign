@@ -8,6 +8,7 @@
     height: 4.5rem;
     position: relative;
     z-index: 1;
+    transition: opacity 300ms ease-in-out;
     &-icon {
       position: absolute;
       top: 0;
@@ -22,13 +23,16 @@
         font-size: 1.5rem;
       }
       &--cracked {
-        transform: scale(.5);
+        transform: scale(.58) translateY(-2px);
       }
+    }
+    &:hover {
+      opacity: 0.6;
     }
   }
   &__links {
     padding: 1.5rem 1rem;
-    padding-bottom: 3.75rem;
+    padding-bottom: 4rem;
     background-color: rgba($colors__cherry, 0.85);
     color: white;
     display: flex;
@@ -39,7 +43,7 @@
       height: 1px;
       position: absolute;
       background-color: white;
-      bottom: 3.75rem;
+      bottom: 4rem;
       left: 1rem;
       right: 1rem;
     }
