@@ -2,10 +2,10 @@
   "meta": {
     "title": "Work | Denton Design",
     "description": "Hatching design solutions for brands big and small.",
-    "image": "/images/pages-work-background.jpg"
+    "image": "/images/eggs_big_0.jpg"
   },
   "backgroundImage": {
-    "src": "/images/pages-work-background.jpg",
+    "src": "/images/eggs_big_0.jpg",
     "alt": "Some eggs."
   },
   "titleImage": {
