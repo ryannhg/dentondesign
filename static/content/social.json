@@ -3,27 +3,17 @@
     "links": [
         {
             "label": "Twitter",
-            "url": "https://www.twitter.com",
+            "url": "https://twitter.com/home?status={{URL}}",
             "icon": "twitter"
         },
         {
             "label": "LinkedIn",
-            "url": "https://www.linkedin.com",
+            "url": "https://www.linkedin.com/shareArticle?mini=true&url={{URL}}",
             "icon": "linkedin"
         },
         {
-            "label": "Behance",
-            "url": "https://www.behance.com",
-            "icon": "behance"
-        },
-        {
-            "label": "Dribbble",
-            "url": "https://www.dribbble.com",
-            "icon": "dribbble"
-        },
-        {
             "label": "Facebook",
-            "url": "https://www.facebook.com",
+            "url": "https://www.facebook.com/sharer/sharer.php?u={{URL}}",
             "icon": "facebook"
         }
     ]

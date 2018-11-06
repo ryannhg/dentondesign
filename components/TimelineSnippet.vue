@@ -1,10 +1,12 @@
 <template>
 <div class="timeline-snippet wrapper wrapper--narrow" ref="snippet"
   :class="{ 'timeline-snippet--intro': isBrown, 'timeline-snippet--line-top': !top, 'timeline-snippet--line-top-ready': inView }">
-  <div class="timeline-snippet__year fonts__h3">{{years}}</div>
-  <h2 class="timeline-snippet__title fonts__h4">{{title}}</h2>
-  <p class="timeline-snippet__caption fonts__h6" ref="caption"
-    :class="{ 'timeline-snippet__caption--brownie': isBrown, 'timeline-snippet__caption--brownie-ready': brownInView }">{{caption}}</p>
+  <div class="timeline-snippet__content">
+    <div class="timeline-snippet__year fonts__h3">{{years}}</div>
+    <h2 class="timeline-snippet__title fonts__h4">{{title}}</h2>
+    <p class="timeline-snippet__caption fonts__h6" ref="caption"
+      :class="{ 'timeline-snippet__caption--brownie': isBrown, 'timeline-snippet__caption--brownie-ready': brownInView }">{{caption}}</p>
+  </div>
 </div>
 </template>
 

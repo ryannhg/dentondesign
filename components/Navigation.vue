@@ -26,7 +26,7 @@
       </li>
     </ul>
     
-    <social-links :class=[visibilityClass] ref="sociallinks" :social-options="social.links" :label="social.label" :direction="'horizontal'" ></social-links>
+    <social-links :class=[visibilityClass] ref="sociallinks" :social-options="social.links" :label="social.label" :direction="'horizontal'" :url="url" ></social-links>
   </nav>
 </template>
 
@@ -69,9 +69,9 @@ export default {
     isExpandedEgg: false,
     showTextVisibility: false,
     masterTimeline: null,
-    viewportChange: 'mobile'
+    viewportChange: 'mobile',
   }),
-  props: ['menu', 'social'],
+  props: ['menu', 'social', 'url'],
   mixins: [windowresize],
   computed: {
     eggRatio () {
