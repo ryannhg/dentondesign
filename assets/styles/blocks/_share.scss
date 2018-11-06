@@ -8,6 +8,7 @@
     height: 4.5rem;
     position: relative;
     z-index: 1;
+    transition: opacity 300ms ease-in-out;
     &-icon {
       position: absolute;
       top: 0;
@@ -24,6 +25,9 @@
       &--cracked {
         transform: scale(.58) translateY(-2px);
       }
+    }
+    &:hover {
+      opacity: 0.6;
     }
   }
   &__links {
