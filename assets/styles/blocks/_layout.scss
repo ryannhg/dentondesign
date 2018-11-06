@@ -1,5 +1,16 @@
+@keyframes fadein{
+  0% {
+    opacity: 0
+  }
+  100% {
+    opacity: 1
+  }
+}
+
 .layout {
   height: 100%;
+  // opacity: 0;
+  // animation: fadein 1s linear forwards;
 
   &__content {
     padding-top: 85vh;
