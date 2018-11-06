@@ -32,17 +32,8 @@
 
   @include above('mobile') {
     &__image {
-        &--anchor-bottom {
-        background-size: auto 100%;
-        background-position: 5vh 100%;
-      }
-    }
-  }
-  @include above('tablet') {
-    &__image {
-        &--anchor-bottom {
-        background-size: auto 100%;
-        background-position: 50vh 100%;
+      &--anchor-bottom {
+        transform: translateX(20%);
       }
     }
   }
