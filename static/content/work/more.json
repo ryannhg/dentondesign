@@ -1,0 +1,14 @@
+{
+  "type": "Misc",
+  "title": "More",
+  "images": [
+    "/images/work_mecutout.jpg"
+  ],
+  "imageCaption": "app design / illustrations / presentations & thought leadership",
+  "titleImage": {
+    "src": "/images/andmore.svg",
+    "alt": "More"
+  },
+  "description": "here are some more creative things i like to do...",
+  "richtext": "<br>\n\n<br>\n\napp design"
+}
