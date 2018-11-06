@@ -22,11 +22,11 @@
   }
 
   &__icon--off {
-    @include transition(color 0.25s linear, opacity);
+    @include transition(color, opacity);
   }
 
   &__icon--hover {
-    @include transition(color 0.25s linear, opacity);
+    @include transition(color, opacity);
 
     position: absolute;
     top: 0;

@@ -35,8 +35,10 @@ import Burger from '~/components/Burger'
 import SocialLinks from '~/components/SocialLinks'
 import NavEgg from '~/components/NavEgg'
 import windowresize from '~/mixins/windowresize'
+import {mapGetters, mapMutations} from 'vuex'
 import page from '~/static/content/work.json'
 import { TimelineLite, TweenLite } from 'gsap'
+
 
 const RADIUS__OFFSET = 0.85
 const EGG_WIDTH = 141
@@ -65,7 +67,6 @@ export default {
     NavEgg
   },
   data: () => ({
-    isOpen: false,
     isExpandedEgg: false,
     showTextVisibility: false,
     masterTimeline: null,
@@ -74,6 +75,9 @@ export default {
   props: ['menu', 'social'],
   mixins: [windowresize],
   computed: {
+    ...mapGetters({
+      isOpen: 'isOpenNavigation'
+    }),
     eggRatio () {
       return (EGG_WIDTH / EGG_HEIGHT) * 100
     },
@@ -96,15 +100,16 @@ export default {
     }
   },
   methods: {
+    ...mapMutations(['updateNavigation', 'toggleNavigation']),
     windowResizeCallbackEvent () {
       this.closeMenu()
       this.updateViewportChange()
     },
     toggle () {
-      this.isOpen = !this.isOpen
+      this.toggleNavigation()
     },
-    closeMenu() {
-      this.isOpen = false
+    closeMenu () {
+      this.updateNavigation(false)
     },
     updateViewportChange () {
       
