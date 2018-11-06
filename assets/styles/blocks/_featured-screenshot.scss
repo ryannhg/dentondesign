@@ -31,7 +31,8 @@
     transform: translateY(-50%);
     text-transform: uppercase;
     cursor: pointer;
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0,0,0, .3);
+    color: $colors__white;
     width: $arrow-size;
     height: $arrow-size;
 
@@ -56,14 +57,14 @@
       top: 40%;
 
       &:hover {
-        background-color: rgba($colors__coal,0.85);
+        background-color: $colors__cherry;
       }
 
       &--prev {
-        left: $wrapper-padding * -0.5;
+        left: $wrapper-padding * -1;
       }
       &--next {
-        right: $wrapper-padding * -0.5;
+        right: $wrapper-padding * -1;
       }
     }
   }
@@ -90,13 +91,13 @@
       height: $arrow-size;
       
       .icon {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
       }
       &--prev {
-        left: $wrapper-padding * -1.75;
+        left: $wrapper-padding * -2;
       }
       &--next {
-        right: $wrapper-padding * -1.75;
+        right: $wrapper-padding * -2;
       }
     }
   }

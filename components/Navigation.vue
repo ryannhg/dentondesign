@@ -183,8 +183,6 @@ export default {
         this.isExpandedEgg = false
       })
 
-      
-
       if (window.innerWidth < 767) {
         this.masterTimeline.add(this.buildNavTimeline(about.$el, 'toBottom', MENU__MOBILE__SPEED))
           .add(this.buildNavTimeline(contact.$el, 'toBottom', MENU__MOBILE__SPEED))

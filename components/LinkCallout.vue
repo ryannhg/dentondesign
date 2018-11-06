@@ -1,6 +1,11 @@
 <template>
 <div class="link-callout wrapper wrapper--narrow">
-  <a :href="linkContent.url" target="_blank" rel="noopener" class="link-callout__heading fonts__h5">{{linkContent.label}}<span class="icon-launch-off"></span></a>
+  <a :href="linkContent.url" target="_blank" rel="noopener" class="link-callout__heading fonts__h5">{{linkContent.label}}
+    <span class="link-callout__icon">
+      <span class="link-callout__icon--off icon-launch-off"></span>
+      <span class="link-callout__icon--hover icon-launch-hover"></span>
+    </span>
+  </a>
 </div>
 </template>
 
