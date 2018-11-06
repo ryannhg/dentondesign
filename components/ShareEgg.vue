@@ -9,7 +9,7 @@
       <div class="share__links">
         <a class="share__link" 
           v-for="link in links" :key="link.url"
-          target="_blank" :href="link.url"
+          target="_blank" :href="relativeUrl(link.url)"
           :aria-label="link.label" ref="link">
           <span :class="'share__link-icon icon-'+ link.icon"></span>
         </a>
@@ -23,6 +23,9 @@ import { TimelineLite, TweenLite } from 'gsap'
 import social from '~/static/content/social.json'
 
 export default {
+  props: {
+    url: String
+  },
   data: () => ({
     ...social,
     isOpen: false,
@@ -57,6 +60,9 @@ export default {
           TweenLite.set(links, { height: 0 })
         })
         .pause()
+    },
+    relativeUrl (url) {
+      return url.split('{{URL}}').join(this.url)
     }
   }
 }

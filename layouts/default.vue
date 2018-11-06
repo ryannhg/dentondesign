@@ -1,13 +1,13 @@
 <template>
   <div class="layout">
     <global-header />
-    <navigation :menu="menu" :social="social"></navigation>
+    <navigation :menu="menu" :social="social" :url="url"></navigation>
     <!-- navbar -->
     <nuxt />
     <!-- line boys -->
     <scroll-teaser />
     <!-- social -->
-    <share-egg id="share-egg" />
+    <share-egg id="share-egg" :url="url"/>
     <fancy-cursor></fancy-cursor>
   </div>
 </template>
@@ -30,10 +30,18 @@ export default {
     ShareEgg,
     FancyCursor
   },
-  data: () => ({
-    menu,
-    navbar,
-    social
-  })
+  data () {
+    return {
+      menu,
+      navbar,
+      social,
+      url: 'https://natedentondesign.com' + this.$route.fullPath
+    }
+  },
+  watch: {
+    $route (value) {
+      this.url = 'https://natedentondesign.com' + this.$route.fullPath
+    }
+  }
 }
 </script>

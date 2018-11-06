@@ -6,8 +6,8 @@
 			<a target="_blank"
         rel="noopener"
         :class="'social-links__icon icon-'+ social.icon"
-        :title="social.label" 
-        :href="social.url"></a>
+        :title="social.label"
+        :href="relativeUrl(social.url)"></a>
 		</li>
   </ul>
 </div>
@@ -18,7 +18,8 @@ export default {
   props: {
     socialOptions: {type: Array, default: () => ([])},
     label: {type: String, default: ''},
-    direction: {type: String}
+    direction: {type: String},
+    url: String
   },
   computed: {
     directionClass () {
@@ -30,6 +31,11 @@ export default {
       return (this.label !== '')
         ? 'social-links--with-label'
         : false
+    }
+  },
+  methods: {
+    relativeUrl (url) {
+      return url.split('{{URL}}').join(this.url)
     }
   }
 }
