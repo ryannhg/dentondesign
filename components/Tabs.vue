@@ -10,7 +10,7 @@
          <div  v-if="isActiveTab(0)" class="tabs__panel" key="panel1" >
           <div class="wrapper wrapper--narrow">
             <div class="richtext richtext--color-white" v-html="marked(approach.content)"></div>
-            <closing-callout :callout-content="timeline.contact"></closing-callout>
+            <closing-callout :callout-content="timeline.contact" :with-border="true"></closing-callout>
           </div>
         </div>
         <div v-else class="tabs__panel"  key="panel2" >
