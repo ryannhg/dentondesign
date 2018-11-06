@@ -41,6 +41,7 @@
       top: 0;
       left: 0;
       transform: translateX(-100%);
+      width: 46px;
     }
 
     &--show-the-d & {
@@ -51,7 +52,7 @@
 
       &__mobile {
         transition-delay: $transition-speed;
-        transform: translateX(0);
+        transform: translateX(55px);
       }
     }
   }

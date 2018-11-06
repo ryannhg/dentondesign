@@ -9,8 +9,8 @@
 
 .layout {
   height: 100%;
-  // opacity: 0;
-  // animation: fadein 1s linear forwards;
+  opacity: 0;
+  animation: fadein 0.5s linear forwards;
 
   &__content {
     padding-top: 85vh;
