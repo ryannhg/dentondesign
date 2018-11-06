@@ -26,7 +26,7 @@
       </li>
     </ul>
     
-    <social-links ref="sociallinks" :social-options="social.links" :label="social.label" :direction="'horizontal'" ></social-links>
+    <social-links :class=[visibilityClass] ref="sociallinks" :social-options="social.links" :label="social.label" :direction="'horizontal'" ></social-links>
   </nav>
 </template>
 
@@ -56,6 +56,7 @@ const attempt = (fn, fallback = undefined) => {
 }
 
 const MENU__HEIGHT__ANIMATED = 120
+const MENU__MOBILE__SPEED = 0.5
 
 export default {
   components: {
@@ -147,7 +148,7 @@ export default {
     tweenTextVisibility () {
       this.showTextVisibility = !this.showTextVisibility
     },
-    buildNavTimeline (navEl, growDirection = 'toTop' ) {
+    buildNavTimeline (navEl, growDirection = 'toTop', time = 0.75 ) {
       let tl = new TimelineLite()
       
       navEl.isTextVisible = false
@@ -164,8 +165,8 @@ export default {
 
       tl
         .set(navEl, { top: topOffset, bottom: bottomOffset, opacity: .3})
-        .to(navEl, 0.75, { [changeFactor]: '0%' }, 'height' )
-        .to(navEl, 0.75, { opacity: 1 }, 'height=-0.25' )
+        .to(navEl, time, { [changeFactor]: '0%' }, 'height' )
+        .to(navEl, time, { opacity: 1 }, 'height=-0.25' )
         .eventCallback('onReverseComplete', () => {  
           TweenLite.set(navEl, {clearProps: 'all'})
         })
@@ -182,17 +183,32 @@ export default {
         this.isExpandedEgg = false
       })
 
-      this.masterTimeline.add(this.buildNavTimeline(contact.$el, 'toTop'), 'step1')
-        .add(this.buildNavTimeline(about.$el, 'toBottom'), 'step1')
-        .to(work.$el, 0.75, {opacity: 1}, '-=0.75')
-        .call(this.tweenTextVisibility, [], '-=0.2')
-        .to(work.$el, 0.1, {opacity: 1})
-
       if (window.innerWidth < 767) {
-        this.masterTimeline.add(TweenLite.to(this.$refs.sociallinks.$el, 0.5, {opacity: 1} ))
+        this.masterTimeline.add(this.buildNavTimeline(about.$el, 'toBottom', MENU__MOBILE__SPEED))
+          .add(this.buildNavTimeline(contact.$el, 'toBottom', MENU__MOBILE__SPEED), `-=${MENU__MOBILE__SPEED/2}`)
+          .add(this.buildSocialLinks(), `-=${MENU__MOBILE__SPEED/2}`)
+          .to(work.$el, MENU__MOBILE__SPEED, {opacity: 1}, 'step2-=0.75')
+          .call(this.tweenTextVisibility, [], '-=0.2')
+          .to(work.$el, 0.1, {opacity: 1})
+          
+      } else {
+        this.masterTimeline.add(this.buildNavTimeline(contact.$el, 'toTop'), 'step1')
+          .add(this.buildNavTimeline(about.$el, 'toBottom'), 'step1')
+          .to(work.$el, 0.75, {opacity: 1}, '-=0.75')
+          .call(this.tweenTextVisibility, [], '-=0.2')
+          .to(work.$el, 0.1, {opacity: 1})
       }
 
       return this.masterTimeline
+    },
+    buildSocialLinks () {
+      let tl = new TimelineLite()
+      let height = this.$refs.sociallinks.$el.getBoundingClientRect().height
+
+      tl.set(this.$refs.sociallinks.$el, {height: 0, opacity: 1})
+        .to(this.$refs.sociallinks.$el, MENU__MOBILE__SPEED, {height: height})
+
+      return tl
     },
     handleEggTransition () {
       if (this.isOpen) {

@@ -14,9 +14,24 @@
     min-width: 200px;
   }
 
-  .icon {
+  &__icon {
     margin-left: 1rem;
     display: inline-block;
+    position: relative;
+  }
+
+  &__icon--off {
+    @include transition(color 0.25s linear, opacity);
+  }
+
+  &__icon--hover {
+    @include transition(color 0.25s linear, opacity);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 2;
   }
 
   @include above('mobile') {
@@ -31,6 +46,15 @@
       &:hover {
         color: $colors__coal;
       }
-    }  
+    }
+
+    &__heading:hover & {
+      &__icon--off {
+        opacity: 0;
+      }
+      &__icon--hover {
+        opacity: 1;
+      }
+    }
   }
 }
