@@ -35,7 +35,7 @@
     width: $eggsize;
     height: $eggheight;
     right: $globals__header-padding;
-    top: $globals__header-padding;
+    top: $globals__header-padding - 2;
     z-index: 5;
 
     .burger {
