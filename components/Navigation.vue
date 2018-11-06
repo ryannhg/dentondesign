@@ -185,8 +185,8 @@ export default {
 
       if (window.innerWidth < 767) {
         this.masterTimeline.add(this.buildNavTimeline(about.$el, 'toBottom', MENU__MOBILE__SPEED))
-          .add(this.buildNavTimeline(contact.$el, 'toBottom', MENU__MOBILE__SPEED))
-          .add(this.buildSocialLinks())
+          .add(this.buildNavTimeline(contact.$el, 'toBottom', MENU__MOBILE__SPEED), `-=${MENU__MOBILE__SPEED/2}`)
+          .add(this.buildSocialLinks(), `-=${MENU__MOBILE__SPEED/2}`)
           .to(work.$el, MENU__MOBILE__SPEED, {opacity: 1}, 'step2-=0.75')
           .call(this.tweenTextVisibility, [], '-=0.2')
           .to(work.$el, 0.1, {opacity: 1})
