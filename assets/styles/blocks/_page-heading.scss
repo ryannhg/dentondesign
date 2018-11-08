@@ -23,10 +23,7 @@
     font-size: $fonts__h3;
     margin-top: 10px;
     line-height: 1.1;
-    &:not(&--large) {
-      
-      text-align: center;
-    }
+    text-align: center;
   }
 
   @include above('tablet') {
