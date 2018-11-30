@@ -1,12 +1,15 @@
 {
-  "siteLink": {},
+  "siteLink": {
+    "label": "launch site",
+    "url": "https://www.kirkland.com"
+  },
   "titleImage": {
     "src": "/images/work_kirkland.svg",
     "alt": "Kirkland & Ellis"
   },
   "imageCaption": "Creative direction / brand identity / website",
-  "obstacle": "the previous identity and website had become stale over the last decade-plus",
-  "outcome": "a modern, sophisticated brand experience that fits the firms reputation",
+  "obstacle": "the previous identity and website had become stale over the past decade-plus",
+  "outcome": "a fresh, modern, and sophisticated brand experience that fits the firm's reputation as a world leader",
   "title": "Kirkland",
   "images": [
     "/images/work_kirkland_home.jpg",
@@ -16,7 +19,7 @@
     "/images/work_kirkland_careers.jpg",
     "/images/work_kirkland_insights.jpg"
   ],
-  "objective": "create a new look and experience that reflects this global firm's exclusive capabilities",
+  "objective": "create a new look and experience that reflects this global firm's exceptional, high-end capabilities",
   "type": "Obstacle, Objective, Outcome",
   "description": "the world's highest-grossing law firm"
 }
