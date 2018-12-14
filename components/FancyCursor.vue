@@ -15,7 +15,7 @@ export default {
   }),
   mounted () {
     if (typeof window !== 'undefined' && detectIt.deviceType === 'mouseOnly') {
-      document.addEventListener('mousemove', this.requestTicker)
+      window.addEventListener('mousemove', this.requestTicker, false)
       this.orbEl = document.createElement('div')
       this.orbEl.setAttribute('class', 'fancy-cursor__orb')
       this.$refs.cursor.insertAdjacentElement('afterEnd', this.orbEl)
@@ -25,7 +25,7 @@ export default {
   },
   beforeDestroy () {
     try {
-      document.removeEventListener('mousemove', this.requestTicker)
+      window.removeEventListener('mousemove', this.requestTicker, false)
     } catch (e) {}
   },
   methods: {
