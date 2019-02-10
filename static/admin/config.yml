@@ -253,6 +253,7 @@ collections:
           - {label: Dribbble, name: dribbble, widget: string}
           - {label: Behance, name: behance, widget: string}
           - label: Resume
+            required: false
             name: "resume"
             widget: "file"
           - label: Background Image
