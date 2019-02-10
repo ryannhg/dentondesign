@@ -10,7 +10,7 @@
     "image": "/images/pages/work/background.jpg"
   },
   "connectLabel": "Connect",
-  "resume": "",
+  "resume": "/images/nathandenton_resume.pdf",
   "backgroundImage": {
     "src": "/images/contact_big2.jpg",
     "alt": "Nate Denton's lovely, modern home."
