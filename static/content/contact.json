@@ -1,23 +1,23 @@
 {
+  "dribbble": "https://dribbble.com/ndenton",
+  "titleImage": {
+    "src": "/images/pages-contact-title.svg",
+    "alt": "Contact"
+  },
   "meta": {
     "title": "Contact | Denton Design",
     "description": "Hatching design solutions for brands big and small.",
     "image": "/images/pages/work/background.jpg"
   },
-  "email": "dentonnathan@gmail.com",
-  "phone": "317.650.0857",
-  "address": "",
   "connectLabel": "Connect",
-  "linkedin": "https://www.linkedin.com/in/nathandenton",
-  "dribbble": "https://dribbble.com/ndenton",
-  "behance": "https://www.behance.net/dentonnath7921",
-  "resume": "#resume",
+  "resume": "",
   "backgroundImage": {
     "src": "/images/contact_big2.jpg",
     "alt": "Nate Denton's lovely, modern home."
   },
-  "titleImage": {
-    "src": "/images/pages-contact-title.svg",
-    "alt": "Contact"
-  }
+  "phone": "317.650.0857",
+  "behance": "https://www.behance.net/dentonnath7921",
+  "address": "",
+  "email": "dentonnathan@gmail.com",
+  "linkedin": "https://www.linkedin.com/in/nathandenton"
 }
