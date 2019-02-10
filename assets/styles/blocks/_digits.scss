@@ -2,7 +2,9 @@
   text-align: center;
   padding-top: 10%;
   &__social-link {
-    margin-right: 1rem;
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
   }
   &__prefix {
     display: none;
