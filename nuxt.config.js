@@ -67,6 +67,9 @@ module.exports = {
     ]
   },
   generate: {
-    routes: work.links.map(link => link.url)
+    routes: work.links.map(link => link.url),
+    minify: {
+      collapseWhitespace: false
+    }
   }
 }
