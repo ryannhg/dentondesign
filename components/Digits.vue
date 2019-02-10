@@ -9,7 +9,7 @@
     <address v-show="contactInfo.address" class="digits__entry fonts__small">
       <span class="digits__prefix">A</span> <a class="digits__contact digits__contact--dark-link" target="_blank" :href="addressLink" v-html="marked(contactInfo.address)"></a>
     </address>
-    <p class="digits__entry fonts__small" v-show="contactInfo.connectLabel && hasSocialLinks">
+    <p class="digits__entry fonts__small" v-show="hasSocialLinks">
       <span class="digits__prefix" v-text="contactInfo.connectLabel"></span>
       <a class="digits__contact digits__contact--dark-link digits__social-link" v-show="contactInfo.linkedin" :href="contactInfo.linkedin" target="_blank"><i class="fab fa-linkedin-in"></i></a>
       <a class="digits__contact digits__contact--dark-link digits__social-link" v-show="contactInfo.dribbble" :href="contactInfo.dribbble" target="_blank"><i class="fab fa-dribbble"></i></a>
@@ -32,7 +32,7 @@ export default {
         : ''
     },
     hasSocialLinks () {
-      return this.contactInfo.linkedin || this.contactInfo.dribbble || this.contactInfo.behance || this.contactInfo.resume
+      return this.contactInfo.connectLabel && this.contactInfo.linkedin || this.contactInfo.dribbble || this.contactInfo.behance || this.contactInfo.resume
     }
   },
   methods: {
