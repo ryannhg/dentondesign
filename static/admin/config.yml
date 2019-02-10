@@ -248,6 +248,13 @@ collections:
             buttons:
             - bold
             - italic
+          - {label: Connect Label, name: connectLabel, widget: string}
+          - {label: LinkedIn, name: linkedin, widget: string}
+          - {label: Dribbble, name: dribbble, widget: string}
+          - {label: Behance, name: behance, widget: string}
+          - label: Resume
+            name: "resume"
+            widget: "file"
           - label: Background Image
             name: backgroundImage
             widget: object

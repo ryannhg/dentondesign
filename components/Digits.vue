@@ -6,9 +6,16 @@
     <p class="digits__entry fonts__small">
       <span class="digits__prefix">P</span> <a class="digits__contact digits__contact--dark-link" :href="'tel:' + contactInfo.phone">{{contactInfo.phone}}</a>
     </p>
-    <address class="digits__entry fonts__small">
+    <address v-if="contactInfo.address" class="digits__entry fonts__small">
       <span class="digits__prefix">A</span> <a class="digits__contact digits__contact--dark-link" target="_blank" :href="addressLink" v-html="marked(contactInfo.address)"></a>
     </address>
+    <p class="digits__entry fonts__small" v-if="contactInfo.connectLabel && hasSocialLinks">
+      <span class="digits__prefix" v-text="contactInfo.connectLabel"></span>
+      <a class="digits__contact digits__contact--dark-link digits__social-link" v-if="contactInfo.linkedin" :href="contactInfo.linkedin" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      <a class="digits__contact digits__contact--dark-link digits__social-link" v-if="contactInfo.dribbble" :href="contactInfo.dribbble" target="_blank"><i class="fab fa-dribbble"></i></a>
+      <a class="digits__contact digits__contact--dark-link digits__social-link" v-if="contactInfo.behance" :href="contactInfo.behance" target="_blank"><i class="fab fa-behance"></i></a>
+      <a class="digits__contact digits__contact--dark-link digits__social-link" v-if="contactInfo.resume" :href="contactInfo.resume" target="_blank"><i class="far fa-file"></i></a>
+    </p>
   </div>
 </template>
 
@@ -23,6 +30,9 @@ export default {
       return this.contactInfo.address
         ? `https://maps.google.com?q=${this.contactInfo.address.split('\n').join(' ')}`
         : ''
+    },
+    hasSocialLinks () {
+      return this.contactInfo.linkedin || this.contactInfo.dribbble || this.contactInfo.behance || this.contactInfo.resume
     }
   },
   methods: {

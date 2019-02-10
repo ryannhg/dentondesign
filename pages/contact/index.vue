@@ -30,7 +30,12 @@ export default {
       return {
         email: this.page.email,
         phone: this.page.phone,
-        address: this.page.address
+        address: this.page.address,
+        connectLabel: this.page.connectLabel,
+        linkedin: this.page.linkedin,
+        dribbble: this.page.dribbble,
+        behance: this.page.behance,
+        resume: this.page.resume
       }
     }
   }

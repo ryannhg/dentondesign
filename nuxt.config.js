@@ -22,6 +22,9 @@ module.exports = {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/images/favicon.png' },
       { rel: 'stylesheet', href: 'https://use.typekit.net/glk1aqk.css' }
+    ],
+    script: [
+      { src: 'https://use.fontawesome.com/releases/v5.3.1/js/all.js' }
     ]
   },
 

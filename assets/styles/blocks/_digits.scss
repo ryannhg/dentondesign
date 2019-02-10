@@ -1,7 +1,9 @@
 .digits {
   text-align: center;
   padding-top: 10%;
-
+  &__social-link {
+    margin-right: 1rem;
+  }
   &__prefix {
     display: none;
   }
