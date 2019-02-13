@@ -2,11 +2,11 @@
   "type": "Misc",
   "title": "Square Meals",
   "images": [
-    "/images/sm_printsuite.jpg"
+    "/images/square-meals-animation_3.gif"
   ],
   "imageCaption": "Square Meals Collateral",
   "titleImage": {
-    "src": "/images/square-meals-animation_3.gif",
+    "src": "/images/square-meals.svg",
     "alt": "Square Meals Title"
   },
   "description": "A culinary collaborative with a conscience, proudly serving New York City's finest organizations",
