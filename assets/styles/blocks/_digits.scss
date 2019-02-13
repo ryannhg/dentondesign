@@ -26,6 +26,7 @@
 
   a#{&}__contact {
     color: $colors__cherry;
+    transition: color 300ms ease-in-out;
 
     &--dark-link,
     &:hover {
