@@ -80,9 +80,9 @@ collections:
             name: meta
             widget: object
             fields:
-              - {label: Title, name: title, widget: string}
-              - {label: Description, name: description, widget: text}
-              - {label: Image, name: image, widget: image}
+              - {label: Title, name: title, widget: string, required: false}
+              - {label: Description, name: description, widget: text, required: false}
+              - {label: Image, name: image, widget: image, required: false}
           - label: Background Image
             name: backgroundImage
             widget: object
@@ -119,9 +119,9 @@ collections:
             name: meta
             widget: object
             fields:
-              - {label: Title, name: title, widget: string}
-              - {label: Description, name: description, widget: text}
-              - {label: Image, name: image, widget: image}
+              - {label: Title, name: title, widget: string, required: false}
+              - {label: Description, name: description, widget: text, required: false}
+              - {label: Image, name: image, widget: image, required: false}
           - label: Background Image
             name: backgroundImage
             widget: object
@@ -150,9 +150,9 @@ collections:
             name: meta
             widget: object
             fields:
-              - {label: Title, name: title, widget: string}
-              - {label: Description, name: description, widget: text}
-              - {label: Image, name: image, widget: image}
+              - {label: Title, name: title, widget: string, required: false}
+              - {label: Description, name: description, widget: text, required: false}
+              - {label: Image, name: image, widget: image, required: false}
           - label: Background Image
             name: backgroundImage
             widget: object
@@ -237,9 +237,9 @@ collections:
             name: meta
             widget: object
             fields:
-              - {label: Title, name: title, widget: string}
-              - {label: Description, name: description, widget: text}
-              - {label: Image, name: image, widget: image}
+              - {label: Title, name: title, widget: string, required: false}
+              - {label: Description, name: description, widget: text, required: false}
+              - {label: Image, name: image, widget: image, required: false}
           - {label: Email, name: email, widget: string}
           - {label: Phone, name: phone, widget: string}
           - label: Address
