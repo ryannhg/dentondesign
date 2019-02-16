@@ -15,31 +15,26 @@ sections:
 - type: document
   path: static/content/work.json
   label: Work
-  match: "**/*"
 - type: directory
   path: static/content/work
   label: Work Detail
   create: documents
   match: "**/*"
-  new_doc_ext: ".json"
+  new_doc_ext: json
 - type: document
   path: static/content/contact.json
   label: Contact
-  match: "**/*"
 - type: heading
   label: Settings
 - type: document
   path: static/content/menu.json
   label: Menu
-  match: "**/*"
 - type: document
   path: static/content/navbar.json
   label: Navbar
-  match: "**/*"
 - type: document
   path: static/content/social.json
   label: Social
-  match: "**/*"
 upload_dir: static/images
 public_path: "/images"
 front_matter_path: ''
