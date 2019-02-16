@@ -21,6 +21,8 @@ sections:
   create: documents
   match: "**/*"
   new_doc_ext: json
+  templates:
+  - work-detail-standard
 - type: document
   path: static/content/contact.json
   label: Contact
