@@ -1,0 +1,46 @@
+---
+label: Work Detail - Misc
+hide_body: false
+is_partial: false
+fields:
+- type: text
+  name: title
+  label: Title
+- type: select
+  name: type
+  config:
+    source:
+      type: simple
+    options:
+    - Obstacle, Objective, Outcome
+    - Misc
+    required: true
+  label: Type
+  hidden: true
+  default: Misc
+- type: image_gallery
+  name: images
+  label: Images
+- type: text
+  name: imageCaption
+  label: Image Caption
+- type: field_group
+  name: titleImage
+  label: Title Image
+  fields:
+  - type: file
+    name: src
+    label: Image
+  - type: text
+    name: alt
+    label: Alt Text
+- type: text
+  name: description
+  label: Description
+- type: textarea
+  name: richText
+  label: Rich Text
+  config:
+    wysiwyg: true
+    schema:
+      format: html-blocks
