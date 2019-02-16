@@ -1,0 +1,63 @@
+---
+label: Work Detail - Standard
+hide_body: true
+is_partial: false
+fields:
+- type: select
+  name: type
+  config:
+    source:
+      type: simple
+    required: true
+    options:
+    - Obstacle, Objective, Outcome
+    - Misc
+  label: Type
+  hidden: true
+  default: Obstacle, Objective, Outcome
+- type: text
+  name: title
+  label: Title
+- type: image_gallery
+  name: images
+  label: Images
+  description: Shown at the top of the page.
+- type: text
+  name: imageCaption
+  label: Image Caption
+- type: field_group
+  name: titleImage
+  label: Bold Page Title Text
+  fields:
+  - type: file
+    label: Image
+    name: src
+  - type: text
+    name: alt
+    label: Alt Text
+- type: textarea
+  name: description
+  label: Description
+  config:
+    wysiwyg: false
+    schema:
+      format: markdown
+- type: textarea
+  name: obstacle
+  label: Obstacle
+- type: textarea
+  name: objective
+  label: Objective
+- type: textarea
+  name: outcome
+  label: Outcome
+- type: field_group
+  name: siteLink
+  label: Site Link
+  fields:
+  - type: text
+    name: label
+    label: Label
+  - type: text
+    name: url
+    label: URL
