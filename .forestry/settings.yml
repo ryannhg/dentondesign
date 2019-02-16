@@ -9,6 +9,9 @@ sections:
 - type: document
   path: static/content/home.json
   label: Homepage
+- type: document
+  path: static/content/about.json
+  label: About
   match: "**/*"
 upload_dir: uploads
 public_path: "/uploads"
