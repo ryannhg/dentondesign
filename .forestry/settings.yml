@@ -22,6 +22,7 @@ sections:
   match: "**/*"
   new_doc_ext: json
   templates:
+  - work-detail-misc
   - work-detail-standard
 - type: document
   path: static/content/contact.json
