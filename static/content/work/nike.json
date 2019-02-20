@@ -1,0 +1,14 @@
+{
+  "type": "Misc",
+  "title": "Nike",
+  "images": [
+    "/images/pg_inscreen.jpg"
+  ],
+  "imageCaption": "creative direction / illustrations / ui / ux / campaign",
+  "titleImage": {
+    "src": "/images/nike.svg",
+    "alt": "Nike BYT"
+  },
+  "description": "A campaign to get NBA All-Star fans involved with the game.",
+  "richtext": "kd"
+}
