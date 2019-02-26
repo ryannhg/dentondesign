@@ -18,16 +18,16 @@
       "url": "/work/one-north"
     },
     {
-      "label": "Nike",
-      "url": "/work/nike"
-    },
-    {
       "label": "Kirkland & Ellis",
       "url": "/work/kirkland"
     },
     {
-      "label": "Design Within Reach",
-      "url": "/work/dwr"
+      "label": "Square Meals",
+      "url": "/work/square-meals"
+    },
+    {
+      "label": "Nike",
+      "url": "/work/nike"
     },
     {
       "label": "Skadden",
@@ -36,10 +36,6 @@
     {
       "label": "And More...",
       "url": "/work/more"
-    },
-    {
-      "label": "Square Meals",
-      "url": "/work/square-meals"
     }
   ]
 }
