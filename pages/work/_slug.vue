@@ -58,7 +58,8 @@ export default {
       slug: route.params.slug,
       work,
       pixelsScrolled: 0,
-      images: []
+      images: [],
+      expandedImage: null
     }
   },
   watch: {
