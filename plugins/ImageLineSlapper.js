@@ -2,7 +2,8 @@ import Vue from 'vue'
 
 Vue.directive('ImageLineSlapper', {
   bind (el, { expression }, vnode) {
-    const images = [ ...el.querySelectorAll('p > img') ]
+    const imageSelector = 'p > img, .line-snippet__image'
+    const images = [ ...el.querySelectorAll(imageSelector) ]
     images.forEach((img, i) => {
       const parent = img.parentElement
       const src = img.getAttribute('src')
@@ -14,15 +15,16 @@ Vue.directive('ImageLineSlapper', {
       ].join('\n')
       parent.children[parent.children.length - 1]
         .addEventListener('click', _ => {
-          console.log('HAW', i)
           document.querySelector(`[data-zoomboy-id="${i}"]`).classList.toggle('zoom-boy--visible')
         })
     })
     const zoomBoys = [ ...el.querySelectorAll('.zoom-boy') ]
+
+    zoomBoys
       .forEach(el => el.addEventListener('click', _ => {
         el.classList.toggle('zoom-boy--visible')
       }))
 
-    setTimeout(_ => Vue.set(vnode.context, expression, [ ...el.querySelectorAll('p > img') ], 300))
+    setTimeout(_ => Vue.set(vnode.context, expression, [ ...el.querySelectorAll(imageSelector) ], 300))
   }
 })
