@@ -10,4 +10,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 300ms ease-in-out, visibility 300ms ease-in-out;
+  &--complete {
+    opacity: 0;
+    visibility: hidden;
+  }
 }

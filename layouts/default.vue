@@ -3,7 +3,7 @@
     <global-header />
     <navigation :menu="menu" :social="social" :url="url"></navigation>
     <!-- navbar -->
-    <nuxt />
+    <nuxt v-if="loadingComplete"/>
     <!-- line boys -->
     <scroll-teaser />
     <!-- social -->
@@ -39,6 +39,11 @@ export default {
     ScrollTeaser,
     ShareEgg,
     FancyCursor
+  },
+  mounted () {
+    setTimeout(_ => {
+      this.loadingComplete = true
+    }, 2400)
   },
   data () {
     return {
