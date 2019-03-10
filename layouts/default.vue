@@ -10,7 +10,9 @@
     <share-egg id="share-egg" :url="url"/>
     <fancy-cursor></fancy-cursor>
     <div class="loader" :class="{ 'loader--complete': loadingComplete }">
-      <p>Loading</p>
+      <div class="loader__egg ">
+        <div class="loader__egg-fill"></div>
+      </div>
     </div>
   </div>
 </template>
