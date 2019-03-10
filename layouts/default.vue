@@ -28,11 +28,23 @@ import navbar from '~/static/content/navbar.json'
 import social from '~/static/content/social.json'
 
 // Loading boys
+import home from '~/static/content/home.json'
+import about from '~/static/content/about.json'
 import work from '~/static/content/work.json'
+import contact from '~/static/content/contact.json'
 
 const images = [
-
+  home.titleImage.src,
+  home.backgroundImage.src,
+  about.titleImage.src,
+  about.backgroundImage.src,
+  contact.titleImage.src,
+  contact.backgroundImage.src,
+  work.titleImage.src,
+  work.backgroundImage.src
 ]
+let imagesToLoad = images.length
+
 
 export default {
   components: {
@@ -43,9 +55,7 @@ export default {
     FancyCursor
   },
   mounted () {
-    setTimeout(_ => {
-      this.loadingComplete = true
-    }, 2400)
+    this.waitForImages()
   },
   data () {
     return {
@@ -59,6 +69,24 @@ export default {
   computed: {
     loadingImages () {
       return this.loadingComplete === false
+    }
+  },
+  methods: {
+    waitForImages () {
+      if (typeof window !== 'undefined') {
+        images.forEach(src => {
+          const image = new Image()
+          image.onload = _ => {
+            imagesToLoad--
+            if (imagesToLoad < 1) {
+              this.loadingComplete = true
+            }
+          }
+          image.src = src
+        })
+      } else {
+        this.loadingComplete = true
+      }
     }
   },
   watch: {
