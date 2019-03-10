@@ -12,6 +12,10 @@
   opacity: 0;
   animation: fadein 0.5s linear forwards;
 
+  &--no-scroll {
+    overflow: hidden;
+  }
+
   &__content {
     padding-top: 85vh;
 

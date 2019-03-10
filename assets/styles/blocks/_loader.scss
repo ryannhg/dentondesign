@@ -1,0 +1,13 @@
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 4;
+  background-color: $colors__beige;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
