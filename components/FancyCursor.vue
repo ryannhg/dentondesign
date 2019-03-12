@@ -36,11 +36,12 @@ export default {
       }
     },
     mousePosition ({clientX, clientY}) {
-      this.rAFTicker = false
       this.$refs.cursor.style.transform = `translate(-50%, -50%) translate(${clientX}px, ${clientY}px)`
       setTimeout(() => {
         this.orbEl.style.transform = `translate(-50%, -50%) translate(${clientX}px, ${clientY}px) scaleY(-1)`
       }, orbDelay)
+
+      this.rAFTicker = false
     }
   }
 }

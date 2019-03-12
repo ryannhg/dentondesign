@@ -16,7 +16,16 @@
 
   &--connected-images {
     img {
+
       margin-bottom: -2.5rem;
+    }
+
+    p > img {
+      @include transition(transform);
+
+      &:hover {
+        transform: scale(1.05);
+      }
     }
   }
   
