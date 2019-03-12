@@ -18,9 +18,36 @@ $orb-size: 36px;
 }
 
 .fancy-cursor {
+  @include transition(background-color);
   width: $cursor-size;
   height: $cursor-size;
   background-color: $colors__cherry;
+  
+
+  &:after,
+  &:before {
+    @include centeralign('both');
+    @include transition(opacity);
+    content: '';
+    border: thin solid $colors__cherry;
+    width: 25px;
+    left: -100%;
+    transform: rotate(45deg);
+    opacity: 0;
+  }
+
+  &:after {
+    transform: rotate(-45deg);
+  }
+
+  &--closing {
+    background-color: rgba($color: $colors__cherry, $alpha: 0);
+
+    &:after,
+    &:before {
+      opacity: 1;
+    }
+  }
 }
 
 .fancy-cursor__orb {

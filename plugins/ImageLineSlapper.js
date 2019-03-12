@@ -16,6 +16,7 @@ Vue.directive('ImageLineSlapper', {
       parent.children[parent.children.length - 1]
         .addEventListener('click', _ => {
           document.querySelector(`[data-zoomboy-id="${i}"]`).classList.toggle('zoom-boy--visible')
+          document.getElementById('fancy-cursor').classList.toggle('fancy-cursor--closing')
         })
     })
     const zoomBoys = [ ...el.querySelectorAll('.zoom-boy') ]
@@ -23,6 +24,7 @@ Vue.directive('ImageLineSlapper', {
     zoomBoys
       .forEach(el => el.addEventListener('click', _ => {
         el.classList.toggle('zoom-boy--visible')
+        document.getElementById('fancy-cursor').classList.toggle('fancy-cursor--closing')
       }))
 
     setTimeout(_ => Vue.set(vnode.context, expression, [ ...el.querySelectorAll(imageSelector) ], 300))

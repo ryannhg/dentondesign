@@ -1,5 +1,5 @@
 <template>
-  <div ref="cursor" class="fancy-cursor"></div>
+  <div id="fancy-cursor" ref="cursor" class="fancy-cursor" :class="{'fancy-cursor--closing': isHoverZoomBoy}"></div>
 </template>
 
 
@@ -11,7 +11,8 @@ const orbDelay = 100
 export default {
   data: () => ({
     rAFTicker: false,
-    orbEl: undefined
+    orbEl: undefined,
+    isHoverZoomBoy: false
   }),
   mounted () {
     if (typeof window !== 'undefined' && detectIt.deviceType === 'mouseOnly') {
@@ -35,13 +36,21 @@ export default {
         this.rAFTicker = true
       }
     },
-    mousePosition ({clientX, clientY}) {
+    mousePosition ({clientX, clientY, target}) {
+
+      this.checkZoomBoy(target)
+      
       this.$refs.cursor.style.transform = `translate(-50%, -50%) translate(${clientX}px, ${clientY}px)`
       setTimeout(() => {
         this.orbEl.style.transform = `translate(-50%, -50%) translate(${clientX}px, ${clientY}px) scaleY(-1)`
       }, orbDelay)
 
       this.rAFTicker = false
+    },
+    checkZoomBoy (el) {
+      this.isHoverZoomBoy = (el.classList.contains('zoom-boy__image') || el.classList.contains('zoom-boy')) 
+        ? true 
+        : false
     }
   }
 }
