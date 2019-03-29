@@ -13,11 +13,10 @@ module.exports = {
     htmlAttrs: {
       lang: 'en-US'
     },
-    title: pkg.name,
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description }
+      { name: 'google-site-verification', content: 'KNrJcSrC6c64oBYSlbhG-lMMDKfryLOBUfvwgZxUT78' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/images/favicon.png' },
