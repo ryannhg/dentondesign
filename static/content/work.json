@@ -14,20 +14,16 @@
   },
   "links": [
     {
-      "label": "Good Design Good",
-      "url": "/work/good-design-good"
-    },
-    {
       "label": "Nike Mash-ups",
       "url": "/work/nike-mashup"
     },
     {
-      "label": "Land O'Lakes",
-      "url": "/work/lol"
+      "label": "Good Design Good",
+      "url": "/work/good-design-good"
     },
     {
-      "label": "One North",
-      "url": "/work/one-north"
+      "label": "Land O'Lakes",
+      "url": "/work/lol"
     },
     {
       "label": "Kirkland & Ellis",
@@ -36,6 +32,10 @@
     {
       "label": "Square Meals",
       "url": "/work/square-meals"
+    },
+    {
+      "label": "One North",
+      "url": "/work/one-north"
     },
     {
       "label": "Nike A-G",
