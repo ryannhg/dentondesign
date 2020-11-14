@@ -1,0 +1,26 @@
+{
+  "siteLink": {
+    "label": "Launch site",
+    "url": "https://www.exclusivepetfood.com/"
+  },
+  "titleImage": {
+    "src": "/images/nike.svg",
+    "alt": "Land O'Lakes"
+  },
+  "imageCaption": "Creative direction / brand identity / ui / ux",
+  "obstacle": "Take the Land O'Lakes Exclusive pet food line and create a modern digital brand experience.",
+  "outcome": "The Land O'Lakes team was thrilled with the final result. They now have a flexible digital property with updated features like customer reviews, interactive ingredient education, and expert testimonials. The marketing team is also able to more actively track data analytics to continuously improve the experience.",
+  "title": "Land O'Lakes",
+  "images": [
+    "/images/lol_infinia_landing.jpg",
+    "/images/lol_home.jpg",
+    "/images/lol_home_nav.jpg",
+    "/images/lol_expert.jpg",
+    "/images/lol_research.jpg",
+    "/images/lol_digestive_health.jpg",
+    "/images/lol_product_line.jpg"
+  ],
+  "objective": "Evolve the brand and redesign the website. Leverage best practices in UX, UI, and accessibility while creating a clean and modern aesthetic that customers will enjoy.",
+  "type": "Obstacle, Objective, Outcome",
+  "description": "A global food and agriculture brand"
+}
